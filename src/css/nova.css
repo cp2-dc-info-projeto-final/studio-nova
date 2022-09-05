@@ -26,7 +26,7 @@ nav {
 main{
     background: url("img/bg.jpg") no-repeat center center;
     background-size: cover;
-    height: 85vh;
+    height: 70vh;
     
 }
 .nav-list {
@@ -41,4 +41,9 @@ main{
 img{
     height: 15vh;
     
+}
+.btn{
+    border-radius: 1px;
+    border: 5px;
+    border-color: rgb(213, 107, 130);
 }
