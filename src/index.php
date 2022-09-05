@@ -14,6 +14,7 @@
     <header>
         <nav>
             <a class="logo" href=""><img src="img/logonova.png" alt=""></a>
+
             <ul class="nav-list">
                 <li><a href="">Início</a></li>
                 <li><a href="">Serviços</a></li>
@@ -24,5 +25,8 @@
         </nav>
     </header>
     <main></main>
+    <footer>
+        <nav></nav>
+    </footer>
 </body>
 </html>
