@@ -14,7 +14,7 @@
 
 ## Lista dos Atores
 
- - CLientes;
+ - Clientes;
  - Funcionários; 
  - Administrador;
 
