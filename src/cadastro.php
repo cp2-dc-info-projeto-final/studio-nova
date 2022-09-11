@@ -8,31 +8,40 @@
     <title>cadastro</title>
 </head>
 <body>
-    <h1>Crie sua conta</h1>
-    <p>(É necessário estar cadastrado para fazer o agendamento)</p>
-    
-    <form action="cadastrar.php" method="">
-        
-            <p>Insira seu nome completo</p>
+    <div class="box">
+        <div class="img-box">
+            <img src="img/logo.png" alt="" class="img1">
+        </div>
+    <div class="form-box">
+        <form action="cadastrar.php" method="">
+            
+            <h2>Crie sua conta</h2>
+            
+            <p>É necessário estar cadastrado para fazer o agendamento</p>
+            
+            <p>Já possui conta ?</p>
+            <a href="login.php">Clique aqui</a>
+            <div class="input-group">
+                <label for="nome">Nome completo</label>
+                <input type="text" name="nome" placeholder=" Digite aqui seu nome completo">
+            </div>
+            <div class="input-group">
+                <label for="email">Informe seu e-mail</label>
+                <input type="text" name="email" placeholder=" Digite aqui seu email">
+            </div>
+            <div class="input-group w50">
+                <label for="senha1">Crie sua senha</label>
+                <input type="password" name="senha1" placeholder=" Crie sua senha">
+            </div>
+            <div class="input-group w50">
+                <label for="senha2">Confirme sua senha</label>    
+                <input type="password" name="senha2" placeholder=" Confirme sua senha">
+            </div>
                 
-                <input type="text" name="nome">
-            
-            <p>Insira seu email</p>
+                <input type="submit" class="btn" value="Cadastrar-se">
+        </form>
+    </div>
+    </div>
 
-                <input type="text" name="email">
-
-            <p>Crie uma senha</p>
-
-                <input type="password" name="senha1">
-            
-            <p>Repita sua senha</p>    
-    
-                <input type="password" name="senha2">
-                <input type="submit">
-    </form>
-
-    <p>Já possui conta ?</p>
-    <a href="login.php">Clique aqui</a>
 </body>
 </html>
-
