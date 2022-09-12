@@ -9,7 +9,7 @@
  - [CDU 05](#CDU-05): Exclusão de usuário;
  - [CDU 06](#CDU-06): Edição de usuário;
  - [CDU 07](#CDU-07): Agendamento;   
- - [CDU 08](#CDU-08): Tabelas;
+ - [CDU 08](#CDU-08): Disponibilizar horários;
  
 
 ## Lista dos Atores
