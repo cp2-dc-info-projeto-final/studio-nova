@@ -4,18 +4,43 @@
 
 ### RF 01
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nulla vel diam vehicula, eu porttitor nulla aliquam.
+O sistema deverá cadastrar cliente e profissionais;
 
 ### RF 02
 
-Nullam laoreet, mauris ac tempor vulputate, orci metus aliquet augue, at accumsan odio mi eu sapien. Aliquam tincidunt metus ut aliquet vehicula. Aliquam vitae arcu sed lacus fermentum sagittis.
+O sistema devera efetuar login dos clientes e profissionais;
+
+### RF 03
+
+O sistema devera agendar horarios para os clientes e profissionais;
+
+### RF 04 
+
+O sistema deve conter um login com e-mail e senha;
+
+### RF 05 
+
+O sistema deverá exibir nome e fotos dos serviços disponíveis na página inicial  
+
+### RF 06 
+
+O sistema deverá exibir os horários disponíveis para agendamento;
+
+### RF 07 
+
+O sistema deverá exibir os dias disponíveis para agendamento;
+
 
 ## Requisitos Não-Funcionais
 
 ### RNF 01
 
-Nulla facilisi. Etiam tempus dolor et odio tincidunt fermentum. Donec pharetra nulla eu euismod maximus. Maecenas eu mauris tincidunt, pulvinar tellus sed, blandit eros.
+O sistema deve ter contato e redes sociais no fim da página; 
 
 ### RNF 02
 
-Nam id enim ut quam faucibus scelerisque at non diam. Morbi eget eleifend lectus, quis fringilla elit. Morbi iaculis, elit vel accumsan hendrerit, ipsum purus varius lacus, eget facilisis massa mauris ac ipsum.
+O sistema deve ser desenvolvido em PHP, MySQL, HTML, CSS, Java script e bootstrap; 
+
+### RNF 03 
+
+o sistema deve ser responsivo e se adaptar em cada dispositivo;
