@@ -27,4 +27,4 @@ Sed sit amet ante sem. Nunc id sapien metus. Etiam lobortis in purus ut porta. V
 
 **Modelagem do Banco de Dados**
 
-![Diagrama de Banco de Dados](diagrama.jpg)
+![Diagrama de Banco de Dados](diagrama-exemplo.png)
