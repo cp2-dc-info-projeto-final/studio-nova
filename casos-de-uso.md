@@ -179,11 +179,11 @@
  
 
 
-### CDU 08 Tabelas
+### CDU 08 Disponibilizar horários
 
 
 **Fluxo Principal**
-1. O sistema vai apresenta ao cliente uma página com os serviços, horários disponiveis e tabela com preço de cada serviço.
+1. O sistema vai apresenta ao cliente uma página com os serviços, horários disponiveis de cada serviço.
 2. O cliente vai até a página de serviços.
 3. Na página de serviços terá tabelas como preço de cada serviço cadastrado no sistema.
 4. E o cliente pode escolher os melhores preços da sua preferência.
