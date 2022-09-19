@@ -28,7 +28,7 @@
             <a href="index.php"><img src="img/logo.png" alt="" class="img1"></a>
         </div>
         <div class="form-box">
-            <form action="cadastro.php" method="POST">
+            <form action="cadastrar.php" method="POST">
             
                 <h2>Crie sua conta</h2>
             
@@ -39,23 +39,20 @@
                 
                 <div class="input-group">
                     <label for="nome">Nome completo</label>
-                    <input type="text" name="nome" placeholder=" Digite aqui seu nome completo" required>
+                    <input type="text" name="nome" placeholder=" Digite aqui seu nome completo" pattern="[a-zA-Z]+$" required>
                 </div>
-                <?php
-                    session_start();
-                    echo $_SESSION['error'];
-                ?>
+               
                 <div class="input-group">
                     <label for="email">Informe seu e-mail</label>
-                    <input type="text" name="email" placeholder=" Digite aqui seu email" required>
+                    <input type="text" name="email" placeholder=" Digite aqui seu email" title="formato" pattern="[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
                 </div>
                 <div class="input-group w50">
                     <label for="senha1">Crie sua senha</label>
-                    <input type="password" name="senha1" placeholder=" Crie sua senha" required>
+                    <input type="password" name="senha1" placeholder=" Crie sua senha" maxlength="14" required>
                 </div>
                 <div class="input-group w50">
                     <label for="senha2">Confirme sua senha</label>    
-                    <input type="password" name="senha2" placeholder=" Confirme sua senha" required>
+                    <input type="password" name="senha2" placeholder=" Confirme sua senha" maxlength="14" required>
                 </div>
             
                 <input type="submit" class="btn" value="Cadastrar-se">
@@ -65,4 +62,3 @@
     </div>
 </body>
 </html>
-
