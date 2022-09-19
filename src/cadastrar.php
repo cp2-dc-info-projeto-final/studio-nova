@@ -8,7 +8,7 @@ session_start();
     $erro = 0;
     $error = "";
 
-    if(empty($nome) or strstr($nome, ' ') == false)
+    /*if(empty($nome) or strstr($nome, ' ') == false)
     {
         echo "Por favor, insira seu nome";
         $erro = "errou";
@@ -19,13 +19,13 @@ session_start();
     {
         echo "Por favor, preencha o e-mail corretamente.<br>";
         $erro = 1;
-    }
+    }*/
     if(strlen($senha1) < 8 or strlen($senha2) < 8)
     {
         echo "A senha deve ter no mínimo 8 caracteres.<br>";
         $erro = 1;
     } 
-    if(($senha1 == $senha2) == false)
+    if($senha1 != $senha2)
     {
         echo "As senhas não são correspondentes.<br>";
         $erro = 1;
