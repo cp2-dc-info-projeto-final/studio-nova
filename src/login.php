@@ -7,23 +7,24 @@
     <link rel="stylesheet" href="css/nova.css">
     <title>Login</title>
     <style>
- body{
-    background-color: rgb(30, 24, 35);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    min-height: 100vh;
-}
-</style>
+
+        body{
+            background-color: rgb(30, 24, 35);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
+    </style>
 </head>
 <body>
     <div class="box">
         <div class="img-box">
-            <img src="img/logo.png" alt="" class="img1">
+            <a href="index.php"><img src="img/logo.png" alt="" class="img1"></a>
         </div>
     
         <div class="form-box">
@@ -35,12 +36,12 @@
             <a href="cadastro.php">Clique aqui</a>
 
             <div class="input-group">
-                <p>Insira seu email</p>
-                <input type="email" name="email" placeholder=" Digite aqui seu e-mail">
+            <label for="email">Insira seu email</label>
+                <input type="email" name="email" placeholder=" Digite aqui seu e-mail" required>
             </div>
             <div class="input-group">
-                <p>Insira sua senha</p>
-                <input type="email" name="email" placeholder=" Digite aqui sua senha">
+            <label for="email">Insira sua senha</label>
+                <input type="email" name="email" placeholder=" Digite aqui sua senha" required>
             </div>
 
             <input type="submit" class="btn" value="Entrar">
