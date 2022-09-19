@@ -1,4 +1,5 @@
- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,55 +7,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/nova.css">
     <title>cadastro</title>
-<style>
- body{
-    background-color: rgb(30, 24, 35);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    min-height: 100vh;
-}
-</style>
+    <style>
+
+        body{
+            background-color: rgb(30, 24, 35);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
+    </style>
 </head>
 <body>
     <div class="box">
         <div class="img-box">
-            <img src="img/logo.png" alt="" class="img1">
+            <a href="index.php"><img src="img/logo.png" alt="" class="img1"></a>
         </div>
-    <div class="form-box">
-        <form action="cadastrar.php" method="">
+        <div class="form-box">
+            <form action="cadastro.php" method="POST">
             
-            <h2>Crie sua conta</h2>
+                <h2>Crie sua conta</h2>
             
-            <p>É necessário estar cadastrado para fazer o agendamento</p>
+                <p>É necessário estar cadastrado para fazer o agendamento</p>
             
-            <p>Já possui conta ?</p>
-            <a href="login.php">Clique aqui</a>
-            <div class="input-group">
-                <label for="nome">Nome completo</label>
-                <input type="text" name="nome" placeholder=" Digite aqui seu nome completo">
-            </div>
-            <div class="input-group">
-                <label for="email">Informe seu e-mail</label>
-                <input type="text" name="email" placeholder=" Digite aqui seu email">
-            </div>
-            <div class="input-group w50">
-                <label for="senha1">Crie sua senha</label>
-                <input type="password" name="senha1" placeholder=" Crie sua senha">
-            </div>
-            <div class="input-group w50">
-                <label for="senha2">Confirme sua senha</label>    
-                <input type="password" name="senha2" placeholder=" Confirme sua senha">
-            </div>
+                <p>Já possui conta ?</p>
+                <a href="login.php">Clique aqui</a>
                 
+                <div class="input-group">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" name="nome" placeholder=" Digite aqui seu nome completo" required>
+                </div>
+                <?php
+                    session_start();
+                    echo $_SESSION['error'];
+                ?>
+                <div class="input-group">
+                    <label for="email">Informe seu e-mail</label>
+                    <input type="text" name="email" placeholder=" Digite aqui seu email" required>
+                </div>
+                <div class="input-group w50">
+                    <label for="senha1">Crie sua senha</label>
+                    <input type="password" name="senha1" placeholder=" Crie sua senha" required>
+                </div>
+                <div class="input-group w50">
+                    <label for="senha2">Confirme sua senha</label>    
+                    <input type="password" name="senha2" placeholder=" Confirme sua senha" required>
+                </div>
+            
                 <input type="submit" class="btn" value="Cadastrar-se">
-        </form>
+        
+            </form>
+        </div>
     </div>
-    </div>
-
 </body>
 </html>
+
