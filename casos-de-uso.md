@@ -103,7 +103,7 @@
 1. Os administradores tem uma página de controle.
 2. Onde o administrador tem acesso a todos os usuários da sistema.
 3. Os administadores podem excluir,editar informações do agendamento.
-4. Os administadores podem cadastra serviços e disponibilizar tabela com o preço de serviço cada serviço.
+4. Os administadores podem cadastrar serviços e disponibilizar tabela com o preço de serviço cada serviço.
 5.O administador pode excluir e editar informações dos profissionais e dos clientes.
 
 
@@ -116,7 +116,7 @@
 2. Onde o administrador tem acesso a todos os usuários da rede.
 3. Um profissional só pode ser cadastrado no sistema após adm fazer seu cadastro.
 4. Somente administrador pode concede cadastro ao profissional.
-5. Após o adm cadastra o profissional ele pode ter acesso ao sistema atraves do seu login.
+5. Após o adm cadastrar o profissional ele pode ter acesso ao sistema atraves do seu login.
 
 
 
@@ -127,19 +127,19 @@
 
 **Fluxo Principal**
 1. O sistema vai apresenta um formulario com a lista de usuários.
-2. O administrador escolher um perfil para exclui. 
-3. O administrador clica no botão "exclui".
-4. O sistema vai exibir a sequinte mensagem " tem certeza que deseja excluir o usuário"
+2. O administrador escolher um cliente para excluir. 
+3. O administrador clica no botão "excluir".
+4. O sistema vai exibir a seguinte mensagem " tem certeza que deseja excluir o usuário"
 5. O administrador clica no botão "ok".  
 6. O sistema exibirá que "o usurio foi excluído com sucesso". 
 
 
 
 **Fluxo Alternativo A**
-1. O sistema vai apresenta um formulario com a lista de usuários.
+1. O sistema vai apresentar um formulario com a lista de usuários.
 2. O administrador escolher um perfil para exclui. 
-3. O administrador clica no botão "exclui".
-4. O sistema vai exibir a sequinte mensagem " Não foi possível excluir o usuário".
+3. O administrador clica no botão "excluir".
+4. O sistema vai exibir a seguinte mensagem " Não foi possível excluir o usuário".
 5. O sistema encaminhara o administrador para a pagina inicial.
 
 
