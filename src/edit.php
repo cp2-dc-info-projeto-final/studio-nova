@@ -2,15 +2,17 @@
     include "conecta.php";
 
     if(isset ($_GET['id'])){    
-
+        
     $id = $_GET["id"];
 
-    if($id = " "){
+    if($id == " "){
         header('Location : administracao.php');
     }
+    
     $sql = "SELECT * FROM usuario WHERE id = $id;"; 
     $res = mysqli_query($mysqli,$sql);
     $usuario = mysqli_fetch_array($res);
+
     }
 ?>
 <html>

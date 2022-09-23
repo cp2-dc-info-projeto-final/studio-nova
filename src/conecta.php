@@ -6,5 +6,4 @@
     $dbName = 'novastudio';
     
     $mysqli = mysqli_connect($dbHost,$dbUsername,$dbPassword,$dbName);
-
 ?>
