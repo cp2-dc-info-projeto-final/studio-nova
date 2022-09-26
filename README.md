@@ -30,8 +30,12 @@ Comprometimento, responsabilidade e honestidade.
 
 **Diagrama de Classes**
 
-![Diagrama de Classes](diagrama-exemplo.png)
+![Diagramas de Classes](caso-de-uso-fluxo-alternativo-cliente.png)
+![Diagramas de Classes]((caso-de-uso-fluxo-principal-cliente.png)
+![Diagramas de Classes]((caso-de-uso-fluxo-principal.png)
+![Diagramas de Classes]((caso-de-uso-fluxo-alternativo.png)
+
 
 **Modelagem do Banco de Dados**
 
-![Diagrama de Banco de Dados](diagrama-exemplo.png)
+![Diagrama de Banco de Dados](diagrama-de-banco-de-dados.png)
