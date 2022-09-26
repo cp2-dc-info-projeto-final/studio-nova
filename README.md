@@ -19,7 +19,7 @@ Nosso Espaço oferece as clientes serviços de  Maquiagem, extensão de cílios,
 Valores-
 Comprometimento, responsabilidade e honestidade.
 
-**Sua autoestima em primeiro lugar sempre!!!!**
+**Sua autoestima em primeiro lugar sempre!!!**
 
 ## Documentação
 
