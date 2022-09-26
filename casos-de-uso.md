@@ -39,7 +39,7 @@
 1. O sistema apresentara um formulário com os campos do usuário a ser inserido.
 2. O usuário insere nome, e-mail e senha.
 3. O usuário clica no botão “Enviar”.
-4. O sistema informa que o endereço de e-mail está incorreto.
+4. O sistema informa que o endereço de e-mail está indisponível.
 5. O usuário digita o e-mail corretamente e clica no botão “Enviar”.
 6. O sistema armazena o usuário e informa que a "operação foi realizada".
 7. O sistema retorna ao início do caso de uso para inclusão de novo usuário. 
