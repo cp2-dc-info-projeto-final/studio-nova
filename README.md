@@ -32,7 +32,7 @@ Comprometimento, responsabilidade e honestidade.
 
 ![Diagramas de Classes](caso-de-uso-fluxo-alternativo-cliente.png)
 ![Diagramas de Classes](caso-de-uso-fluxo-principal-cliente.png)
-![Diagramas de Classes](caso-de-uso-fluxo-principal.png)
+![Diagramas de Classes](caso-de-uso-fluxo-principal-funcionario.png)
 ![Diagramas de Classes](caso-de-uso-fluxo-alternativo.png)
 
 
