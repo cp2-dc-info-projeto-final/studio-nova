@@ -9,14 +9,28 @@
 </head>
 <body>
 <?php
-include "conecta.php";
+    include "conecta.php";
+     
+    
+    if(isset($_GET["id"]) && $_GET["id"] != ""){
+    
+        $id = $_GET["id"];
+        $sql = "DELETE FROM usuario WHERE id = $id;"; 
+        mysqli_query($mysqli,$sql);
+        echo "Cliente excluído com sucesso!<br>";
+        echo "<a href='administracao.php'>Voltar para o início</a><br>";
+        echo "<a href='listacli.php'>Voltar para lista de clientes</a>";
+    } 
 
-$id = $_GET["id"];
-$sql = "DELETE FROM usuario WHERE id = $id;"; 
-mysqli_query($mysqli,$sql);
-echo "Cliente excluído com sucesso!<br>";
-echo "<a href='administracao.php'>Voltar para o início</a><br>";
-echo "<a href='listacli.php'>Voltar para lista de clientes</a>";
+    if(isset($_GET["id_funcionario"]) && $_GET["id_funcionario"] != ""){
+    
+        $id = $_GET["id_funcionario"];
+        $sql = "DELETE FROM funcionario WHERE id_funcionario = $id;"; 
+        mysqli_query($mysqli,$sql);
+        echo "Cliente excluído com sucesso!<br>";
+        echo "<a href='administracao.php'>Voltar para o início</a><br>";
+        echo "<a href='listacli.php'>Voltar para lista de clientes</a>";
+        }
 ?>
 </body>
 </html>
