@@ -8,13 +8,20 @@
     <title>Lista de clientes</title>
 </head>
 <body>
+    
         <nav>
             <a class="logo" href="administracao.php"><img src="img/logo.png" alt=""></a>
             <ul class="nav-list">
                 <h1>Lista de clientes</h1>        
             </ul>
+            <form action="pagina_extra.php" method="POST">
+            <input type="hidden" name="operacao" value="buscar">
+            <input type="search" name="nome" size="10" value="Pesquisar">
+            <input type="submit" value="Buscar">
+        </form>
         </nav>
         <main>
+        
         <div id="id01" class="w3-modal" style="visibility: hidden">
             <div class="w3-modal-content">
                 <div class="w3-container">
