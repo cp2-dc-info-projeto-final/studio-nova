@@ -59,6 +59,16 @@ img{
     text-decoration: none;
     
 }
+.btn1{
+    background-color: rgb(213, 107, 130);
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    
+}
 .w50{
     width: 50%;
     float: left;
@@ -112,4 +122,11 @@ form .input-group input{
 }
 h1{
     color: rgb(213, 107, 130);
+}
+.navigation{
+    position: relative;
+    height: 40vh;
+    background: rgb(30, 24, 35);
+    width: 20vh;
+    box-shadow: rgb(213, 107, 130);
 }
