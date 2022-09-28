@@ -25,10 +25,14 @@
                 for($i = 0; $i < $linhas; $i++)
                 {
                     $funcionario = mysqli_fetch_array($res);
-                    echo "<p>Nome: ".$funcionario["nome"]."</p>";
+                    echo "<p>Funcionário: ".$funcionario["nome"]."</p>";
                     echo "<p>E-mail: ".$funcionario["email"]."</p>";
-                    echo "<p><a href='edit.php?id=".$funcionario["id"]."'>
-                    Editar funconario</a></p>";
+                    echo "<p>CPF: ".$funcionario["cpf"]."</p>";
+                    echo "<p>Celular: ".$funcionario["tel"]."</p>";
+                    echo "<p><a href='edit.php?id_funcionario=".$funcionario["id_funcionario"]."'>
+                    Editar funcionario</a></p>";
+                    echo "<p><a href='excluir.php?id_funcionario=".$funcionario["id_funcionario"]."'>
+                    Excluir funcionario</a></p>";
                 
                 }
             
