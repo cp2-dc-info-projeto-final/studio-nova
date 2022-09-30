@@ -33,19 +33,19 @@ $senha = $mysqli->real_escape_string($_POST['senha']);
   
   if($quantidade_ad == 1 )
   { 
-      $usuario = $sql_query_ad->fetch_assoc();
+      $administrador = $sql_query_ad->fetch_assoc();
       header("location: administracao.php");
       
-      $_SESSION['id'] = $usuario ['id'];
-      $_SESSION['email'] = $usuario ['email'];
+      $_SESSION['id'] = $administrador ['id'];
+      $_SESSION['email'] = $administrador ['email'];
   }
   if($quantidade_fun == 1)
   {
-      $usuario = $sql_query_fun->fetch_assoc();
+      $funcionario = $sql_query_fun->fetch_assoc();
       header("location: funcionarios.php");
       
-      $_SESSION['id'] = $usuario ['id'];
-      $_SESSION['email'] = $usuario ['email'];
+      $_SESSION['id'] = $funcionario ['id'];
+      $_SESSION['email'] = $funcionario ['email'];
   }
 else{
             echo '<script type ="text/JavaScript">';  
