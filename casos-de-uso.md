@@ -34,6 +34,7 @@
 4. O sistema armazena o usuário e informa que a "operação foi realizada com sucesso".
 5. O sistema retorna ao início do caso de uso para inclusão de novo usuário. 
 
+![Diagrama de Casos de Uso](caso-de-uso-fluxo-principal-cliente.png)
 
 **Fluxo Alternativo A**
 1. O sistema apresentara um formulário com os campos do usuário a ser inserido.
@@ -119,6 +120,7 @@
 5. Após o adm cadastrar o profissional ele pode ter acesso ao sistema atraves do seu login.
 
 
+![Diagrama de Casos de Uso](caso-de-uso-fluxo-principal-funcionario.png)
 
 
 ### CDU 05 Exclusão de usuário
