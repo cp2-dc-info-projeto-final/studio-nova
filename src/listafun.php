@@ -33,10 +33,7 @@
                     Editar funcionario</a></p>";
                     echo "<p><a href='excluir.php?id_funcionario=".$funcionario["id_funcionario"]."'>
                     Excluir funcionario</a></p>";
-<<<<<<< HEAD
-=======
-                
->>>>>>> 8e61dd96581d0717e6725239f7179e2fa11ad5d3
+
                 }
             
             ?>

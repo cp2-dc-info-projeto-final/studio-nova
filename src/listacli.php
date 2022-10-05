@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +15,9 @@
             <ul class="nav-list">
                 <h1>Lista de clientes</h1>        
             </ul>
-<<<<<<< HEAD
+
                             
-            <div class="box-search">
+            <div class="box-search" method="GET">
                 <input type="search" class="form-control w-25" placeholder="Pesquisar" id="pesquisar">
                 <button onclick="searchData()" class="btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -25,15 +26,10 @@
                 </button>
             </div>
 
-=======
-            <form action="pagina_extra.php" method="POST">
-            <input type="hidden" name="operacao" value="buscar">
-            <input type="search" name="nome" size="10" value="Pesquisar">
-            <input type="submit" value="Buscar">
-        </form>
->>>>>>> 8e61dd96581d0717e6725239f7179e2fa11ad5d3
         </nav>
-        <main>
+       <main>
+      
+
         
         <div id="id01" class="w3-modal" style="visibility: hidden">
             <div class="w3-modal-content">
@@ -48,6 +44,18 @@
             <?php
             include ("conecta.php");
 
+            if(!empty($_GET['pesquisar']))
+    {
+        $data = $_GET['search'];
+        $sql = "SELECT * FROM usuarios WHERE id LIKE '%$data%' or nome LIKE '%$data%' or nome LIKE '%$data%' ORDER BY id DESC";
+    }
+    else
+    {
+        $sql = "SELECT * FROM usuarios ORDER BY id DESC";
+    }
+        $result = $mysqli->query($sql);
+
+           
                 $sql = "SELECT * FROM usuario;"; 
                 $res = mysqli_query($mysqli,$sql);
                 $linhas = mysqli_num_rows($res);
@@ -67,7 +75,6 @@
             ?>
         </main>
 </body>
-<<<<<<< HEAD
 <script>
     var search = document.getElementById('pesquisar');
 
@@ -80,10 +87,10 @@
 
     function searchData()
     {
-        window.location = 'listacli.php?search='+search.value;
+        window.location = 'teste.php?search='+search.value;
     }
 </script>
 </html>
-=======
+
 </html>
->>>>>>> 8e61dd96581d0717e6725239f7179e2fa11ad5d3
+
