@@ -8,11 +8,11 @@
     }
     if(empty($email) OR empty($senha)){
         echo "Você não fez o login!";
-        echo "<p><a href='login.html'>Página de login</a></p>";
+        echo "<p><a href='login.php'>Página de login</a></p>";
         exit;
     }
     else{
-        include "conecta_mysql.inc";
+        include "conecta.php";
         $sql = "SELECT * FROM cliente WHERE email = '$email';";
         $res = mysqli_query($mysqli, $sql);
         
@@ -23,21 +23,23 @@
         $res_adm = mysqli_query($mysqli, $sql);
 
         // testa se não encontrou o e-mail no banco de dados
-        if(mysqli_num_rows($res) != 1){
+        if(mysqli_num_rows($res) != 1 mysqli_num_rows($res_fun) != 1 or mysqli_num_rows($res_adm) != 1){
             unset($_SESSION["email"]);
             unset($_SESSION["senha"]);
-            echo "Você não fez o login!";
-            echo "<p><a href='login.html'>Página de login</a></p>";
+            echo "<p>Você não fez o login!<p>";
+            echo "<p><a href='login.php'>Página de login</a></p>";
             exit;
         }
         else{
             $cliente = mysqli_fetch_array($res);
+            $funcionario = mysqli_fetch_array($res_fun);
+            $administrador = mysqli_fetch_array($res_adm);
             // testa se a senha está errada
-            if($senha != $cliente["senha"]){
+            if($senha != $cliente["senha"] or $senha != $funcionario["senha"] or $senha != $administrador["senha"]){
                 unset($_SESSION["email"]);
                 unset($_SESSION["senha"]);
                 echo "Você não fez o login!";
-                echo "<p><a href='login.html'>Página de login</a></p>";
+                echo "<p><a href='login.php'>Página de login</a></p>";
                 exit;
             }
         }
