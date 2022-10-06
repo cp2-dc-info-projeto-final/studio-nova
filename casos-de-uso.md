@@ -45,6 +45,7 @@
 6. O sistema armazena o usuário e informa que a "operação foi realizada".
 7. O sistema retorna ao início do caso de uso para inclusão de novo usuário. 
 
+![Diagrama de Casos de Uso](caso-de-uso-fluxo-alternativo-cliente.png)
 
 **Fluxo alternativo B**
 1. O sistema apresentara um formulário com os campos do usuário a ser inserido.
