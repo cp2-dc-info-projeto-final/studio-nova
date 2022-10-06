@@ -20,7 +20,7 @@
 
 ## Diagrama de Casos de Uso
 
-![Diagrama de Casos de Uso](diagrama-de-casos-de-uso.png)
+![Diagrama de Casos de Uso](Diagrama-de-casos-de-uso.png)
 
 ## Descrição dos Casos de Uso
 
