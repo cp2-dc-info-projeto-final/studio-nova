@@ -10,6 +10,7 @@
  - [CDU 06](#CDU-06): Edição de usuário;
  - [CDU 07](#CDU-07): Agendamento;   
  - [CDU 08](#CDU-08): Disponibilizar horários;
+ - [CDU 09](#CDU-09): Cadastro de serviços;
  
 
 ## Lista dos Atores
