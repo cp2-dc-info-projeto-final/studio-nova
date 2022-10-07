@@ -190,3 +190,36 @@
 2. O cliente vai até a página de serviços.
 3. Na página de serviços terá tabelas como preço de cada serviço cadastrado no sistema.
 4. E o cliente pode escolher os melhores preços da sua preferência.
+
+
+
+
+
+### CDU 09 Cadastro de serviços 
+
+
+
+**Fluxo Principal**
+1. O sistema vai apresenta ao cliente a interface onde ele pode escolher o serviço e o horário que deseja.
+2. O sistema vai apresenta ao cliente um formulario onde o cliente descreve o que deseja fazer em um horário de sua  preferencia. 
+3. Após a descrição do serviço o cliente clica no botão "Marcar.
+4. O a descrição do serviço é enviado para o nosso sistema.
+5. O sistema vai exibir a sequinte mensagem " serviço Efetuado com sucesso"
+6. O sistema redireciona o cliente para a página inicial. 
+
+
+
+**Fluxo Alternativo A**
+
+1. O sistema vai apresenta ao cliente a interface onde ele pode escolher o serviço e o horário que deseja.
+2. O sistema vai apresenta ao cliente um formulario onde o cliente descreve o que deseja fazer em um horário de sua preferencia. 
+3. Após a descrição do serviço o cliente clica no botão "Marcar.
+4. A  descrição do serviço é enviado para o nosso sistema.
+5. O sistema vai exibir a seguinte mensagem " serviço efetuado com sucesso"
+6. O sistema redireciona o cliente para a página inicial. 
+7. o cliente deseja remarca o serviço ja efetuado.
+8. O cliente vai até a interface clica no botão "Remarcar". 
+9. o cliente atualiza o serviço ou o horarrio no formulario clica no botão "Marcar.
+10. O sistema vai exibir a seguinte mensagem " serviço efetuado com sucesso"
+11. O sistema redireciona o cliente para a pagina inicial. 
+
