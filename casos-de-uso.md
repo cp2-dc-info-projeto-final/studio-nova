@@ -210,7 +210,7 @@
 5. O sistema vai exibir a sequinte mensagem " serviço cadastrado com sucesso"
 6. O sistema redireciona o cliente para a página inicial. 
 
-
+![Diagrama de Casos de Uso](Fluxo-cadastro-de-serviços-principal.jpg)
 
 **Fluxo Alternativo A**
 
@@ -226,3 +226,4 @@
 10. O sistema vai exibir a seguinte mensagem " serviço cadastrado com sucesso"
 11. O sistema redireciona o cliente para a pagina inicial. 
 
+![Diagrama de Casos de Uso](Fluxo-cadastro-de-serviços-alternativo.jpg)
