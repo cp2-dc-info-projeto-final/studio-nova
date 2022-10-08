@@ -203,7 +203,7 @@
 **Fluxo Principal**
 1. O sistema vai apresenta ao cliente a interface onde ele pode escolher o serviço e o horário que deseja.
 2. O sistema vai apresenta ao cliente um formulario onde o cliente descreve o que deseja fazer em um horário de sua  preferencia. 
-3. Após a descrição do serviço o cliente clica no botão "Marcar.
+3. Após a descrição do serviço o cliente clica no botão "Marcar".
 4. A descrição do serviço é enviado para o nosso sistema.
 5. O sistema vai exibir a sequinte mensagem " serviço Efetuado com sucesso"
 6. O sistema redireciona o cliente para a página inicial. 
@@ -216,11 +216,11 @@
 2. O sistema vai apresenta ao cliente um formulario onde o cliente descreve o que deseja fazer em um horário de sua preferencia. 
 3. Após a descrição do serviço o cliente clica no botão "Marcar.
 4. A  descrição do serviço é enviado para o nosso sistema.
-5. O sistema vai exibir a seguinte mensagem " serviço efetuado com sucesso"
+5. O sistema vai exibir a seguinte mensagem " Horário indisponível" 
 6. O sistema redireciona o cliente para a página inicial. 
-7. o cliente deseja remarcar o serviço ja efetuado.
+7. o cliente deseja remarcar o serviço.
 8. O cliente vai até a interface clica no botão "Remarcar". 
-9. o cliente atualiza o serviço ou o horário no formulario clica no botão "Marcar.
+9. o cliente atualiza o serviço ou o horário no formulario clica no botão "Marcar".
 10. O sistema vai exibir a seguinte mensagem " serviço efetuado com sucesso"
 11. O sistema redireciona o cliente para a pagina inicial. 
 
