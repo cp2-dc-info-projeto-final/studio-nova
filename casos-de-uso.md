@@ -207,7 +207,7 @@
 2. O sistema vai apresenta ao cliente um formulario onde o cliente descreve o que deseja fazer em um horário de sua  preferencia. 
 3. Após a descrição do serviço o cliente clica no botão "Marcar".
 4. A descrição do serviço é enviado para o nosso sistema.
-5. O sistema vai exibir a sequinte mensagem " serviço Efetuado com sucesso"
+5. O sistema vai exibir a sequinte mensagem " serviço cadastrado com sucesso"
 6. O sistema redireciona o cliente para a página inicial. 
 
 
@@ -223,6 +223,6 @@
 7. o cliente deseja remarcar o serviço.
 8. O cliente vai até a interface clica no botão "Remarcar". 
 9. o cliente atualiza o serviço ou o horário no formulario clica no botão "Marcar".
-10. O sistema vai exibir a seguinte mensagem " serviço efetuado com sucesso"
+10. O sistema vai exibir a seguinte mensagem " serviço cadastrado com sucesso"
 11. O sistema redireciona o cliente para a pagina inicial. 
 
