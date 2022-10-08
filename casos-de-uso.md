@@ -21,7 +21,7 @@
 
 ## Diagrama de Casos de Uso
 
-![Diagrama de Casos de Uso](Diagrama1.jpg)
+![Diagrama de Casos de Uso](diagrama1.jpg)
 
 ## Descrição dos Casos de Uso
 
