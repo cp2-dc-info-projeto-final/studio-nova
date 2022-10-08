@@ -72,6 +72,8 @@
 2. O usuário deve inserir o login e a senha e clicar no botão de "ENTRA". 
 3. O sistema valida login e senha do usuário.
 4. O sistema encaminha o usuário para a página do cliente.
+ 
+![Diagrama de Casos de Uso](fluxo alternativo usuario NOVA.png) 
 
 **Fluxo Alternativo A**
 
