@@ -122,7 +122,7 @@
 5. Após o adm cadastrar o profissional ele pode ter acesso ao sistema atraves do seu login.
 
 
-![Diagrama de Casos de Uso](fluxo-principal-funcionário.jpg)
+![Diagrama de Casos de Uso](Fluxo-principal-funcionário.jpg)
 
 
 ### CDU 05 Exclusão de usuário
