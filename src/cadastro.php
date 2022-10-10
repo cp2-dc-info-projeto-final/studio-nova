@@ -80,14 +80,18 @@
                             }
 
                         if($erro == 0)
-                            {
-                                $senha_cript = password_hash($senha2, PASSWORD_DEFAULT);
+                            {   
+
                                 $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
-                                $sql = "INSERT INTO usuario (nome,email,senha)";
-                                $sql .= "VALUES ('$nome','$email','$senha_cript');";  
+                                $sql = "INSERT INTO usuario (nome,email,senha,tipo)";
+                                $sql .= "VALUES ('$nome','$email','$senha2','$tipo');";  
                                 mysqli_query($mysqli,$sql);
                                 mysqli_close($mysqli);
-
+                                $_SESSION['id'] = $nome;
+                                $_SESSION['email'] = $email;
+                                $_SESSION['senha'] = $senha2;
+                                $_SESSION['tipo'] = "cliente";
+                                
                                 header("location: paginainicial.php");
                             }
                         }

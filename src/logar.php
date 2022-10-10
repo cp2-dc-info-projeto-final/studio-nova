@@ -24,30 +24,18 @@ $senha = $mysqli->real_escape_string($_POST['senha']);
 
   if($quantidade == 1 )
   {
-       $cliente = mysqli_fetch_array($quantidade);
-       if(!password_verify($senha, $cliente['senha']))
-       {
-            echo "Senha inválida!";
-            echo "<p><a href='login.html'>Página de login</a></p>";
             $usuario = $sql_query->fetch_assoc();
             session_start();
             $_SESSION['id'] = $usuario ['id'];
             $_SESSION['email'] = $usuario ['email'];
-            $_SESSION['senha'] = $administrador ['senha'];
+            $_SESSION['senha'] = $usuario ['senha'];
             $_SESSION['tipo'] = "cliente";
       
             header("location: paginainicial.php");
-       }
-      
   }
   
   if($quantidade_ad == 1 )
   {    
-       $administrador = mysqli_fetch_array($quantidade_ad);
-       if(!password_verify($senha, $administrador['senha']))
-       {
-            echo "Senha inválida!";
-            echo "<p><a href='login.html'>Página de login</a></p>";
             $administrador = $sql_query_ad->fetch_assoc();
             session_start();
             $_SESSION['id'] = $administrador ['id'];
@@ -57,23 +45,16 @@ $senha = $mysqli->real_escape_string($_POST['senha']);
       
             header("location: administracao.php");
          }
-  }
   if($quantidade_fun == 1)
   {
-       $funcionario = mysqli_fetch_array($quantidade_fun);
-       if(!password_verify($senha, $funcionario['senha']))
-       {
-            echo "Senha inválida!";
-            echo "<p><a href='login.html'>Página de login</a></p>";
             $funcionario = $sql_query_fun->fetch_assoc();
             session_start();
             $_SESSION['id'] = $funcionario ['id'];
             $_SESSION['email'] = $funcionario ['email'];
-            $_SESSION['senha'] = $administrador ['senha'];
+            $_SESSION['senha'] = $funcionario ['senha'];
             $_SESSION['tipo'] = "funcionario";
       
             header("location: funcionarios.php");
-       }
   }
 else{
             echo '<script type ="text/JavaScript">';  

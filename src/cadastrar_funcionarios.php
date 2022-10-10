@@ -8,6 +8,7 @@
     $senha2 = $_POST ["senha2"];
     $tel = $_POST["tel"];
     $cpf = $_POST["cpf"];
+    $tipo = "funcionario";
     $erro = 0;
 
     if(empty($nome) or strstr($nome, ' ') == false)
@@ -28,10 +29,9 @@
 
     if($erro == 0)
     {
-        $senha_cript = password_hash($senha2, PASSWORD_DEFAULT);
         $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
-        $sql = "INSERT INTO funcionario (nome,email,senha,cpf,tel)";
-        $sql .= "VALUES ('$nome','$email','$senha2','$cpf','$tel');";  
+        $sql = "INSERT INTO funcionario (nome,email,senha,cpf,tel,tipo)";
+        $sql .= "VALUES ('$nome','$email','$senha2','$cpf','$tel','$tipo');";  
         mysqli_query($mysqli,$sql);
         mysqli_close($mysqli);
 
