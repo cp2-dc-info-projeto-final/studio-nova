@@ -128,7 +128,7 @@
 
 ![Diagrama de Casos de Uso](Fluxo-principal-funcionário.jpg)
 
-![Diagrama de Casos de Uso](caso-de-uso-fluxo-alternativo.png.jpg)
+![Diagrama de Casos de Uso](caso-de-uso-fluxo-alternativo.png)
 
 ### CDU 05 Exclusão de usuário
 
