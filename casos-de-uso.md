@@ -73,7 +73,7 @@
 3. O sistema valida login e senha do usuário.
 4. O sistema encaminha o usuário para a página do cliente.
  
-![Diagrama de Casos de Uso](fluxo alternativo usuario NOVA.png) 
+![Diagrama de Casos de Uso](caso-de-uso-login-principal.png) 
 
 **Fluxo Alternativo A**
 
@@ -91,6 +91,8 @@
 3. O sistema informa que o login está incorreto.
 4. O usuário digita corretamente o login e clica no botão "ENTRA". 
 5. O sistema encaminha o usuário para a página do cliente.
+
+![Diagrama de Casos de Uso](fluxo-alternativo-usuario-nova.png)
 
 **Fluxo Alternativo c**
 1. O sistema exibirá um formulário com os campos login e senha.
@@ -126,6 +128,7 @@
 
 ![Diagrama de Casos de Uso](Fluxo-principal-funcionário.jpg)
 
+![Diagrama de Casos de Uso](caso-de-uso-fluxo-alternativo.png)
 
 ### CDU 05 Exclusão de usuário
 
