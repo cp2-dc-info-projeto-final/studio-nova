@@ -6,24 +6,30 @@ $email = $mysqli->real_escape_string($_POST['email']);
 $senha = $mysqli->real_escape_string($_POST['senha']);
 
 
- $sql_code = "SELECT * FROM  usuario WHERE email = '$email' AND senha= '$senha'";
+ $sql_code = "SELECT * FROM  usuario WHERE email = '$email'";
  $sql_query = $mysqli->query($sql_code) or die ("Falha na execusão do código:" . $mysqli->error);
 
   $quantidade = $sql_query->num_rows;
 
-  $sql_code_ad = "SELECT * FROM  administrador WHERE email = '$email' AND senha= '$senha'";
+  $sql_code_ad = "SELECT * FROM  administrador WHERE email = '$email'";
   $sql_query_ad = $mysqli->query($sql_code_ad) or die ("Falha na execusão do código:" . $mysqli->error);
 
   $quantidade_ad = $sql_query_ad->num_rows;
 
-  $sql_code_fun = "SELECT * FROM  funcionario WHERE email = '$email' AND senha= '$senha'";
+  $sql_code_fun = "SELECT * FROM  funcionario WHERE email = '$email'";
   $sql_query_fun = $mysqli->query($sql_code_fun) or die ("Falha na execusão do código:" . $mysqli->error);
 
   $quantidade_fun = $sql_query_fun->num_rows;
  
 
   if($quantidade == 1 )
-  { 
+  {
+       $cliente = mysqli_fetch_array($quantidade);
+       if(!password_verify($senha, $cliente['senha']))
+       {
+            echo "Senha inválida!";
+            echo "<p><a href='login.html'>Página de login</a></p>";
+       }
       $usuario = $sql_query->fetch_assoc();
       session_start();
       $_SESSION['id'] = $usuario ['id'];
@@ -35,7 +41,13 @@ $senha = $mysqli->real_escape_string($_POST['senha']);
   }
   
   if($quantidade_ad == 1 )
-  { 
+  {    
+       $administrador = mysqli_fetch_array($quantidade_ad);
+       if(!password_verify($senha, $administrador['senha']))
+       {
+            echo "Senha inválida!";
+            echo "<p><a href='login.html'>Página de login</a></p>";
+       }
       $administrador = $sql_query_ad->fetch_assoc();
       session_start();
       $_SESSION['id'] = $administrador ['id'];
@@ -47,6 +59,12 @@ $senha = $mysqli->real_escape_string($_POST['senha']);
   }
   if($quantidade_fun == 1)
   {
+       $funcionario = mysqli_fetch_array($quantidade_fun);
+       if(!password_verify($senha, $funcionario['senha']))
+       {
+            echo "Senha inválida!";
+            echo "<p><a href='login.html'>Página de login</a></p>";
+       }
       $funcionario = $sql_query_fun->fetch_assoc();
       session_start();
       $_SESSION['id'] = $funcionario ['id'];
