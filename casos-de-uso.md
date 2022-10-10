@@ -92,7 +92,7 @@
 4. O usuário digita corretamente o login e clica no botão "ENTRA". 
 5. O sistema encaminha o usuário para a página do cliente.
 
-![Diagrama de Casos de Uso](.png)
+![Diagrama de Casos de Uso](fluxo-alternativo-usuario-nova.png)
 
 **Fluxo Alternativo c**
 1. O sistema exibirá um formulário com os campos login e senha.
