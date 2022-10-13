@@ -83,8 +83,8 @@
                             {   
 
                                 $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
-                                $sql = "INSERT INTO usuario (nome,email,senha,tipo)";
-                                $sql .= "VALUES ('$nome','$email','$senha2','$tipo');";  
+                                $sql = "INSERT INTO usuario (nome,email,senha)";
+                                $sql .= "VALUES ('$nome','$email','$senha2');";  
                                 
                                 session_start();
                                 $_SESSION['id'] = $nome;

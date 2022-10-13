@@ -6,6 +6,11 @@
 -- Tempo de geração: 11-Out-2022 às 04:57
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 7.4.29
+CREATE DATABASE IF NOT EXISTS novastudio DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE novastudio;
+DROP USER IF EXISTS 'nova'@'localhost';
+CREATE USER 'nova'@'localhost' IDENTIFIED BY 'admin';
+GRANT ALL PRIVILEGES ON novastudio.* TO 'nova'@'localhost';
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,6 +32,7 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `administrador`
 --
 
+DROP TABLE IF EXISTS `administrador`;
 CREATE TABLE `administrador` (
   `id` int(10) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -45,7 +51,7 @@ INSERT INTO `administrador` (`id`, `email`, `senha`) VALUES
 --
 -- Estrutura da tabela `funcionario`
 --
-
+DROP TABLE IF EXISTS `funcionario`;
 CREATE TABLE `funcionario` (
   `id_funcionario` int(10) NOT NULL,
   `nome` varchar(100) NOT NULL,
@@ -67,7 +73,7 @@ INSERT INTO `funcionario` (`id_funcionario`, `nome`, `email`, `senha`, `cpf`, `t
 --
 -- Estrutura da tabela `servicos`
 --
-
+DROP TABLE IF EXISTS `servicos`;
 CREATE TABLE `servicos` (
   `id` int(11) NOT NULL,
   `nome` int(11) NOT NULL,
@@ -80,7 +86,7 @@ CREATE TABLE `servicos` (
 --
 -- Estrutura da tabela `usuario`
 --
-
+DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `id` int(20) NOT NULL,
   `nome` varchar(100) NOT NULL,

@@ -36,7 +36,7 @@
                 </a>
             </li>
             <li class="list"></li>
-                <a href="">
+                <a href="logout.php">
                     <span class="icon"></span>
                     <span class="list">Sair</span> 
                 </a>

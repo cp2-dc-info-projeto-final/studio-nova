@@ -18,7 +18,7 @@
     {
         if($tipo == "cliente"){
             include "conecta.php";
-            $sql = "SELECT * FROM cliente WHERE email = '$email';";
+            $sql = "SELECT * FROM usuario WHERE email = '$email';";
             $res = mysqli_query($mysqli, $sql);
         }
         if($tipo == "funcionario"){

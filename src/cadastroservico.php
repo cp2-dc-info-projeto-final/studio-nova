@@ -59,10 +59,9 @@
                                 $nome = $_POST ["nome"];
                                 $preco = $_POST ["preco"];
                                 $duracao = $_POST ["duracao"];
-                        
+
                                 $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
-                                $sql = "INSERT INTO servico (nome,preco,duracao)";
-                                $sql .= "VALUES ('$nome','$preco','$duracao');";  
+                                $sql = "INSERT INTO servicos (nome,preco,duracao) VALUES ('$nome','$preco','$duracao');";  
                                 mysqli_query($mysqli,$sql);
                                 mysqli_close($mysqli);
 
