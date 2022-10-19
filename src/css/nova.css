@@ -123,13 +123,52 @@ form .input-group input{
 h1{
     color: rgb(213, 107, 130);
 }
-
+.btn-cancelar{
+    background-color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    color: rgb(213, 107, 130);
+    font-size: 20px;
+    text-decoration: none;
+    
+}
+.confirma {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(77, 77, 77, 0.7);
+    transition: all .4s;
+}
+.confirma-conteudo {
+    position: relative;
+    width: 500px;
+    max-width: 90%;
+    background-color: white;
+    padding: 1em 2em;
+}
+.confirma:target{
+    visibility: visible;
+    opacity: 1;
+}
 .navigation{
     position: relative;
     height: 40vh;
     background: rgb(30, 24, 35);
-    width: 20vh;
-    box-shadow: rgb(213, 107, 130);
+    width: 70px;
+    box-shadow: 10px 0 0 rgb(213, 107, 130);
+    border-left: 10px solid rgb(30, 24, 35);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.navigatiom:hover{
+    width: 300px;
 }
 .navigation ul{
     position: absolute;
@@ -143,6 +182,8 @@ h1{
     position: relative;
     list-style: none;
     width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 .navigation ul li a{
     position: relative;
@@ -153,8 +194,23 @@ h1{
 .navigation ul li a .icon{
     position: relative;
     display: block;
-    min-width: 30px;
-    height: 30px;
+    min-width: 60px;
+    height: 60px;
     text-align: center;
-    line-height: 40px;
+    line-height: 70px;
+}
+.navigation ul li a .icon svg{
+    font-size: 1.5rem;
+    z-index: 1;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+.navigation ul li :active{
+    background: rgb(213, 107, 130);
 }
