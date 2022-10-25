@@ -36,36 +36,36 @@
             
                 <div class="input-group">
                     <label for="nome">Informe o nome do serviço</label>
-                    <input type="text" name="nome" placeholder=" nome do serviço" title="formato" required>
+                    <input type="text" name="nome" placeholder=" Nome do serviço" title="formato" required>
                 </div>
                 <div class="input-group">
                     <label for="preco">Informe o preço do serviço</label>
-                    <input type="text" name="preco" placeholder=" preço do serviço" title="formato" required>
+                    <input type="text" name="preco" placeholder=" Preço do serviço" title="formato" required>
                 </div>
                 <div class="input-group">
                     <label for="duracao">Informe a duração do serviço</label>
-                    <input type="text" name="duracao" placeholder=" duração do serviço em minutos" title="formato" required>
+                    <input type="text" name="duracao" placeholder=" Duração do serviço em minutos" title="formato" required>
                 </div>
-                
-                
-            
+                 
                 <?php
     
                     session_start();
                     include_once("conecta.php");
 
-                        if(isset($_POST["nome"]) || isset($_POST["preco"]) || isset($_POST["duracao"]) ) 
+                        if(isset($_POST["nome"]) && isset($_POST["preco"]) && isset($_POST["duracao"]) ) 
                         {
                                 $nome = $_POST ["nome"];
                                 $preco = $_POST ["preco"];
                                 $duracao = $_POST ["duracao"];
-
+                                $erro = 0;
+                                
                                 $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
                                 $sql = "INSERT INTO servicos (nome,preco,duracao) VALUES ('$nome','$preco','$duracao');";  
+                                
                                 mysqli_query($mysqli,$sql);
                                 mysqli_close($mysqli);
 
-                                echo "serviço cadastrado com sucesso!<br>";
+                                echo "Serviço cadastrado com sucesso!<br>";
                     }
                 ?>     
                 <input type="submit" class="btn" value="Cadastrar serviço">

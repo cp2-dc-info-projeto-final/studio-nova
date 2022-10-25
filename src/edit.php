@@ -1,7 +1,7 @@
 <?php 
     include "conecta.php";
 
-    if(isset($_GET["id"]) || $_GET["id"] != ""){
+    if(isset($_GET["id"]) && $_GET["id"] != ""){
         
         $id = $_GET["id"];
         $sql = "SELECT * FROM usuario WHERE id = $id;"; 
@@ -9,7 +9,7 @@
         $usuario = mysqli_fetch_array($res);
     }
     
-    if(isset($_GET["id_funcionario"]) || $_GET["id_funcionario"] != ""){
+    if(isset($_GET["id_funcionario"]) && $_GET["id_funcionario"] != ""){
     
         $id_fun = $_GET["id_funcionario"];
         $sql = "SELECT * FROM funcionario WHERE id_funcionario = $id_fun;"; 

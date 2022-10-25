@@ -10,11 +10,11 @@
 <body>
 <?php
     include "conecta.php";
-     
+
     
-    if(isset($_GET["id"]) && $_GET["id"] != ""){
+    if(isset($id_cliente) && $id_cliente != ""){
     
-        $id = $_GET["id"];
+        $id = $id_cliente;
         $sql = "DELETE FROM usuario WHERE id = $id;"; 
         mysqli_query($mysqli,$sql);
         echo "Cliente excluído com sucesso!<br>";

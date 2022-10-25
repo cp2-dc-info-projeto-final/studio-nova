@@ -1,4 +1,6 @@
-
+<?php
+include "autentica.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,8 +37,7 @@
   
   <main>
   <?php
-    session_start();
-    include_once('conecta.php');
+    include "conecta.php";
     
     
     if(!empty($_GET['search']))
@@ -67,7 +68,7 @@
        
                
     }
-             $sql = "SELECT * FROM usuario;"; 
+                $sql = "SELECT * FROM usuario;"; 
                 $res = mysqli_query($mysqli,$sql);
                 $linhas = mysqli_num_rows($res);
        
@@ -78,23 +79,23 @@
                     echo "<p>E-mail: ".$cliente["email"]."</p>";
                     echo "<p><a href='edit.php?id=".$cliente["id"]."'>
                     Editar cliente</a></p>";
-                    echo "<p><a data-bs-toggle='modal' data-bs-target='#modal'> Excluir cliente</a></p>";
+                    echo "<p><a href='excluir.php?id=".$cliente["id"]."'> Excluir cliente</a></p>";
                 
                 }
 
 ?>
   </main>
     </div>
-    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-sm">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <a href="excluir.php">Sim</a>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    </div>
-                </div>
-    </div>          
+   <!--
+    <div id="botao-confirma" class="confirma">
+        <div class="confirma-conteudo">
+            <h1>Deseja excluir esse usuário?</h1><br>
+            <a href="excluir.php" class="btn1">SIM</a>
+            <a href="" class="btn-cancelar">Cancelar</a>
+
+        </div> 
+    </div>
+    -->      
 </body>
 <script>
     var search = document.getElementById('pesquisar');
