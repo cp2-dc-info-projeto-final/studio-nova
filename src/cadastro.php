@@ -67,6 +67,15 @@
                             $senha1 = $_POST ["senha1"];
                             $senha2 = $_POST ["senha2"];
                             $erro = 0;
+
+                            $sql = "SELECT * FROM usuario WHERE email = '$email';";
+                            $res = mysqli_query($mysqli, $sql);
+                    
+                            //testa se já existe o e-mail cadastrado
+                            if(mysqli_num_rows($res) == 1){
+                                echo "E-mail já cadastrado. Por favor, digite outro e-mail.<br>";
+                                $erro = 1;
+                            }
     
                         if(($senha1 != $senha2))
                             {
