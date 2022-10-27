@@ -44,7 +44,7 @@
             
             $usuario = mysqli_fetch_array($res);
             // testa se a senha está errada
-            if($senha != $usuario["senha"]){
+            if(!hash_equals ($senha, $usuario["senha"])){
                 unset($_SESSION["email"]);
                 unset($_SESSION["senha"]);
                 echo "Você não fez o login!";

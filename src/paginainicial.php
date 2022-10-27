@@ -23,6 +23,7 @@
     </nav>
     <div class="sidebar">
         <center>
+            <h2><?php echo $_SESSION ['bemvindo']; ?></h2>
             <h2><?php echo $_SESSION ['nome']; ?></h2>
         </center>
         <a href="">

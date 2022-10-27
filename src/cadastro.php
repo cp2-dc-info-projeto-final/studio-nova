@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/nova.css">
     <title>cadastro</title>
-    <style>
+    <style> 
 
         body{
             background-color: rgb(30, 24, 35);
@@ -98,14 +98,16 @@
                         if($erro == 0)
                             {   
 
+                                $senha_cript = password_hash($senha2 , PASSWORD_DEFAULT);
                                 $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
-                                $sql = "INSERT INTO usuario (nome,email,sobrenome,senha) VALUES ('$nome','$email','$sobrenome','$senha2');";  
+                                $sql = "INSERT INTO usuario (nome,email,sobrenome,senha) VALUES ('$nome','$email','$sobrenome','$senha_cript');";  
                                 
                                 session_start();
                                 $_SESSION['nome'] = $nome;
                                 $_SESSION['email'] = $email;
-                                $_SESSION['senha'] = $senha2;
+                                $_SESSION['senha'] = $senha_cript;
                                 $_SESSION['tipo'] = "cliente";
+                                $_SESSION['bemvindo'] = "Bem vindo !";
 
                                 mysqli_query($mysqli,$sql);
                                 mysqli_close($mysqli);
