@@ -22,12 +22,14 @@
         </nav>
         <main>
         <br>
-        <a href="cadastrofun.php" >Cadastrar funcionários</a><br>
-        <a href="listafun.php" >Listar funcionários</a><br>
-        <a href="listacli.php" >Clientes</a><br>
-        <a href="Agendamentos.php">Agendamentos</a><br>
-        <a href="cadastroadm.php">Criar novo administrador</a><br>
-        <a href="cadastroservico.php">Cadastrar novo serviço</a><br>
+        <center>
+            <a href="cadastrofun.php" >Cadastrar funcionários</a><br>
+            <a href="listafun.php" >Listar funcionários</a><br>
+            <a href="listacli.php" >Clientes</a><br>
+            <a href="Agendamentos.php">Agendamentos</a><br>
+            <a href="cadastroadm.php">Criar novo administrador</a><br>
+            <a href="cadastroservico.php">Cadastrar novo serviço</a><br>
+        </center>
         </main>
         
         <footer>

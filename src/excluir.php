@@ -13,7 +13,12 @@
 
     
     if(isset($id_cliente) && $id_cliente != ""){
-    
+        
+        if ($mysqli->connect_errno) {
+            printf("Connect failed: %s\n", $mysqli->connect_error);
+            exit();
+        }
+
         $id = $id_cliente;
         $sql = "DELETE FROM usuario WHERE id = $id;"; 
         mysqli_query($mysqli,$sql);

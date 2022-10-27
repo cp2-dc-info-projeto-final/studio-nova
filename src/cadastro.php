@@ -35,17 +35,23 @@
                 <p>É necessário estar cadastrado para fazer o agendamento</p>
             
                 <p>Já possui conta ?</p>
-                <a href="login.php">Clique aqui</a>
+                <a href="login.php">Clique aqui</a><br>
                 
-                <div class="input-group">
-                    <label for="nome">Nome completo</label>
-                    <input type="text" name="nome" placeholder=" Digite aqui seu nome completo" required>
+
+                <div class="input-group w50">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" placeholder=" Digite aqui seu nome" required>
+                </div>
+                <div class="input-group w50">
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" name="sobrenome" placeholder=" Digite aqui seu sobrenome" required>
                 </div>
                
                 <div class="input-group">
                     <label for="email">Informe seu e-mail</label>
                     <input type="text" name="email" placeholder=" Digite aqui seu email" title="formato" pattern="[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
                 </div>
+
                 <div class="input-group w50">
                     <label for="senha1">Crie sua senha</label>
                     <input type="password" name="senha1" placeholder=" Crie sua senha" maxlength="14" required>
@@ -59,10 +65,11 @@
                     session_start();
                     include_once("conecta.php");
 
-                    if(isset($_POST["nome"]) || isset($_POST["email"]) || isset($_POST["senha1"]) || isset($_POST["senha2"]) ) 
+                    if(isset($_POST["nome"]) || isset($_POST["sobrenome"]) ||isset($_POST["email"]) || isset($_POST["senha1"]) || isset($_POST["senha2"])  ) 
                         {
 
                             $nome = $_POST ["nome"];
+                            $sobrenome = $_POST ["sobrenome"];
                             $email = $_POST ["email"];
                             $senha1 = $_POST ["senha1"];
                             $senha2 = $_POST ["senha2"];
@@ -92,7 +99,7 @@
                             {   
 
                                 $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
-                                $sql = "INSERT INTO usuario (nome,email,senha) VALUES ('$nome','$email','$senha2');";  
+                                $sql = "INSERT INTO usuario (nome,email,sobrenome,senha) VALUES ('$nome','$email','$sobrenome','$senha2');";  
                                 
                                 session_start();
                                 $_SESSION['id'] = $nome;

@@ -13,12 +13,14 @@
 <body>
     
     <nav>
-        <a class="logo" href=""><img src="img/logo.png" alt=""></a>
+            <a class="logo" href=""><img src="img/logo.png" alt=""></a>
+            <a href="#botao-confirma">Sair</a>
     </nav>
-    <div class="navigation">
-        <ul>
-            <li class="list"></li>
-                <a href="">
+    <div class="sidebar">
+        <center>
+            <h2><?php echo $_SESSION ['id']; ?></h2>
+        </center>
+        <a href="">
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
@@ -27,8 +29,6 @@
                     </span>
                     <span class="title">Início</span> 
                 </a>
-            </li>
-            <li class="list"></li>
                 <a href="">
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
@@ -37,8 +37,6 @@
                     </span>
                     <span class="title">Meu perfil</span> 
                 </a>
-            </li>
-            <li class="list"></li>
                 <a href="">
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder" viewBox="0 0 16 16">
@@ -47,8 +45,6 @@
                     </span>
                     <span class="title">Meus agendamentos</span> 
                 </a>
-            </li>
-            <li class="list"></li>
                 <a href="#botao-confirma">
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
@@ -58,9 +54,10 @@
                     </span>
                     <span class="title">Sair</span> 
                 </a>
-            </li>
-        </ul>
+        
     </div>
+    
+
     <div id="botao-confirma" class="confirma">
         <div class="confirma-conteudo">
             <h1>Tem certeza que encerrar sua sessão?</h1><br>
