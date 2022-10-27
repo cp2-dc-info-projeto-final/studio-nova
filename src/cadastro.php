@@ -102,7 +102,7 @@
                                 $sql = "INSERT INTO usuario (nome,email,sobrenome,senha) VALUES ('$nome','$email','$sobrenome','$senha2');";  
                                 
                                 session_start();
-                                $_SESSION['id'] = $nome;
+                                $_SESSION['nome'] = $nome;
                                 $_SESSION['email'] = $email;
                                 $_SESSION['senha'] = $senha2;
                                 $_SESSION['tipo'] = "cliente";

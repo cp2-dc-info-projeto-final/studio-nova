@@ -27,6 +27,7 @@ $senha = $mysqli->real_escape_string($_POST['senha']);
             $usuario = $sql_query->fetch_assoc();
             session_start();
             $_SESSION['id'] = $usuario ['id'];
+            $_SESSION['nome'] = $usuario ['nome'];
             $_SESSION['email'] = $usuario ['email'];
             $_SESSION['senha'] = $usuario ['senha'];
             $_SESSION['tipo'] = "cliente";
