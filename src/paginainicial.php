@@ -1,5 +1,6 @@
 <?php
     include "autentica.php";
+    include "conecta.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,18 +12,24 @@
     <title>Página inicial</title>
 </head>
 <body>
+    
     <input type="checkbox" class="check">
+
+    <!-- barra de navegação --> 
     <nav>
-            <label for="check">
-                <svg id="sidebar-btn" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <a  href="#mySidenav" onclick="openNav()">     
+                <svg id="sidebar-btn" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                 </svg>
+                </a>
             </label>
             <a class="logo" href=""><img src="img/logo.png" alt=""></a>
             <a href="#botao-confirma">Sair</a>
     </nav>
-    <div class="sidebar">
+    <!-- menu lateral --> 
+    <div class="sidebar" id="mySidenav">
         <center>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <h2><?php echo $_SESSION ['bemvindo']; ?></h2>
             <h2><?php echo $_SESSION ['nome']; ?></h2>
         </center>
@@ -63,6 +70,7 @@
         
     </div>
     
+<!-- Caixa de confirmação -->    
 
     <div id="botao-confirma" class="confirma">
         <div class="confirma-conteudo">
@@ -72,5 +80,14 @@
 
         </div>
     </div>
+    <!-- abrir o navbar--> 
+    <script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 </body>
 </html>

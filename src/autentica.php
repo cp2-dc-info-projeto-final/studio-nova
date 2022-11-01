@@ -21,18 +21,18 @@
             $sql = "SELECT * FROM usuario WHERE email = '$email';";
             $res = mysqli_query($mysqli, $sql);
         }
-        if($tipo == "funcionario"){
+        else if($tipo == "funcionario"){
             include "conecta.php";
             $sql = "SELECT * FROM funcionario WHERE email = '$email';";
             $res = mysqli_query($mysqli, $sql);
         }        
-        if($tipo == "administrador"){
+        else if($tipo == "administrador"){
             include "conecta.php";
             $sql = "SELECT * FROM administrador WHERE email = '$email';";
             $res = mysqli_query($mysqli, $sql);
         }
         // testa se não encontrou o e-mail no banco de dados
-        if(mysqli_num_rows($res) != 1){
+        else if(mysqli_num_rows($res) != 1){
             unset($_SESSION["email"]);
             unset($_SESSION["senha"]);
             echo "<p>Você não fez o login!<p>";

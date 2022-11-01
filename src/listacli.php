@@ -10,14 +10,6 @@ include "autentica.php";
     <link rel="stylesheet" href="css/nova.css">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-<style>
-    .box-search{
-    display: flex;
-    justify-content: center;
-    gap: .1%;
-    width: 30vh;
-    }
-</style>
 </head>
 <body>
         <nav>
@@ -86,16 +78,6 @@ include "autentica.php";
 ?>
   </main>
     </div>
-   <!--
-    <div id="botao-confirma" class="confirma">
-        <div class="confirma-conteudo">
-            <h1>Deseja excluir esse usuário?</h1><br>
-            <a href="excluir.php" class="btn1">SIM</a>
-            <a href="" class="btn-cancelar">Cancelar</a>
-
-        </div> 
-    </div>
-    -->      
 </body>
 <script>
     var search = document.getElementById('pesquisar');
@@ -109,7 +91,7 @@ include "autentica.php";
 
     function searchData()
     {
-        window.location = 'listacli.php?search='+search.value;
+        window.location = 'busca.php?search='+search.value;
     }
 </script>
 </html>

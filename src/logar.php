@@ -52,7 +52,6 @@ $senha = $mysqli->real_escape_string($_POST['senha']);
               echo "<p><a href='login.php'>Página de login</a></p>";
             }
 
-            $administrador = $sql_query_ad->fetch_assoc();
             session_start();
             $_SESSION['id'] = $administrador ['id'];
             $_SESSION['email'] = $administrador ['email'];
@@ -70,7 +69,6 @@ $senha = $mysqli->real_escape_string($_POST['senha']);
               echo "<p><a href='login.php'>Página de login</a></p>";
             }            
 
-            $funcionario = $sql_query_fun->fetch_assoc();
             session_start();
             $_SESSION['id'] = $funcionario ['id'];
             $_SESSION['email'] = $funcionario ['email'];

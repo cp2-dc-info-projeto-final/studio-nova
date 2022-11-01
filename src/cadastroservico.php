@@ -62,11 +62,13 @@
                                 $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
                                 $sql = "INSERT INTO servicos (nome,preco,duracao) VALUES ('$nome','$preco','$duracao');";  
                                 
+                                echo "Serviço cadastrado com sucesso!<br>"; 
+
                                 mysqli_query($mysqli,$sql);
                                 mysqli_close($mysqli);
 
-                                echo "Serviço cadastrado com sucesso!<br>";
-                    }
+                        }
+
                 ?>     
                 <input type="submit" class="btn" value="Cadastrar serviço">
         
