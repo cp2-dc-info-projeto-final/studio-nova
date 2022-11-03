@@ -13,7 +13,6 @@
 </head>
 <body>
     
-    <input type="checkbox" class="check">
 
     <!-- barra de navegação --> 
     <nav>

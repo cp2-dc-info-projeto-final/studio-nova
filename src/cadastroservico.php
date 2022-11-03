@@ -57,14 +57,16 @@
                                 $nome = $_POST ["nome"];
                                 $preco = $_POST ["preco"];
                                 $duracao = $_POST ["duracao"];
-                                $erro = 0;
                                 
                                 $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
                                 $sql = "INSERT INTO servicos (nome,preco,duracao) VALUES ('$nome','$preco','$duracao');";  
                                 
+                                if (!mysqli_query($mysqli,$sql)) {
+                                        printf("Error message: %s\n", mysqli_error($mysqli));
+                                    }
+
                                 echo "Serviço cadastrado com sucesso!<br>"; 
 
-                                mysqli_query($mysqli,$sql);
                                 mysqli_close($mysqli);
 
                         }

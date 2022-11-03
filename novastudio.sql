@@ -14,6 +14,7 @@ CREATE USER 'nova'@'localhost' IDENTIFIED BY 'admin';
 GRANT ALL PRIVILEGES ON novastudio.* TO 'nova'@'localhost';
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -32,7 +33,7 @@ SET time_zone = "+00:00";
 --
 -- Estrutura da tabela `administrador`
 --
-DROP TABLE IF EXISTS `administrador`;
+
 CREATE TABLE `administrador` (
   `id` int(10) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -44,14 +45,14 @@ CREATE TABLE `administrador` (
 --
 
 INSERT INTO `administrador` (`id`, `email`, `senha`) VALUES
-(1, 'admin@admin.com', 'adminadmin');
+(1, 'admin@admin.com', '$2y$10$01JccDo.xTZQrfX0rTIcCueK1lvjmZQQVdLaYcNmkpmXAwY8mbCEq');
 
 -- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `funcionario`
 --
-DROP TABLE IF EXISTS `funcionario`;
+
 CREATE TABLE `funcionario` (
   `id_funcionario` int(10) NOT NULL,
   `nome` varchar(100) NOT NULL,
@@ -73,20 +74,28 @@ INSERT INTO `funcionario` (`id_funcionario`, `nome`, `email`, `senha`, `cpf`, `t
 --
 -- Estrutura da tabela `servicos`
 --
-DROP TABLE IF EXISTS `servicos`;
+
 CREATE TABLE `servicos` (
   `id` int(11) NOT NULL,
-  `nome` int(11) NOT NULL,
+  `nome` varchar(11) NOT NULL,
   `preco` int(11) NOT NULL,
   `duracao` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `servicos`
+--
+
+INSERT INTO `servicos` (`id`, `nome`, `preco`, `duracao`) VALUES
+(1, 'make ', 123, 123),
+(2, 'make ', 123, 123);
 
 -- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `usuario`
 --
-DROP TABLE IF EXISTS `usuario`;
+
 CREATE TABLE `usuario` (
   `id` int(20) NOT NULL,
   `nome` varchar(100) NOT NULL,
@@ -100,9 +109,13 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `nome`, `sobrenome`, `email`, `senha`) VALUES
-(1, 'naomi carneiro', '', 'naomi@gmail.com', 'naomiabraba'),
-(2, 'MATHEUS PEREIRA DA NOVA holanda', '', 'matheus@matheus.com', '12345678'),
-(3, 'MATHEUS', 'DA NOVA', 'mpereiranova@gmail.com', '12345678');
+(1, 'naomi ', 'carneiro', 'naomi@gmail.com', '$2y$10$i6KJVXPdXygdKLnxwjdJUuBIlnnhjEIJihB41f5.LoJcLZvopefJW'),
+(2, 'MATHEUS PEREIRA DA NOVA holanda', '', 'matheus@matheus.com', '$2y$10$B.Xf564TS9ubspXdA3AF6.V3xMNpgpHSUGOsH0wOCZuMSTIJOWozm'),
+(3, 'MATHEUS', 'DA NOVA', 'mpereiranova@gmail.com', '$2y$10$B.Xf564TS9ubspXdA3AF6.V3xMNpgpHSUGOsH0wOCZuMSTIJOWozm'),
+(4, 'matheus', 'Pereira', 'matheus@gmail.com', '$2y$10$ZDzCT56WxqT5qFlq8jgrfuvCcDbObedyYprg7aRjNtk/0j5iFD3/W'),
+(5, 'vladimir', 'pinho ', 'vladimir@santos.com', '$2y$10$/9fA8Wz2pyenDhC9MLTUeuGZFbFkgO9c0NXbiGV953ig8mDEiF4ua'),
+(6, 'matheus', 'Pereira', 'matheus@teste.com', '$2y$10$LeQgk74drpvhTI3rK0OpauNpKvjoAKUjDP5xNzVODFwnIsz8xNh/C'),
+(7, 'clecio ', 'santos', 'clecio@teste.com', '$2y$10$NFVyfTjFk7UkB5BTFPUlBOm8/MRzKaFVoLMsoQMb498tEOqEvDhBO');
 
 --
 -- Indexes for dumped tables
@@ -148,10 +161,15 @@ ALTER TABLE `administrador`
 ALTER TABLE `funcionario`
   MODIFY `id_funcionario` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT for table `servicos`
+--
+ALTER TABLE `servicos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;COMMIT;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
