@@ -33,7 +33,7 @@ SET time_zone = "+00:00";
 --
 -- Estrutura da tabela `administrador`
 --
-
+DROP TABLE IF EXISTS `administrador`;
 CREATE TABLE `administrador` (
   `id` int(10) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -53,6 +53,7 @@ INSERT INTO `administrador` (`id`, `email`, `senha`) VALUES
 -- Estrutura da tabela `funcionario`
 --
 
+DROP TABLE IF EXISTS `funcionario`;
 CREATE TABLE `funcionario` (
   `id_funcionario` int(10) NOT NULL,
   `nome` varchar(100) NOT NULL,
@@ -74,7 +75,7 @@ INSERT INTO `funcionario` (`id_funcionario`, `nome`, `email`, `senha`, `cpf`, `t
 --
 -- Estrutura da tabela `servicos`
 --
-
+DROP TABLE IF EXISTS `servicos`;
 CREATE TABLE `servicos` (
   `id` int(11) NOT NULL,
   `nome` varchar(11) NOT NULL,
@@ -95,7 +96,7 @@ INSERT INTO `servicos` (`id`, `nome`, `preco`, `duracao`) VALUES
 --
 -- Estrutura da tabela `usuario`
 --
-
+DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `id` int(20) NOT NULL,
   `nome` varchar(100) NOT NULL,

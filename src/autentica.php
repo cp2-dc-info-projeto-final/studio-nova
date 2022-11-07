@@ -2,16 +2,20 @@
     session_start();
     if(isset($_SESSION["email"])){
         $email = $_SESSION["email"];
+        echo"email vazio";
     }
     if(isset($_SESSION["senha"])){
         $senha = $_SESSION["senha"];
+        echo"senha vazio";
     }
     if(isset($_SESSION["tipo"])){
         $tipo = $_SESSION["tipo"];
+        echo"tipo vazio";
     }
     if(empty($email) OR empty($senha) OR empty($tipo)){
         echo "Você não fez o login!";
         echo "<p><a href='login.php'>Página de login</a></p>";
+        echo "1";
         exit;
     }
     else
@@ -49,6 +53,7 @@
                 unset($_SESSION["senha"]);
                 echo "Você não fez o login!";
                 echo "<p><a href='login.php'>Página de login</a></p>";
+                echo"2";
                 exit;
             }
         }
