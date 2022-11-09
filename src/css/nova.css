@@ -168,7 +168,6 @@ h1{
     width: 30vh;
     }
 .sidebar{
-    visibility: hidden;
     position: fixed;
     width: 35vh;
     height: 100%;
@@ -203,6 +202,32 @@ h1{
     padding-right: 10px;
 
 }
+label #sidebar_btn{
+    z-index: 1;
+    position: fixed;
+    left: 300px;
+    color: rgb(213, 107, 130);
+    font-size: 30px;
+    margin: 5px 0;
+    cursor: pointer;
+    transform: 0.5s;
+    transition-property: color;
+}
+label #sidebar_btn:hover{
+    color: white;
+}
+#check:checked ~ .sidebar{
+    left: -190px;
+}
+#check:checked ~ .sidebar a span{
+    display: none;
+}
+#check:checked ~ .sidebar a{
+    font-size: 30px;
+    margin-left: 170px;
+    width: 80px;
+}
 .sidebar:target{
     visibility: visible;
 }
+
