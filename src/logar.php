@@ -65,9 +65,8 @@ $senha = $mysqli->real_escape_string($_POST['senha']);
             header("location: administracao.php");
          }
         }
-        }
 
-  else
+        if($quantidade_ad != 1)
   {       
         $sql_code_fun = "SELECT * FROM  funcionario WHERE email = '$email'";
         $sql_query_fun = $mysqli->query($sql_code_fun) or die ("Falha na execusão do código:" . $mysqli->error);
@@ -103,6 +102,10 @@ $senha = $mysqli->real_escape_string($_POST['senha']);
         echo '</script>';
         }
 }
+
+        }
+
+ 
     
 
 ?>
