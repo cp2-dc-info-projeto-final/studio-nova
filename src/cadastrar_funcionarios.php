@@ -28,9 +28,10 @@
 
     if($erro == 0)
     {
+        $senha_cript = password_hash($senha2 , PASSWORD_DEFAULT);
         $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
         $sql = "INSERT INTO funcionario (nome,email,senha,cpf,tel)";
-        $sql .= "VALUES ('$nome','$email','$senha2','$cpf','$tel');";  
+        $sql .= "VALUES ('$nome','$email','$senha_cript','$cpf','$tel');";  
         mysqli_query($mysqli,$sql);
         mysqli_close($mysqli);
 
