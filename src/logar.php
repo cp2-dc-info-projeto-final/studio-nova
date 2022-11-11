@@ -36,7 +36,8 @@ $senha = $mysqli->real_escape_string($_POST['senha']);
             
   }
   
-  else if($quantidade != 1){
+  else if($quantidade != 1)
+  {
             
             $sql_code_ad = "SELECT * FROM  administrador WHERE email = '$email'";
             $sql_query_ad = $mysqli->query($sql_code_ad) or die ("Falha na execusão do código:" . $mysqli->error);
@@ -67,43 +68,44 @@ $senha = $mysqli->real_escape_string($_POST['senha']);
         }
 
         if($quantidade_ad != 1)
-  {       
-        $sql_code_fun = "SELECT * FROM  funcionario WHERE email = '$email'";
-        $sql_query_fun = $mysqli->query($sql_code_fun) or die ("Falha na execusão do código:" . $mysqli->error);
+        {       
+          $sql_code_fun = "SELECT * FROM  funcionario WHERE email = '$email'";
+          $sql_query_fun = $mysqli->query($sql_code_fun) or die ("Falha na execusão do código:" . $mysqli->error);
 
-        $quantidade_fun = $sql_query_fun->num_rows;
+          $quantidade_fun = $sql_query_fun->num_rows;
 
-        if($quantidade_fun == 1)
-        {
+          if($quantidade_fun == 1)
+          {
 
-            $sql_code = "SELECT * FROM funcionario WHERE senha = '$senha'";
+              $sql_code = "SELECT * FROM funcionario WHERE senha = '$senha'";
 
-            $funcionario = mysqli_fetch_array($sql_query_fun);
-             if(!password_verify($senha, $funcionario['senha']))
-             {
-              echo "Senha inválida!";
-              echo "<p><a href='login.php'>Página de login</a></p>";
-            }            
+              $funcionario = mysqli_fetch_array($sql_query_fun);
+              if(!password_verify($senha, $funcionario['senha']))
+                {
+                  echo "Senha inválida!";
+                  echo "<p><a href='login.php'>Página de login</a></p>";
+                }            
             
-            else{
-
-            session_start();
-            $_SESSION['id'] = $funcionario ['id'];
-            $_SESSION['email'] = $funcionario ['email'];
-            $_SESSION['senha'] = $funcionario ['senha'];
-            $_SESSION['tipo'] = "funcionario";
+              else
+                {
+                  session_start();
+                  $_SESSION['id'] = $funcionario ['id'];
+                  $_SESSION['email'] = $funcionario ['email'];
+                  $_SESSION['senha'] = $funcionario ['senha'];
+                  $_SESSION['tipo'] = "funcionario";
       
-            header("location: funcionarios.php");
-            }
-      }
-    else{
-        echo '<script type ="text/JavaScript">';  
-        echo 'alert("Nome de usuário ou senha incorretos")';  
-        echo '</script>';
+                  header("location: funcionarios.php");
+                }
+          }
+          else
+          {
+            echo '<script type ="text/JavaScript">';  
+            echo 'alert("Nome de usuário ou senha incorretos")';  
+            echo '</script>';
+          }
         }
-}
 
-        }
+  }
 
  
     

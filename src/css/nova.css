@@ -29,10 +29,25 @@ nav {
     height: 15vh;
 }
 main{
-    background: url("img/bg.jpg") no-repeat center center;
+    background:no-repeat center center;
     background-size: cover;
     height: 85vh;
     
+}
+main .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-text{
+    width: 50%;
+}
+main p{
+    color: white;
+}
+.main-text div{
+    display: flex;
+    align-items: center;
 }
 .nav-list {
     list-style: none;
@@ -48,9 +63,19 @@ main{
     font-size: 20px;
     margin-left: 32px;
 }
-img{
+#logo-nav{
     height: 15vh;
     
+}
+.img-container{
+    height: 40vh;
+    position: relative;
+}
+.container{
+    max-width: 210vh;
+    height: 60vh;
+    background-color: rgb(30, 24, 35);
+    margin: 0 auto;
 }
 .btn{
     background-color: rgb(213, 107, 130);

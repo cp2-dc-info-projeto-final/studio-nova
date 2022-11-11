@@ -13,25 +13,33 @@
 <body>
     <header>
         <nav>
-            <a class="logo" href=""><img src="img/logo.png" alt=""></a>
+            <a class="logo" href=""><img id="logo-nav" src="img/logo.png" alt=""></a>
             <ul class="nav-list">
-                <li><a href="">Início</a></li>
+                <li><a href="#home">Início</a></li>
                 <li><a href="">Serviços</a></li>
-                <li><a href="">Contatos</a></li>
+                <li><a href="#contatos">Contatos</a></li>
                 <li><a href="login.php" class="btn">Entrar</a></li>
                 <li><a href="cadastro.php">Cadastre-se</a></li>
             </ul>
         </nav>
     </header>
-    <section id="home">
-        <div class="home-container">
-       
-
-        </div>
-    </section>
-    <main>
         
+    <main>
+        <div class="container" id="home">
+            <div class="main-text">
+                <h1>Bem vinda ao Nova studio!!</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur incidunt ab molestiae quisquam minima dignissimos aliquam blanditiis ut expedita?</p>
+                <p>Deseja fazer um agendamento conosco?</p>
+                <a class="btn1" href="cadastro.php">Clique aqui</a>
+                
+                <div>
+                    <img id="img-container" src="img/logo.png" alt="">
+                </div>
+
+            </div>
+        </div>
     </main>
+    
     <footer>
         <nav>
             <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
