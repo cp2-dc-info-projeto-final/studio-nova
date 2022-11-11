@@ -27,7 +27,7 @@ include "autentica.php";
     </div>
         </nav>
   
-  <main>
+
   <?php
     include "conecta.php";
     
@@ -76,7 +76,7 @@ include "autentica.php";
                 }
 
 ?>
-  </main>
+  
     </div>
 </body>
 <script>

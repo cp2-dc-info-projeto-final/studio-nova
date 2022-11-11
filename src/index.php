@@ -29,17 +29,20 @@
             <div class="main-text">
                 <h1>Bem vinda ao Nova studio!!</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur incidunt ab molestiae quisquam minima dignissimos aliquam blanditiis ut expedita?</p>
-                <p>Deseja fazer um agendamento conosco?</p>
-                <a class="btn1" href="cadastro.php">Clique aqui</a>
                 
                 <div>
-                    <img id="img-container" src="img/logo.png" alt="">
+                <h2>Deseja fazer um agendamento conosco?</h2><br>
+                <p><a class="btn1" href="cadastro.php">Clique aqui</a></p>
+                </div>
+                
+                <div class="img-container">
+                    <img src="img/logo.png" alt="">
                 </div>
 
             </div>
         </div>
     </main>
-    
+     
     <footer>
         <nav>
             <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">

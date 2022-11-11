@@ -35,18 +35,21 @@ main{
     
 }
 main .container{
-    display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .main-text{
     width: 50%;
+    display: fixed;
+    margin-left: 10vh;
 }
 main p{
     color: white;
 }
+main h2{
+    color: white;
+}
 .main-text div{
-    display: flex;
     align-items: center;
 }
 .nav-list {
@@ -70,6 +73,10 @@ main p{
 .img-container{
     height: 40vh;
     position: relative;
+    display: flex;
+    margin-left: 100vh;
+    margin-bottom: 100vh;
+
 }
 .container{
     max-width: 210vh;
@@ -203,6 +210,10 @@ h1{
     transition: 0.5s;
     transition-property: left;
 
+}
+.sidebar:target{
+    visibility: visible;
+    opacity: 1;
 }
 .sidebar h2{
     color: white;
