@@ -27,6 +27,7 @@
     <main>
         <div class="container" id="home">
             <div class="main-text">
+                
                 <h1>Bem vinda ao Nova studio!!</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur incidunt ab molestiae quisquam minima dignissimos aliquam blanditiis ut expedita?</p>
                 

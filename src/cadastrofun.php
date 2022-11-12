@@ -24,7 +24,7 @@
 <body>
     <div class="box">
         <div class="img-box">
-            <a href="administracao.php"><img src="img/logo.png" alt="" class="img1"></a>
+            <a href="administracao.php"><img id="img1" src="img/logo.png" alt="" class="img1"></a>
         </div>
         <div class="form-box">
             <form action="cadastrar_funcionarios.php" method="POST">

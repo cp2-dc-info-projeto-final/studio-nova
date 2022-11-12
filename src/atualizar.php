@@ -3,16 +3,19 @@ include ("conecta.php");
 
 $nome = $_POST ["nome"];
 $email = $_POST ["email"];
-$senha1 =  $_POST ["senha1"];
-$senha2 = $_POST ["senha2"];
+$senha =  $_POST ["senha"];
 $id = $_POST ["id"];
 $id_fun = $_POST["id_fun"];
 $erro = 0;
 
-if(!hash_equals($senha1,$senha2)){
-    echo "senha incorreta";
-    echo "<a href='editusu.php'>Voltar para a edição</a>";
-    $erro == 1;
+$sql_code = "SELECT * FROM  usuario WHERE senha = '$senha'";
+$sql_query = $mysqli->query($sql_code);
+$usuario = mysqli_fetch_array($sql_query);
+if(!password_verify($senha, $usuario['senha']))
+{
+echo "Senha inválida! Tente novamente";
+echo "<p><a href='editusu.php'>voltar para edição</a></p>";
+$erro = 1;
 }
 
 if($id != 0 && $erro == 0){
