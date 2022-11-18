@@ -13,7 +13,7 @@ include "autentica.php";
 </head>
 <body>
         <nav>
-            <a class="logo" href="administracao.php"><img src="img/logo.png" alt=""></a>
+            <a class="logo" href="administracao.php"><img id="logo-nav" src="img/logo.png" alt=""></a>
             <ul class="nav-list">
                 <h1>Clientes</h1>        
             </ul>

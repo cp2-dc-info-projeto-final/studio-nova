@@ -73,6 +73,18 @@ INSERT INTO `funcionario` (`id_funcionario`, `nome`, `email`, `senha`, `cpf`, `t
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `recupera_senha`
+--
+DROP TABLE IF EXISTS `recupera_senha`;
+CREATE TABLE `recupera_senha` (
+  `id` int(100) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `rash` varchar(200) NOT NULL,
+  `status` int(20) NOT NULL DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
 -- Estrutura da tabela `servicos`
 --
 DROP TABLE IF EXISTS `servicos`;
@@ -135,6 +147,12 @@ ALTER TABLE `funcionario`
   ADD PRIMARY KEY (`id_funcionario`),
   ADD UNIQUE KEY `id_funcionario` (`id_funcionario`);
 
+-- Indexes for table `recupera_senha`
+--
+ALTER TABLE `recupera_senha`
+  ADD PRIMARY KEY (`id`);
+
+--
 --
 -- Indexes for table `servicos`
 --
@@ -161,6 +179,11 @@ ALTER TABLE `administrador`
 --
 ALTER TABLE `funcionario`
   MODIFY `id_funcionario` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `recupera_senha`
+--
+ALTER TABLE `recupera_senha`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `servicos`
 --
