@@ -215,6 +215,7 @@
                                     $mensagem = "
                                             <h2>Você solicitou uma nova senha?</h2>
                                             <h3>Se sim clique no link abaixo </h3>
+                                            <p><a href='http://127.0.0.1:8080/TCC-NOVA-STUDIO/studio-nova/src/alterar_senha.php'></a></p> 
                                             <h5>Caso você não tenha solicitado esse serviço verifique seus dados</h5>
                                     ";
                                     $mensagem .=  "</html></header>";
