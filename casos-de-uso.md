@@ -181,10 +181,26 @@
 
 
 **Fluxo Principal**
-1. O sistema vai apresenta ao cliente uma página com os serviços, horários disponiveis e tabela com preço de cada serviço.
-2. O cliente vai até a página com os horários disponiveis.
-3. Escolhe o serviço e agenda para o dia e a hora de sua preferência.
-4. O sistema vai marca o serviço com os profissional disponivel.
+1. O sistema vai apresenta ao cliente a interface onde ele pode escolher o serviço e o horário que deseja.
+2. O cliente clica no botão "Marcar".
+3. O sistema salva o agendamento.
+4. O sistema exibi a sequinte mensagem " Agendamento cadastrado com sucesso"
+5. O sistema redireciona o cliente para a página inicial. 
+
+
+
+
+**Fluxo Alternativo A**
+
+1. O sistema vai apresenta ao cliente a interface onde ele pode escolher o serviço e o horário que deseja. 
+3. o cliente clica no botão "Marcar.
+5. O sistema exibi a seguinte mensagem " Horário indisponível" 
+6. O sistema recarrega o formulário. 
+7. o cliente deseja remarcar o serviço.
+8. O cliente vai até a interface clica no botão "Remarcar". 
+9. o cliente atualiza o serviço ou o horário no formulario clica no botão "Marcar".
+10. O sistema vai exibir a seguinte mensagem " Agendamento cadastrado com sucesso"
+11. O sistema redireciona o cliente para a pagina inicial. 
  
 
 
@@ -192,13 +208,26 @@
 
 
 **Fluxo Principal**
-1. O sistema vai apresenta ao cliente uma página com os serviços, horários disponiveis de cada serviço.
-2. O cliente vai até a página de serviços.
-3. Na página de serviços terá tabelas como preço de cada serviço cadastrado no sistema.
-4. E o cliente pode escolher os melhores preços da sua preferência.
+1. O sistema resgata a lista de serviços e apresenta ao administrador.
+2. O Administrador seleciona o serviço.
+3. O Administrador seleciona a data e hora.
+4. O Administrador seleciona a duração do serviço.
+5. O sistema salva o horário para agendamento.
 
 
+**Fluxo Alternativo A**
+1. O sistema resgata a lista de serviços e apresenta ao administrador.
+2. O Administrador seleciona o serviço.
+3. O Administrador seleciona a data e hora anterior ao momento presente.
+4. O Administrador seleciona a duração do serviço.
+5. O sistema informa que não é possível salvar o agendamento anterior ao momento presente.
 
+**Fluxo Alternativo B**
+1. O sistema resgata a lista de serviços e apresenta ao administrador.
+2. O Administrador seleciona o serviço.
+3. O Administrador seleciona a data e hora.
+4. O Administrador seleciona a duração do serviço como "0".
+5. O sistema informa que não é possível salvar o horário de agendamento com a duração "0".
 
 
 ### CDU 09 Cadastro de serviços 
@@ -206,27 +235,21 @@
 
 
 **Fluxo Principal**
-1. O sistema vai apresenta ao cliente a interface onde ele pode escolher o serviço e o horário que deseja.
-2. O sistema vai apresenta ao cliente um formulario onde o cliente descreve o que deseja fazer em um horário de sua  preferencia. 
-3. Após a descrição do serviço o cliente clica no botão "Marcar".
-4. A descrição do serviço é enviado para o nosso sistema.
-5. O sistema vai exibir a sequinte mensagem " serviço cadastrado com sucesso"
-6. O sistema redireciona o cliente para a página inicial. 
+1. O sistema vai apresenta um formulario onde o administrador pode cadastrar o serviço
+2. O administrador preenche nome e descrição do serviço
+3. O administrador clica em salvar 
+4. O sistema salva o serviço exibe a seguinte mensagem "serviço cadastrado com sucesso"   
+5. sistema redireciona o cliente para a página inicial. 
 
 ![Diagrama de Casos de Uso](Fluxo-cadastro-de-serviços-principal.jpg)
 
 **Fluxo Alternativo A**
 
-1. O sistema vai apresenta ao cliente a interface onde ele pode escolher o serviço e o horário que deseja.
-2. O sistema vai apresenta ao cliente um formulario onde o cliente descreve o que deseja fazer em um horário de sua preferencia. 
-3. Após a descrição do serviço o cliente clica no botão "Marcar.
-4. A  descrição do serviço é enviado para o nosso sistema.
-5. O sistema vai exibir a seguinte mensagem " Horário indisponível" 
-6. O sistema redireciona o cliente para a página inicial. 
-7. o cliente deseja remarcar o serviço.
-8. O cliente vai até a interface clica no botão "Remarcar". 
-9. o cliente atualiza o serviço ou o horário no formulario clica no botão "Marcar".
-10. O sistema vai exibir a seguinte mensagem " serviço cadastrado com sucesso"
-11. O sistema redireciona o cliente para a pagina inicial. 
+1. O sistema vai apresenta um formulario onde o administrador pode cadastrar o serviço
+2. O administrador preenche nome e descrição do serviço
+3. O administrador clica em salvar 
+4. O sistema exibe a seguinte mensagem "Nome já existente"
+5. O sistema recarrega o formulário.
+
 
 ![Diagrama de Casos de Uso](Fluxo-cadastro-de-serviços-alternativo.jpg)
