@@ -181,10 +181,13 @@
 
 
 **Fluxo Principal**
-1. O sistema vai apresenta ao cliente uma página com os serviços, horários disponiveis e tabela com preço de cada serviço.
-2. O cliente vai até a página com os horários disponiveis.
-3. Escolhe o serviço e agenda para o dia e a hora de sua preferência.
-4. O sistema vai marca o serviço com os profissional disponivel.
+1. O sistema vai apresenta ao cliente a interface onde ele pode escolher o serviço e o horário que deseja.
+2. O sistema vai apresenta ao cliente um formulario onde o cliente descreve o que deseja fazer em um horário de sua  preferencia. 
+3. Após a descrição do serviço o cliente clica no botão "Marcar".
+4. A descrição do serviço é enviado para o nosso sistema.
+5. O sistema vai exibir a sequinte mensagem " serviço cadastrado com sucesso"
+6. O sistema redireciona o cliente para a página inicial. 
+
  
 
 
