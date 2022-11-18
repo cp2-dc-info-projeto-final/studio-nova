@@ -185,7 +185,7 @@
 2. O sistema vai apresenta ao cliente um formulario onde o cliente descreve o que deseja fazer em um horário de sua  preferencia. 
 3. Após a descrição do serviço o cliente clica no botão "Marcar".
 4. A descrição do serviço é enviado para o nosso sistema.
-5. O sistema vai exibir a sequinte mensagem " serviço cadastrado com sucesso"
+5. O sistema vai exibir a sequinte mensagem " Agendamento cadastrado com sucesso"
 6. O sistema redireciona o cliente para a página inicial. 
 
 
@@ -202,7 +202,7 @@
 7. o cliente deseja remarcar o serviço.
 8. O cliente vai até a interface clica no botão "Remarcar". 
 9. o cliente atualiza o serviço ou o horário no formulario clica no botão "Marcar".
-10. O sistema vai exibir a seguinte mensagem " serviço cadastrado com sucesso"
+10. O sistema vai exibir a seguinte mensagem " Agendamento cadastrado com sucesso"
 11. O sistema redireciona o cliente para a pagina inicial. 
  
 
@@ -211,13 +211,26 @@
 
 
 **Fluxo Principal**
-1. O sistema vai apresenta ao cliente uma página com os serviços, horários disponiveis de cada serviço.
-2. O cliente vai até a página de serviços.
-3. Na página de serviços terá tabelas como preço de cada serviço cadastrado no sistema.
-4. E o cliente pode escolher os melhores preços da sua preferência.
+1. O sistema resgata a lista de serviços e apresenta ao administrador.
+2. O Administrador seleciona o serviço.
+3. O Administrador seleciona a data e hora.
+4. O Administrador seleciona a duração do serviço.
+5. O sistema salva o horário para agendamento.
 
 
+**Fluxo Alternativo A**
+1. O sistema resgata a lista de serviços e apresenta ao administrador.
+2. O Administrador seleciona o serviço.
+3. O Administrador seleciona a data e hora anterior ao momento presente.
+4. O Administrador seleciona a duração do serviço.
+5. O sistema informa que não é possível salvar o agendamento anterior ao momento presente.
 
+**Fluxo Alternativo B**
+1. O sistema resgata a lista de serviços e apresenta ao administrador.
+2. O Administrador seleciona o serviço.
+3. O Administrador seleciona a data e hora.
+4. O Administrador seleciona a duração do serviço como "0".
+5. O sistema informa que não é possível salvar o horário de agendamento com a duração "0".
 
 
 ### CDU 09 Cadastro de serviços 
