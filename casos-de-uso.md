@@ -225,27 +225,21 @@
 
 
 **Fluxo Principal**
-1. O sistema vai apresenta ao cliente a interface onde ele pode escolher o serviço e o horário que deseja.
-2. O sistema vai apresenta ao cliente um formulario onde o cliente descreve o que deseja fazer em um horário de sua  preferencia. 
-3. Após a descrição do serviço o cliente clica no botão "Marcar".
-4. A descrição do serviço é enviado para o nosso sistema.
-5. O sistema vai exibir a sequinte mensagem " serviço cadastrado com sucesso"
-6. O sistema redireciona o cliente para a página inicial. 
+1. O sistema vai apresenta um formulario onde o administrador pode cadastrar o serviço
+2. O administrador preenche nome e descrição do serviço
+3. O administrador clica em salvar 
+4. O sistema salva o serviço exibe a seguinte mensagem "serviço cadastrado com sucesso"   
+5. sistema redireciona o cliente para a página inicial. 
 
 ![Diagrama de Casos de Uso](Fluxo-cadastro-de-serviços-principal.jpg)
 
 **Fluxo Alternativo A**
 
-1. O sistema vai apresenta ao cliente a interface onde ele pode escolher o serviço que deseja.
-2. O sistema vai apresenta ao cliente um formulario onde o cliente descreve o que deseja fazer em um serviço de sua preferencia. 
-3. Após a descrição do serviço o cliente clica no botão "Marcar.
-4. A  descrição do serviço é enviado para o nosso sistema.
-5. O sistema vai exibir a seguinte mensagem " Horário indisponível" 
-6. O sistema redireciona o cliente para a página inicial. 
-7. o cliente deseja remarcar o serviço.
-8. O cliente vai até a interface clica no botão "Remarcar". 
-9. o cliente atualiza o serviço ou o horário no formulario clica no botão "Marcar".
-10. O sistema vai exibir a seguinte mensagem " serviço cadastrado com sucesso"
-11. O sistema redireciona o cliente para a pagina inicial. 
+1. O sistema vai apresenta um formulario onde o administrador pode cadastrar o serviço
+2. O administrador preenche nome e descrição do serviço
+3. O administrador clica em salvar 
+4. O sistema exibe a seguinte mensagem "Nome já existente"
+5. O sistema recarrega o formulário.
+
 
 ![Diagrama de Casos de Uso](Fluxo-cadastro-de-serviços-alternativo.jpg)
