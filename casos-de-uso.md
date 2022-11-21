@@ -4,13 +4,12 @@
 
  - [CDU 01](#CDU-01): Cadastro de usuário;
  - [CDU 02](#CDU-02): Efetuar login;
- - [CDU 03](#CDU-03): Controle de usuário;
- - [CDU 04](#CDU-04): Adição de profissionais;
- - [CDU 05](#CDU-05): Exclusão de usuário;
- - [CDU 06](#CDU-06): Edição de usuário;
- - [CDU 07](#CDU-07): Agendamento;   
- - [CDU 08](#CDU-08): Disponibilizar horários;
- - [CDU 09](#CDU-09): Cadastro de serviços;
+ - [CDU 03](#CDU-03): Adição de profissionais;
+ - [CDU 04](#CDU-04): Exclusão de usuário;
+ - [CDU 05](#CDU-05): Edição de usuário;
+ - [CDU 06](#CDU-06): Agendamento;   
+ - [CDU 07](#CDU-07): Disponibilizar horários;
+ - [CDU 08](#CDU-08): Cadastro de serviços;
  
 
 ## Lista dos Atores
@@ -102,35 +101,36 @@
 5. O sistema encaminha o usuário para sua página do cliente.
 
 
-### CDU 03 Controle de usuário
+### CDU 03 Adição de profissionais 
 
 
 **Fluxo Principal**
 
-1. Os administradores tem uma página de controle.
-2. Onde o administrador tem acesso a todos os usuários da sistema.
-3. Os administadores podem excluir,editar informações do agendamento.
-4. Os administadores podem cadastrar serviços e disponibilizar tabela com o preço de serviço cada serviço.
-5.O administador pode excluir e editar informações dos profissionais e dos clientes.
-
-
-### CDU 04 Adição de profissionais 
-
-
-**Fluxo Principal**
-
-1. Os administradores tem uma página de controle.
-2. Onde o administrador tem acesso a todos os usuários da rede.
-3. Um profissional só pode ser cadastrado no sistema após adm fazer seu cadastro.
-4. Somente administrador pode concede cadastro ao profissional.
-5. Após o adm cadastrar o profissional ele pode ter acesso ao sistema atraves do seu login.
+1. O sistema apresenta um formulario com os campos "Nome,e-mail,senha,cpf,telefone".
+2. O administrador preenche o formulario.
+3. O administrador clicar em "Salvar".
+4. O sistema exibir a seguinte mensagem "Operação validada".
+5. O sistema encaminha o administrador para tela principal.
 
 
 ![Diagrama de Casos de Uso](Fluxo-principal-funcionário.jpg)
 
+
+**Fluxo Alternativo A**
+
+1. O sistema apresenta um formulario com os campos "Nome,e-mail,senha,cpf,telefone".
+2. O administrador preenche o formulario.
+3. O administrador clicar em "Salvar".
+4. O sistema exibir a seguinte mensagem "E-mail invalido".
+5. O sistema recarrega o formulário.
+6. O administrador preenche o formulario.
+7. O administrador clicar em "Salvar".
+8. O sistema exibir a seguinte mensagem "Operação validada".
+9. O sistema encaminha o administrador para tela principal.
+
 ![Diagrama de Casos de Uso](caso-de-uso-fluxo-alternativo.png)
 
-### CDU 05 Exclusão de usuário
+### CDU 04 Exclusão de usuário
 
 
 
@@ -153,7 +153,7 @@
 
 
 
-### CDU 06 Edição de usuário
+### CDU 05 Edição de usuário
 
 
 
@@ -177,7 +177,7 @@
 
 
 
-### CDU 07 Agendamento
+### CDU 06 Agendamento
 
 
 **Fluxo Principal**
@@ -196,15 +196,15 @@
 3. o cliente clica no botão "Marcar.
 5. O sistema exibi a seguinte mensagem " Horário indisponível" 
 6. O sistema recarrega o formulário. 
-7. o cliente deseja remarcar o serviço.
+7. O cliente deseja remarcar o serviço.
 8. O cliente vai até a interface clica no botão "Remarcar". 
-9. o cliente atualiza o serviço ou o horário no formulario clica no botão "Marcar".
+9. O cliente atualiza o serviço ou o horário no formulario clica no botão "Marcar".
 10. O sistema vai exibir a seguinte mensagem " Agendamento cadastrado com sucesso"
 11. O sistema redireciona o cliente para a pagina inicial. 
  
 
 
-### CDU 08 Disponibilizar horários
+### CDU 07 Disponibilizar horários
 
 
 **Fluxo Principal**
@@ -230,7 +230,7 @@
 5. O sistema informa que não é possível salvar o horário de agendamento com a duração "0".
 
 
-### CDU 09 Cadastro de serviços 
+### CDU 08 Cadastro de serviços 
 
 
 
