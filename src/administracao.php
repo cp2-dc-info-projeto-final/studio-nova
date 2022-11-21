@@ -18,7 +18,7 @@
             <ul class="nav-list">
                 <h1>Administração</h1>
             </ul>
-            <a href="logout.php" class="btn-nav">logout</a> 
+            <a href="#botao-confirma" class="btn-nav">logout</a> 
         </nav>
         <main>
         <br>
@@ -29,6 +29,7 @@
             <a href="Agendamentos.php">Agendamentos</a><br>
             <a href="cadastroadm.php">Criar novo administrador</a><br>
             <a href="cadastroservico.php">Cadastrar novo serviço</a><br>
+            <a href="horarios.php">Disponiblizar horário</a><br>
         </center>
         </main>
         
@@ -47,5 +48,14 @@
 
         </nav>
     </footer>
+
+    <div id="botao-confirma" class="confirma">
+        <div class="confirma-conteudo">
+            <h1>Tem certeza que encerrar sua sessão?</h1><br>
+            <a href="logout.php" class="btn1">SIM</a>
+            <a href="" class="btn-cancelar">Cancelar</a>
+
+        </div>
+    </div>
 </body>
 </html>

@@ -4,9 +4,9 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 // Inclui os arquivos da biblioteca PHPMailer necessários para o envio de e-mail
-require 'PHPMailer-master/src/Exception.php';
-require 'PHPMailer-master/src/PHPMailer.php';
-require 'PHPMailer-master/src/SMTP.php';
+include 'PHPMailer-master/src/Exception.php';
+include 'PHPMailer-master/src/PHPMailer.php';
+include 'PHPMailer-master/src/SMTP.php';
 
 function envia_email($para, $assunto, $mensagem){
 
