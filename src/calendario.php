@@ -4,7 +4,7 @@ include("functions.php");
 
 $monthTime = getMonthTime();
 
-echo '<link href="styles.css" rel="stylesheet">';
+echo '<link href="origem/calendastyles.css" rel="stylesheet">';
 
 echo "<header>";
 echo '<a href="?month='.prevMonth($monthTime).'">Anterior</a>';
