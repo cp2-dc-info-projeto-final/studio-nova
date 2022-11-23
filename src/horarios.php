@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/nova.css">
-    <title>Document</title>
+    <title>Disponibilzar horarios</title>
 </head>
 <body>
     <?php
@@ -69,5 +69,6 @@ echo "</tbody>";
 echo "</table>";
 
 ?> 
+
 </body>
 </html>

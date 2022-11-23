@@ -29,7 +29,7 @@
     
         <div class="form-box">
             <form action="login.php" method="POST">
-            <input type="hidden" name="operacao" value="logar">    
+            <input type="hidden" name="operacao" value="logar" method="POST">
 
             <h2>Login</h2>
             
@@ -70,9 +70,10 @@
                         <?php
                             include "conecta.php";
 
-                    if(isset($_POST["email"]) || isset($_POST["senha"])) 
+                    if(isset($_POST["email"]) || isset($_POST["senha"]) || isset($_REQUEST["operacao"]) )  
                     {
-                        $operacao = $_REQUEST["operacao"];
+                        
+                          $operacao = $_REQUEST["operacao"];
 
                         if($operacao == "logar")
                         {
@@ -203,7 +204,6 @@
                                                   if($quantidade == 1)
                                                   {
                                                       
-                                                    echo "entrei no if";
                                                       //include "envia_email.php";
                       
                                                       
