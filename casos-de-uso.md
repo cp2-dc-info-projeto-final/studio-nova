@@ -214,7 +214,7 @@
 4. O Administrador seleciona a duração do serviço.
 5. O sistema salva o horário para agendamento.
 
-![Diagrama de Casos de Uso](Diagrama Disponibilizar Horario Principal.jpg)
+![Diagrama de Casos de Uso](Diagrama-Disponibilizar-Horario-Principal.jpg)
 
 **Fluxo Alternativo A**
 1. O sistema resgata a lista de serviços e apresenta ao administrador.
