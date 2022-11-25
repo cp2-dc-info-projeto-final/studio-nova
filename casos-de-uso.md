@@ -223,7 +223,7 @@
 4. O Administrador seleciona a duração do serviço.
 5. O sistema informa que não é possível salvar o agendamento anterior ao momento presente.
 
-![Diagrama de Casos de Uso](principal-cadastro-de-serviços.jpg)
+![Diagrama de Casos de Uso](Diagrama-Disponibilizar-Horario.jpg)
 
 **Fluxo Alternativo B**
 1. O sistema resgata a lista de serviços e apresenta ao administrador.
