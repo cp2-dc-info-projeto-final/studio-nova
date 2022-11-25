@@ -128,7 +128,7 @@
 8. O sistema exibir a seguinte mensagem "Operação validada".
 9. O sistema encaminha o administrador para tela principal.
 
-![Diagrama de Casos de Uso](caso-de-uso-fluxo-alternativo.png)
+![Diagrama de Casos de Uso](fluxo-alternativo-funcionário.jpg)
 
 ### CDU 04 Exclusão de usuário
 
@@ -140,7 +140,7 @@
 3. O administrador clica no botão "excluir".
 4. O sistema vai exibir a seguinte mensagem " tem certeza que deseja excluir o usuário"
 5. O administrador clica no botão "ok".  
-6. O sistema exibirá que "o usurio foi excluído com sucesso". 
+6. O sistema exibirá que "o usuário foi excluído com sucesso". 
 
 
 
@@ -214,6 +214,7 @@
 4. O Administrador seleciona a duração do serviço.
 5. O sistema salva o horário para agendamento.
 
+![Diagrama de Casos de Uso](Diagrama-Disponibilizar-Horario-Principal.jpg)
 
 **Fluxo Alternativo A**
 1. O sistema resgata a lista de serviços e apresenta ao administrador.
@@ -221,6 +222,8 @@
 3. O Administrador seleciona a data e hora anterior ao momento presente.
 4. O Administrador seleciona a duração do serviço.
 5. O sistema informa que não é possível salvar o agendamento anterior ao momento presente.
+
+![Diagrama de Casos de Uso](Diagrama-Disponibilizar-Horario.jpg)
 
 **Fluxo Alternativo B**
 1. O sistema resgata a lista de serviços e apresenta ao administrador.
@@ -241,7 +244,7 @@
 4. O sistema salva o serviço exibe a seguinte mensagem "serviço cadastrado com sucesso"   
 5. sistema redireciona o cliente para a página inicial. 
 
-![Diagrama de Casos de Uso](Fluxo-cadastro-de-serviços-principal.jpg)
+![Diagrama de Casos de Uso](principal-cadastro-de-serviços.jpg)
 
 **Fluxo Alternativo A**
 
@@ -252,4 +255,4 @@
 5. O sistema recarrega o formulário.
 
 
-![Diagrama de Casos de Uso](Fluxo-cadastro-de-serviços-alternativo.jpg)
+![Diagrama de Casos de Uso](cadastro-de-serviços.jpg)

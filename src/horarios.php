@@ -10,7 +10,7 @@
 <body>
     <?php
      include "conecta.php";
-     include("functions.php");
+     include "functions.php";
 
      $monthTime = getMonthTime();
 
@@ -80,13 +80,38 @@
          echo "<p>Precos: ". $servicos["preco"]."</p>";
          echo "<p>Duracao: ". $servicos["duracao"]."</p>";
          echo "<p><a href='calendario.php?";
-         echo "<a href='#calendario'>Disponibilizar horário</a>";
+         echo "<a href='#inserirhorarios'>Disponibilizar horário</a>";
         }
 
+
+        if(isset($_POST["horario"]) && isset($_POST["horario"])){
+        $horario = $_POST["horario"];
+        $$dataServico = $_POST["dataServico"];
+        $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
+        $sql = "INSERT INTO usuario (id,horario,dataServico) VALUES ('$id','$horario','$dataServico');";
+}  
+    
+    
 
     
 
 ?> 
-
+<div id ="inserirhorarios" class = "confirma">
+<div class="confirma-conteudo">
+                        <h1>Insira aqui seu email</h1><br>
+                        <form action="inserir_horarios.php" method="POST">
+                            <div class="input-group">
+                                <label for="data">Insira o dia</label>
+                                <input type="date" name="data" placeholder=" Insira aqui seu email" title="formato">
+                            </div>
+                            <div class="input-group">
+                                <label for="horario">Insira o horario</label>
+                                <input type="date" name="horario" placeholder=" Insira aqui seu email" title="formato">
+                            </div>
+                            <input type="submit" class="btn" value="inserir">
+                        </form>
+    </div>
+</div>
+ 
 </body>
 </html>
