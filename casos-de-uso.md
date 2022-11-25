@@ -128,7 +128,7 @@
 8. O sistema exibir a seguinte mensagem "Operação validada".
 9. O sistema encaminha o administrador para tela principal.
 
-![Diagrama de Casos de Uso](caso-de-uso-fluxo-alternativo.png)
+![Diagrama de Casos de Uso](fluxo-alternativo-funcionário.jpg)
 
 ### CDU 04 Exclusão de usuário
 
