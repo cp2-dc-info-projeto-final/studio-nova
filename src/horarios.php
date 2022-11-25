@@ -10,7 +10,7 @@
 <body>
     <?php
      include "conecta.php";
-     include("functions.php");
+     include "functions.php";
 
      $monthTime = getMonthTime();
 
@@ -84,11 +84,12 @@
         }
 
 
-        $id = $_POST["id"];
+        if(isset($_POST["horario"]) && isset($_POST["horario"])){
         $horario = $_POST["horario"];
-        $data = $_POST["data"];
+        $$dataServico = $_POST["dataServico"];
         $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
-        $sql = "INSERT INTO usuario (id,horario,dataServico) VALUES ('$id','$horario','$data');";  
+        $sql = "INSERT INTO usuario (id,horario,dataServico) VALUES ('$id','$horario','$dataServico');";
+}  
     
     
 
