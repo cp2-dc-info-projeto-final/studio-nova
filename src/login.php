@@ -28,7 +28,7 @@
         </div>
     
         <div class="form-box">
-            <form action="login.php" method="POST">
+            <form action="logar.php" method="POST">
             <input type="hidden" name="operacao" value="logar" method="POST">
 
             <h2>Login</h2>
@@ -56,147 +56,33 @@
     </div>
 </div>
                     <div id="esqueciasenha" class="confirma">
+                        
+
                         <div class="confirma-conteudo">
                         <h1>Insira aqui seu email</h1><br>
                         <p>Para enviarmos um formulário de recuperação de senha</p><br>
-                        
                         <form action="login.php" method="POST">
                             <div class="input-group">
-                                <label for="email">Insira seu email</label>
-                                <input type="email" name="email" placeholder=" Insira aqui seu email" title="formato">
+                                <label for="email_2">Insira seu email</label>
+                                <input type="email" name="email_2" placeholder=" Insira aqui seu email" title="formato">
                             </div>
                             <input type="submit" class="btn" value="Enviar email">
                         </form>
-                        
-                        
+                     
                         <?php
-                            include "conecta.php";
 
-                    if(isset($_POST["email"]) && isset($_POST["senha"]) && isset($_REQUEST["operacao"]) )  
-                    {
-                        
-                          $operacao = $_REQUEST["operacao"];
+                        if(isset($_POST["email_2"])){
 
-                        if($operacao == "logar")
-                        {
-                            session_start();
-                            $email = $mysqli->real_escape_string($_POST['email']);
-                            $senha = $mysqli->real_escape_string($_POST['senha']);
-                            
-                            
-                             $sql_code = "SELECT * FROM  usuario WHERE email = '$email'";
-                             $sql_query = $mysqli->query($sql_code) or die ("Falha na execusão do código:" . $mysqli->error);
-                            
-                              $quantidade = $sql_query->num_rows;
-                            
-                              if($quantidade == 1 )
-                              {          
-                                
-                                        $sql_code = "SELECT * FROM  usuario WHERE senha = '$senha'";
-                            
-                                        $usuario = mysqli_fetch_array($sql_query);
-                                         if(!password_verify($senha, $usuario['senha']))
-                                         {
-                                          echo "Senha inválida!";
-                                          echo "<p><a href='login.php'>Página de login</a></p>";
-                                        }
-                                        else {
-                                          session_start();
-                                          $_SESSION['id'] = $usuario['id'];
-                                          $_SESSION['nome'] = $usuario['nome'];
-                                          $_SESSION['email'] = $usuario['email'];
-                                          $_SESSION['senha'] = $usuario['senha'];
-                                          $_SESSION['tipo'] = "cliente";
-                                          $_SESSION['bemvindo'] = "Bem vindo de volta !";
-                                    
-                                          header("location: paginainicial.php");
-                                        }
-                                        
-                              }
-                              
-                              else if($quantidade != 1)
-                              {
-                                        
-                                        $sql_code_ad = "SELECT * FROM  administrador WHERE email = '$email'";
-                                        $sql_query_ad = $mysqli->query($sql_code_ad) or die ("Falha na execusão do código:" . $mysqli->error);
-                                        
-                                        $quantidade_ad = $sql_query_ad->num_rows;
-                              
-                                        if($quantidade_ad == 1 ){
-                              
-                                          
-                                          $sql_code = "SELECT * FROM administrador WHERE senha = '$senha'";
-                            
-                                          $administrador = mysqli_fetch_array($sql_query_ad);
-                                         if(!password_verify($senha, $administrador['senha']))
-                                          {
-                                            echo "Senha inválida!";
-                                            echo "<p><a href='login.php'>Página de login</a></p>";
-                                          }
-                                          else{
-                                            
-                                        session_start();
-                                        $_SESSION['id'] = $administrador ['id'];
-                                        $_SESSION['email'] = $administrador ['email'];
-                                        $_SESSION['senha'] = $administrador ['senha'];
-                                        $_SESSION['tipo'] = "administrador";
-                                  
-                                        header("location: administracao.php");
-                                     }
-                                    }
-                            
-                                    if($quantidade_ad != 1)
-                                    {       
-                                      $sql_code_fun = "SELECT * FROM  funcionario WHERE email = '$email'";
-                                      $sql_query_fun = $mysqli->query($sql_code_fun) or die ("Falha na execusão do código:" . $mysqli->error);
-                            
-                                      $quantidade_fun = $sql_query_fun->num_rows;
-                            
-                                      if($quantidade_fun == 1)
-                                      {
-                            
-                                          $sql_code = "SELECT * FROM funcionario WHERE senha = '$senha'";
-                            
-                                          $funcionario = mysqli_fetch_array($sql_query_fun);
-                                          if(!password_verify($senha, $funcionario['senha']))
-                                            {
-                                              echo "Senha inválida!";
-                                              echo "<p><a href='login.php'>Página de login</a></p>";
-                                            }            
-                                        
-                                          else
-                                            {
-                                              session_start();
-                                              $_SESSION['id'] = $funcionario ['id'];
-                                              $_SESSION['email'] = $funcionario ['email'];
-                                              $_SESSION['senha'] = $funcionario ['senha'];
-                                              $_SESSION['tipo'] = "funcionario";
-                                  
-                                              header("location: funcionarios.php");
-                                            }
-                                      }
-                                      else
-                                      {
-                                        echo '<script type ="text/JavaScript">';  
-                                        echo 'alert("Nome de usuário ou senha incorretos")';  
-                                        echo '</script>';
-                                      }
-                                    }
-                            
-                              }
-                        }
-
-                        else if($operacao == "esqueci"){
-                          
+                          include "conecta.php";
 
                           echo "Entrei no esqueci";
                           
-                          $email = $_POST['email'];
+                          $email = $_POST['email_2'];
                           
                           $rash = md5(rand());
                           $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
-                          $sql_code = "INSERT INTO recupera_senha (email,rash) VALUES ($email,$rash) ";
-                          $sql_query = $mysqli->query($sql_code) or die ("Falha na execusão do código:" . $mysqli->error);
+                          $sql_code = "INSERT INTO recupera_senha (email,rash) VALUES ('$email','$rash');";
+                          $sql_query = $mysqli->query($sql_code) or die ("Falha na execusão do código AQUI:" . $mysqli->error);
 
 
 
@@ -204,7 +90,7 @@
                           $sql_code2 = "SELECT * FROM  usuario WHERE email = '$email'";
                           $sql_query2 = $mysqli->query($sql_code2) or die ("Falha na execusão do código:" . $mysqli->error);
 
-                          $quantidade = $sql_query->num_rows;
+                          $quantidade = $sql_query2->num_rows;
 
                           if($quantidade == 1)
                           {
@@ -214,12 +100,12 @@
                               
                               $sql_code = "SELECT * FROM  usuario WHERE nome AND sobrenome";
                       
-                                  $usuario = mysqli_fetch_array($sql_query);
+                                  $usuario = mysqli_fetch_array($sql_query2);
 
                                   $nome = $usuario['nome'];
                                   $sobrenome = $usuario['sobrenome'];
                                   $data = date('a/m/Y');
-                                  $email = $_POST['email'];
+                                  $email = $_POST['email_2'];
 
                                   $assunto = "Recuperar senha";
 
@@ -245,15 +131,12 @@
                               echo "<br><p>Email não encontrado, por favor digite corretamente</p>";
                           } 
                       
-                                                  
-                        }
-                        
                         }
                     
                     
                         ?>
 
-                    </div>
-                    
+</div>
+
 </body>
 </html>
