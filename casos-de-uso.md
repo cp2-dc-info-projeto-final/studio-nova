@@ -241,7 +241,7 @@
 4. O sistema salva o serviço exibe a seguinte mensagem "serviço cadastrado com sucesso"   
 5. sistema redireciona o cliente para a página inicial. 
 
-![Diagrama de Casos de Uso](Fluxo-cadastro-de-serviços-principal.jpg)
+![Diagrama de Casos de Uso]()
 
 **Fluxo Alternativo A**
 
@@ -252,4 +252,4 @@
 5. O sistema recarrega o formulário.
 
 
-![Diagrama de Casos de Uso](Fluxo-cadastro-de-serviços-alternativo.jpg)
+![Diagrama de Casos de Uso]()
