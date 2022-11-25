@@ -140,7 +140,7 @@
 3. O administrador clica no botão "excluir".
 4. O sistema vai exibir a seguinte mensagem " tem certeza que deseja excluir o usuário"
 5. O administrador clica no botão "ok".  
-6. O sistema exibirá que "o usurio foi excluído com sucesso". 
+6. O sistema exibirá que "o usuário foi excluído com sucesso". 
 
 
 
