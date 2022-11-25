@@ -1,13 +1,10 @@
     <?php
-    include "conecta.php";
-    $email = $_POST['email'];
+                            include "conecta.php";
+                            $email = $_POST['email'];
                             
                             $rash = md5(rand());
                             $sql_code = "INSERT INTO recupera_senha (email,rash) VALUES ($email,$rash) ";
                             $sql_query = $mysqli->query($sql_code) or die ("Falha na execusão do código:" . $mysqli->error);
-
-
-  
 
                             $sql_code2 = "SELECT * FROM  usuario WHERE email = '$email'";
                             $sql_query2 = $mysqli->query($sql_code2) or die ("Falha na execusão do código:" . $mysqli->error);
