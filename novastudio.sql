@@ -3,15 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 27-Out-2022 às 15:55
+-- Generation Time: 26-Nov-2022 às 22:47
 -- Versão do servidor: 5.7.17
 -- PHP Version: 5.6.30
-
-CREATE DATABASE IF NOT EXISTS novastudio DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE novastudio;
-DROP USER IF EXISTS 'nova'@'localhost';
-CREATE USER 'nova'@'localhost' IDENTIFIED BY 'admin';
-GRANT ALL PRIVILEGES ON novastudio.* TO 'nova'@'localhost';
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -33,7 +27,7 @@ SET time_zone = "+00:00";
 --
 -- Estrutura da tabela `administrador`
 --
-DROP TABLE IF EXISTS `administrador`;
+
 CREATE TABLE `administrador` (
   `id` int(10) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -50,10 +44,23 @@ INSERT INTO `administrador` (`id`, `email`, `senha`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `agendamento`
+--
+
+CREATE TABLE `agendamento` (
+  `id` smallint(6) NOT NULL,
+  `data` date DEFAULT NULL,
+  `hora` time DEFAULT NULL,
+  `idusuario` int(11) DEFAULT NULL,
+  `idservico` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `funcionario`
 --
 
-DROP TABLE IF EXISTS `funcionario`;
 CREATE TABLE `funcionario` (
   `id_funcionario` int(10) NOT NULL,
   `nome` varchar(100) NOT NULL,
@@ -75,7 +82,7 @@ INSERT INTO `funcionario` (`id_funcionario`, `nome`, `email`, `senha`, `cpf`, `t
 --
 -- Estrutura da tabela `recupera_senha`
 --
-DROP TABLE IF EXISTS `recupera_senha`;
+
 CREATE TABLE `recupera_senha` (
   `id` int(100) NOT NULL,
   `email` varchar(200) NOT NULL,
@@ -85,9 +92,10 @@ CREATE TABLE `recupera_senha` (
 
 -- --------------------------------------------------------
 
+--
 -- Estrutura da tabela `servicos`
 --
-DROP TABLE IF EXISTS `servicos`;
+
 CREATE TABLE `servicos` (
   `id` int(11) NOT NULL,
   `nome` varchar(11) NOT NULL,
@@ -108,7 +116,7 @@ INSERT INTO `servicos` (`id`, `nome`, `preco`, `duracao`) VALUES
 --
 -- Estrutura da tabela `usuario`
 --
-DROP TABLE IF EXISTS `usuario`;
+
 CREATE TABLE `usuario` (
   `id` int(20) NOT NULL,
   `nome` varchar(100) NOT NULL,
@@ -141,18 +149,26 @@ ALTER TABLE `administrador`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `agendamento`
+--
+ALTER TABLE `agendamento`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idusuario` (`idusuario`),
+  ADD KEY `idservico` (`idservico`);
+
+--
 -- Indexes for table `funcionario`
 --
 ALTER TABLE `funcionario`
   ADD PRIMARY KEY (`id_funcionario`),
   ADD UNIQUE KEY `id_funcionario` (`id_funcionario`);
 
+--
 -- Indexes for table `recupera_senha`
 --
 ALTER TABLE `recupera_senha`
   ADD PRIMARY KEY (`id`);
 
---
 --
 -- Indexes for table `servicos`
 --
@@ -174,6 +190,11 @@ ALTER TABLE `usuario`
 --
 ALTER TABLE `administrador`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `agendamento`
+--
+ALTER TABLE `agendamento`
+  MODIFY `id` smallint(6) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `funcionario`
 --
