@@ -98,15 +98,19 @@
 ?> 
 <div id ="inserirhorarios" class = "confirma">
 <div class="confirma-conteudo">
-                        <h1>Insira aqui seu email</h1><br>
+                        <h1> Agendamento de horário </h1><br>
                         <form action="inserir_horarios.php" method="POST">
+                     <div class="input-group">
+                        <label for="nome">Informe o nome do serviço</label>
+                        <input type="text" name="nome" placeholder=" Nome do serviço" title="formato" required>
+                      </div>
                             <div class="input-group">
                                 <label for="data">Insira o dia</label>
                                 <input type="date" name="data" placeholder=" Insira aqui seu email" title="formato">
                             </div>
                             <div class="input-group">
                                 <label for="horario">Insira o horario</label>
-                                <input type="date" name="horario" placeholder=" Insira aqui seu email" title="formato">
+                                <input type="time" name="horario" placeholder=" Insira aqui seu email" title="formato">
                             </div>
                             <input type="submit" class="btn" value="inserir">
                         </form>
