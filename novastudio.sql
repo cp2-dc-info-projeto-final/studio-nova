@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 26-Nov-2022 às 22:47
+-- Generation Time: 28-Nov-2022 às 15:36
 -- Versão do servidor: 5.7.17
 -- PHP Version: 5.6.30
 
@@ -98,9 +98,9 @@ CREATE TABLE `recupera_senha` (
 
 CREATE TABLE `servicos` (
   `id` int(11) NOT NULL,
-  `nome` varchar(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
   `preco` int(11) NOT NULL,
-  `duracao` int(11) NOT NULL
+  `duracao` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -109,7 +109,13 @@ CREATE TABLE `servicos` (
 
 INSERT INTO `servicos` (`id`, `nome`, `preco`, `duracao`) VALUES
 (1, 'make ', 123, 123),
-(2, 'make ', 123, 123);
+(2, 'make ', 123, 123),
+(3, 'makeup social', 150, 1),
+(4, 'makeup noiva', 700, 90),
+(5, 'limpeza de pele', 120, 90),
+(6, 'designer com henna', 50, 60),
+(7, 'designer simples', 30, 20),
+(8, 'lash lifting', 150, 90);
 
 -- --------------------------------------------------------
 
@@ -209,7 +215,7 @@ ALTER TABLE `recupera_senha`
 -- AUTO_INCREMENT for table `servicos`
 --
 ALTER TABLE `servicos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `usuario`
 --
