@@ -75,8 +75,6 @@
 
                           include "conecta.php";
 
-                          echo "Entrei no esqueci";
-                          
                           $email = $_POST['email_2'];
                           
                           $rash = md5(rand());
@@ -95,7 +93,7 @@
                           if($quantidade == 1)
                           {
                               
-                              //include "envia_email.php";
+                              include "envia_email.php";
 
                               
                               $sql_code = "SELECT * FROM  usuario WHERE nome AND sobrenome";
@@ -114,17 +112,17 @@
                                   $mensagem = "
                                           <h2>Você solicitou uma nova senha?</h2>
                                           <h3>Se sim clique no link abaixo </h3>
-                                          <p><a href='http://127.0.0.1:8080/TCC-NOVA-STUDIO/studio-nova/src/alterar_senha.php'></a></p> 
+                                          <p><a href='http://127.0.0.1:8080/novastudio/studio-nova/src/alterar_senha.php'>Clique aqui</a></p> 
                                           <h5>Caso você não tenha solicitado esse serviço verifique seus dados</h5>
                                   ";
                                   $mensagem .=  "</html></header>";
 
-                                  //if(envia_email($email, $assunto, $mensagem)){
-                                      //echo "<p>Um email com as instruções para sua nova senha foi enviado!</p>";
-                                  //}
-                                  //else{
-                                      //echo "<p>Falha no envio do e-mail</p>";
-                                 // }
+                                  if(envia_email($email, $assunto, $mensagem)){
+                                      echo "<p>Um email com as instruções para sua nova senha foi enviado!</p>";
+                                  }
+                                  else{
+                                      echo "<p>Falha no envio do e-mail</p>";
+                                  }
                                  
                           }
                           else{

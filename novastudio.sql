@@ -3,9 +3,15 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 28-Nov-2022 às 15:36
+-- Generation Time: 29-Nov-2022 às 03:56
 -- Versão do servidor: 5.7.17
 -- PHP Version: 5.6.30
+
+CREATE DATABASE IF NOT EXISTS novastudio DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE novastudio;
+DROP USER IF EXISTS 'nova'@'localhost';
+CREATE USER 'nova'@'localhost' IDENTIFIED BY 'admin';
+GRANT ALL PRIVILEGES ON novastudio.* TO 'nova'@'localhost';
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -27,7 +33,7 @@ SET time_zone = "+00:00";
 --
 -- Estrutura da tabela `administrador`
 --
-
+DROP TABLE IF EXISTS `administrador`;
 CREATE TABLE `administrador` (
   `id` int(10) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -46,7 +52,7 @@ INSERT INTO `administrador` (`id`, `email`, `senha`) VALUES
 --
 -- Estrutura da tabela `agendamento`
 --
-
+DROP TABLE IF EXISTS `agendamento`;
 CREATE TABLE `agendamento` (
   `id` smallint(6) NOT NULL,
   `data` date DEFAULT NULL,
@@ -60,7 +66,7 @@ CREATE TABLE `agendamento` (
 --
 -- Estrutura da tabela `funcionario`
 --
-
+DROP TABLE IF EXISTS `funcionario`;
 CREATE TABLE `funcionario` (
   `id_funcionario` int(10) NOT NULL,
   `nome` varchar(100) NOT NULL,
@@ -80,9 +86,29 @@ INSERT INTO `funcionario` (`id_funcionario`, `nome`, `email`, `senha`, `cpf`, `t
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `recupera_senha`
+-- Estrutura da tabela `horarios`
+--
+DROP TABLE IF EXISTS `horarios`;
+CREATE TABLE `horarios` (
+  `id` int(100) NOT NULL,
+  `nome_servico` varchar(100) NOT NULL,
+  `horario` time NOT NULL,
+  `dataServico` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `horarios`
 --
 
+INSERT INTO `horarios` (`id`, `nome_servico`, `horario`, `dataServico`) VALUES
+(1, 'makeup social ', '15:00:00', '2022-12-03');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `recupera_senha`
+--
+DROP TABLE IF EXISTS `recupera_senha`;
 CREATE TABLE `recupera_senha` (
   `id` int(100) NOT NULL,
   `email` varchar(200) NOT NULL,
@@ -90,12 +116,19 @@ CREATE TABLE `recupera_senha` (
   `status` int(20) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Extraindo dados da tabela `recupera_senha`
+--
+
+INSERT INTO `recupera_senha` (`id`, `email`, `rash`, `status`) VALUES
+(5, 'mpereiranova@gmail.com', '082d37565d86c5f7dc93a3d11f9edfb4', 0);
+
 -- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `servicos`
 --
-
+DROP TABLE IF EXISTS `servicos`;
 CREATE TABLE `servicos` (
   `id` int(11) NOT NULL,
   `nome` varchar(50) NOT NULL,
@@ -106,10 +139,7 @@ CREATE TABLE `servicos` (
 --
 -- Extraindo dados da tabela `servicos`
 --
-
 INSERT INTO `servicos` (`id`, `nome`, `preco`, `duracao`) VALUES
-(1, 'make ', 123, 123),
-(2, 'make ', 123, 123),
 (3, 'makeup social', 150, 1),
 (4, 'makeup noiva', 700, 90),
 (5, 'limpeza de pele', 120, 90),
@@ -122,7 +152,7 @@ INSERT INTO `servicos` (`id`, `nome`, `preco`, `duracao`) VALUES
 --
 -- Estrutura da tabela `usuario`
 --
-
+DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `id` int(20) NOT NULL,
   `nome` varchar(100) NOT NULL,
@@ -136,13 +166,13 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `nome`, `sobrenome`, `email`, `senha`) VALUES
-(1, 'naomi ', 'carneiro', 'naomi@gmail.com', '$2y$10$i6KJVXPdXygdKLnxwjdJUuBIlnnhjEIJihB41f5.LoJcLZvopefJW'),
-(2, 'MATHEUS PEREIRA DA NOVA holanda', '', 'matheus@matheus.com', '$2y$10$B.Xf564TS9ubspXdA3AF6.V3xMNpgpHSUGOsH0wOCZuMSTIJOWozm'),
-(3, 'MATHEUS', 'DA NOVA', 'mpereiranova@gmail.com', '$2y$10$B.Xf564TS9ubspXdA3AF6.V3xMNpgpHSUGOsH0wOCZuMSTIJOWozm'),
-(4, 'matheus', 'Pereira', 'matheus@gmail.com', '$2y$10$ZDzCT56WxqT5qFlq8jgrfuvCcDbObedyYprg7aRjNtk/0j5iFD3/W'),
-(5, 'vladimir', 'pinho ', 'vladimir@santos.com', '$2y$10$/9fA8Wz2pyenDhC9MLTUeuGZFbFkgO9c0NXbiGV953ig8mDEiF4ua'),
-(6, 'matheus', 'Pereira', 'matheus@teste.com', '$2y$10$LeQgk74drpvhTI3rK0OpauNpKvjoAKUjDP5xNzVODFwnIsz8xNh/C'),
-(7, 'clecio ', 'santos', 'clecio@teste.com', '$2y$10$NFVyfTjFk7UkB5BTFPUlBOm8/MRzKaFVoLMsoQMb498tEOqEvDhBO');
+(1, 'naomi ', 'carneiro', 'naomi@gmail.com', '$2y$10$w2asoK5rBkmdNVI6XIs8tONs6/2TW8ohHCzMu7lsM3JWoh1vHnuA2'),
+(2, 'MATHEUS PEREIRA DA NOVA holanda', '', 'matheus@matheus.com', '$2y$10$w2asoK5rBkmdNVI6XIs8tONs6/2TW8ohHCzMu7lsM3JWoh1vHnuA2'),
+(3, 'MATHEUS', 'DA NOVA', 'mpereiranova@gmail.com', '$2y$10$w2asoK5rBkmdNVI6XIs8tONs6/2TW8ohHCzMu7lsM3JWoh1vHnuA2'),
+(4, 'matheus', 'Pereira', 'matheus@gmail.com', '$2y$10$w2asoK5rBkmdNVI6XIs8tONs6/2TW8ohHCzMu7lsM3JWoh1vHnuA2'),
+(5, 'vladimir', 'pinho ', 'vladimir@santos.com', '$2y$10$w2asoK5rBkmdNVI6XIs8tONs6/2TW8ohHCzMu7lsM3JWoh1vHnuA2'),
+(6, 'matheus', 'Pereira', 'matheus@teste.com', '$2y$10$w2asoK5rBkmdNVI6XIs8tONs6/2TW8ohHCzMu7lsM3JWoh1vHnuA2'),
+(7, 'clecio ', 'santos', 'clecio@teste.com', '$2y$10$w2asoK5rBkmdNVI6XIs8tONs6/2TW8ohHCzMu7lsM3JWoh1vHnuA2');
 
 --
 -- Indexes for dumped tables
@@ -168,6 +198,12 @@ ALTER TABLE `agendamento`
 ALTER TABLE `funcionario`
   ADD PRIMARY KEY (`id_funcionario`),
   ADD UNIQUE KEY `id_funcionario` (`id_funcionario`);
+
+--
+-- Indexes for table `horarios`
+--
+ALTER TABLE `horarios`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `recupera_senha`
@@ -207,10 +243,15 @@ ALTER TABLE `agendamento`
 ALTER TABLE `funcionario`
   MODIFY `id_funcionario` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT for table `horarios`
+--
+ALTER TABLE `horarios`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `recupera_senha`
 --
 ALTER TABLE `recupera_senha`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `servicos`
 --
