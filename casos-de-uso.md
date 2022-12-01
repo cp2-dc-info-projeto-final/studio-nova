@@ -167,6 +167,7 @@
 5. O administrador clica no botão "ok".  
 6. O sistema exibirá que "o usuário foi editado com sucesso". 
 
+![Diagrama de Casos de Uso](fluxo-principal-edição.jpg)
 
 
 **Fluxo Alternativo A**
