@@ -27,7 +27,8 @@ include "autentica.php";
     </div>
         </nav>
   
-
+<center>
+    <div>
   <?php
     include "conecta.php";
     
@@ -71,13 +72,14 @@ include "autentica.php";
                     echo "<p>E-mail: ".$cliente["email"]."</p>";
                     echo "<p><a href='edit.php?id=".$cliente["id"]."'>
                     Editar cliente</a></p>";
-                    echo "<p><a href='excluir.php?id=".$cliente["id"]."'> Excluir cliente</a></p>";
+                    echo "<p><a href='excluir.php?id=".$cliente["id"]."'> Excluir cliente</a></p><br>";
                 
                 }
 
 ?>
   
     </div>
+    </center>
 </body>
 <script>
     var search = document.getElementById('pesquisar');

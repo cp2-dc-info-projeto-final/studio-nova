@@ -1,5 +1,8 @@
 <?php
-    include "autentica.php";
+    include "autentica.php"; 
+    if($tipo != "administrador"){
+        header('location:error.php');
+    }
 ?>
 
 <!DOCTYPE html>

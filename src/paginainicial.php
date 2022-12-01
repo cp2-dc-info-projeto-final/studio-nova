@@ -76,7 +76,6 @@
             <h1>Tem certeza que encerrar sua sessão?</h1><br>
             <a href="logout.php" class="btn1">SIM</a>
             <a href="" class="btn-cancelar">Cancelar</a>
-
         </div>
     </div>
     <center>
@@ -86,137 +85,29 @@
                 $sql = "SELECT * FROM servicos;"; 
                 $res = mysqli_query($mysqli,$sql);
                 $linhas = mysqli_num_rows($res);
-       
+                $servico = mysqli_fetch_array($res);
+                $nome = $servico["nome"];
+                
+                $sql2 = "SELECT * FROM horarios;";
+                $res2 = mysqli_query($mysqli,$sql);
+                $horarios = mysqli_fetch_array($res2);
+
+
+
                 for($i = 0; $i < $linhas; $i++)
                 {
-                    $servico = mysqli_fetch_array($res);
-                    echo "<p>Nome: ".$servico["nome"]."</p>";
+                    echo "<p>Nome: ".$nome."</p>";
                     echo "<p>Preço: ".$servico["preco"]."</p>";
-                    echo "<p><a href='#verhorarios?id=".$servico["id"]."'>
-                    Ver horários</a></p>";
-                   
-                
+                    echo "<p><a>Ver horários</a></p>";
+  
                 }
+
+                
+               
 
         ?>
     </div>
     </center>
-    <div class = "#verhorarios?id=3">
-    <h1>Horarios disponiveis:</h1>
-        <?php
-                $sql = "SELECT * FROM servicos;"; 
-                $res = mysqli_query($mysqli,$sql);
-                $linhas = mysqli_num_rows($res);
-       
-                for($i = 0; $i < $linhas; $i++)
-                {
-                    $servico = mysqli_fetch_array($res);
-                    echo "<p>Nome: ".$servico["nome"]."</p>";
-                    echo "<p>Preço: ".$servico["preco"]."</p>";
-                    echo "<p><a href='#verhorarios?id=".$servico["id"]."'>
-                    Ver horários</a></p>";
-                   
-                
-                }
-
-        ?>
-    </div>
-    <div class = "#verhorarios?id=4">
-    <h1>Nossos serviços :</h1>
-        <?php
-                $sql = "SELECT * FROM servicos;"; 
-                $res = mysqli_query($mysqli,$sql);
-                $linhas = mysqli_num_rows($res);
-       
-                for($i = 0; $i < $linhas; $i++)
-                {
-                    $servico = mysqli_fetch_array($res);
-                    echo "<p>Nome: ".$servico["nome"]."</p>";
-                    echo "<p>Preço: ".$servico["preco"]."</p>";
-                    echo "<p><a href='#verhorarios?id=".$servico["id"]."'>
-                    Ver horários</a></p>";
-                   
-                
-                }
-
-        ?>
-    </div><div class = "#verhorarios?id=5">
-    <h1>Nossos serviços :</h1>
-        <?php
-                $sql = "SELECT * FROM servicos;"; 
-                $res = mysqli_query($mysqli,$sql);
-                $linhas = mysqli_num_rows($res);
-       
-                for($i = 0; $i < $linhas; $i++)
-                {
-                    $servico = mysqli_fetch_array($res);
-                    echo "<p>Nome: ".$servico["nome"]."</p>";
-                    echo "<p>Preço: ".$servico["preco"]."</p>";
-                    echo "<p><a href='#verhorarios?id=".$servico["id"]."'>
-                    Ver horários</a></p>";
-                   
-                
-                }
-
-        ?>
-    </div><div class = "#verhorarios?id=6">
-    <h1>Nossos serviços :</h1>
-        <?php
-                $sql = "SELECT * FROM servicos;"; 
-                $res = mysqli_query($mysqli,$sql);
-                $linhas = mysqli_num_rows($res);
-       
-                for($i = 0; $i < $linhas; $i++)
-                {
-                    $servico = mysqli_fetch_array($res);
-                    echo "<p>Nome: ".$servico["nome"]."</p>";
-                    echo "<p>Preço: ".$servico["preco"]."</p>";
-                    echo "<p><a href='#verhorarios?id=".$servico["id"]."'>
-                    Ver horários</a></p>";
-                   
-                
-                }
-
-        ?>
-    </div><div class = "#verhorarios?id=7">
-    <h1>Nossos serviços :</h1>
-        <?php
-                $sql = "SELECT * FROM servicos;"; 
-                $res = mysqli_query($mysqli,$sql);
-                $linhas = mysqli_num_rows($res);
-       
-                for($i = 0; $i < $linhas; $i++)
-                {
-                    $servico = mysqli_fetch_array($res);
-                    echo "<p>Nome: ".$servico["nome"]."</p>";
-                    echo "<p>Preço: ".$servico["preco"]."</p>";
-                    echo "<p><a href='#verhorarios?id=".$servico["id"]."'>
-                    Ver horários</a></p>";
-                   
-                
-                }
-
-        ?>
-    </div><div class = "#verhorarios?id=8">
-    <h1>Nossos serviços :</h1>
-        <?php
-                $sql = "SELECT * FROM servicos;"; 
-                $res = mysqli_query($mysqli,$sql);
-                $linhas = mysqli_num_rows($res);
-       
-                for($i = 0; $i < $linhas; $i++)
-                {
-                    $servico = mysqli_fetch_array($res);
-                    echo "<p>Nome: ".$servico["nome"]."</p>";
-                    echo "<p>Preço: ".$servico["preco"]."</p>";
-                    echo "<p><a href='#verhorarios?id=".$servico["id"]."'>
-                    Ver horários</a></p>";
-                   
-                
-                }
-
-        ?>
-    </div>
     <!-- abrir o navbar--> 
     <script>
 function openNav() {

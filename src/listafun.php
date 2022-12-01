@@ -12,12 +12,13 @@ include "autentica.php";
 </head>
 <body>
         <nav>
-            <a class="logo" href="administracao.php"><img src="img/logo.png" alt=""></a>
+            <a class="logo" href="administracao.php"><img id="logo-nav" src="img/logo.png" alt=""></a>
             <ul class="nav-list">
-                <h1>Lista de clientes</h1>        
+                <h1>Lista de funcionários</h1>        
             </ul>
         </nav>
-        <main>
+        <center>
+        <div>
             <?php
             include ("conecta.php");
 
@@ -40,6 +41,7 @@ include "autentica.php";
                 }
             
             ?>
-        </main>
+        </div>
+        </center>
 </body>
 </html>
