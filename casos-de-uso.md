@@ -179,6 +179,7 @@
 6. O sistema vai exibir a sequinte mensagem " edição não realizada".
 8. O sistema encaminhara o administrador para a pagina inicial.
 
+![Diagrama de Casos de Uso](fluxo-alternativo-edição.jpg)
 
 
 
