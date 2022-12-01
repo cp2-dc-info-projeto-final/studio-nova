@@ -148,7 +148,7 @@
 1. O sistema vai apresentar um formulario com a lista de usuários.
 2. O administrador escolher um perfil para exclui. 
 3. O administrador clica no botão "excluir".
-4. 4. O sistema vai exibir a seguinte mensagem " tem certeza que deseja excluir o usuário".
+4. O sistema vai exibir a seguinte mensagem " tem certeza que deseja excluir o usuário".
 5. O administrador  clica no botão "cancelar".
 6. O sistema vai exibir a seguinte mensagem " exclusão não realizada".
 7. O sistema encaminhara o administrador para a pagina inicial.
