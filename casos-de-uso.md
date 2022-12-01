@@ -142,6 +142,7 @@
 5. O administrador clica no botão "ok".  
 6. O sistema exibirá que "o usuário foi excluído com sucesso". 
 
+![Diagrama de Casos de Uso](diagrama-exclusão-de-usuário-principal.jpg)
 
 
 **Fluxo Alternativo A**
@@ -153,6 +154,7 @@
 6. O sistema vai exibir a seguinte mensagem " exclusão não realizada".
 7. O sistema encaminhara o administrador para a pagina inicial.
 
+![Diagrama de Casos de Uso](diagrama-exclusão-de-usuário-alternativo.jpg)
 
 
 ### CDU 05 Edição de usuário
@@ -193,6 +195,7 @@
 4. O sistema exibi a sequinte mensagem " Agendamento cadastrado com sucesso"
 5. O sistema redireciona o cliente para a página inicial. 
 
+![Diagrama de Casos de Uso](diagrama-agendamento-principal.jpg)
 
 
 
@@ -208,6 +211,7 @@
 10. O sistema vai exibir a seguinte mensagem " Agendamento cadastrado com sucesso"
 11. O sistema redireciona o cliente para a pagina inicial. 
  
+![Diagrama de Casos de Uso](diagrama-agendamento-alternativoo.jpg)
 
 
 ### CDU 07 Disponibilizar horários
