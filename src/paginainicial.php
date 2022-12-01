@@ -85,21 +85,36 @@
                 $sql = "SELECT * FROM servicos;"; 
                 $res = mysqli_query($mysqli,$sql);
                 $linhas = mysqli_num_rows($res);
-                $servico = mysqli_fetch_array($res);
-                $nome = $servico["nome"];
-                
-                $sql2 = "SELECT * FROM horarios;";
-                $res2 = mysqli_query($mysqli,$sql);
-                $horarios = mysqli_fetch_array($res2);
-
-
-
+   
                 for($i = 0; $i < $linhas; $i++)
                 {
+                    $servico = mysqli_fetch_array($res);
+                    $id = $servico["id"];
+                    $nome = $servico["nome"];
                     echo "<p>Nome: ".$nome."</p>";
                     echo "<p>Preço: ".$servico["preco"]."</p>";
-                    echo "<p><a>Ver horários</a></p>";
-  
+                    echo "<p><a href='#horarios?$id'>Ver horários</a></p>";
+                    
+                    
+                    echo "<div id='horarios?$id' class='confirma'";
+                    echo " <div class='confirma-conteudo'>";
+                    echo "<h1>Horários de $nome </h1><br>";
+                    $sql2 = "SELECT * FROM horarios WHERE nome_servico = '$nome';";
+                    $res2 = mysqli_query($mysqli,$sql2);
+                    $quantidade = mysqli_num_rows($res2);
+
+                    if($quantidade != 0){
+
+                        $data = mysqli_fetch_array($res2);
+                        $dia_servico = $data["dataServico"];
+                        $hora = $data["horario"];
+                        echo "<p> Dia: $dia_servico às $hora </p>"; 
+
+                    }
+                    else{
+                        echo"<p>Nenhum horário disponível no momento</p>";
+                    }
+                    echo"</div></div>";
                 }
 
                 
@@ -107,6 +122,8 @@
 
         ?>
     </div>
+
+        
     </center>
     <!-- abrir o navbar--> 
     <script>

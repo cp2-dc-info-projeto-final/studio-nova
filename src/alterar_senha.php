@@ -98,6 +98,7 @@
 
                                 echo "<p>Senha atualizada com sucesso!</p>";
                                 echo "<a href='login.php'>Fazer login</a>";
+                                
                             }
                     }
                     else{
@@ -108,7 +109,7 @@
                     }
             }
             else {
-                echo "Email não cadastrado, faça o cadastro na página de cadastro para acessar o site";
+                echo "<p>Email não cadastrado, faça o cadastro na página de cadastro para acessar o site</p>";
                 echo "<a href='cadastro.php'>Cadastro</a>";
             }
 
