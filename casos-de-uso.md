@@ -195,7 +195,7 @@
 4. O sistema exibi a sequinte mensagem " Agendamento cadastrado com sucesso"
 5. O sistema redireciona o cliente para a página inicial. 
 
-![Diagrama de Casos de Uso](caso-de-uso-fluxo-principal-cliente.png)
+![Diagrama de Casos de Uso](diagrama-agendamento-alternativoo.jpg)
 
 
 
@@ -211,7 +211,7 @@
 10. O sistema vai exibir a seguinte mensagem " Agendamento cadastrado com sucesso"
 11. O sistema redireciona o cliente para a pagina inicial. 
  
-![Diagrama de Casos de Uso](caso-de-uso-fluxo-principal-cliente.)
+![Diagrama de Casos de Uso](diagrama-agendamento-principal.jpg)
 
 
 ### CDU 07 Disponibilizar horários
