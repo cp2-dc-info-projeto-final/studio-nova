@@ -36,9 +36,7 @@ include "autentica.php";
                     echo "<p><a href='edit.php?id_funcionario=".$funcionario["id_funcionario"]."'>
                     Editar funcionario</a></p>";
                     echo "<p><a href='excluir.php?id_funcionario=".$funcionario["id_funcionario"]."'>
-                    Excluir funcionario</a></p>";
-                    echo "<p><a href='excluir.php?id_funcionario=".$funcionario["id_funcionario"]."'>
-                    Excluir funcionario</a></p>";
+                    Excluir funcionario</a></p><br>";
 
                 }
             

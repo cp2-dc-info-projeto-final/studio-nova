@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 01-Dez-2022 às 17:02
+-- Generation Time: 03-Dez-2022 às 22:26
 -- Versão do servidor: 5.7.17
 -- PHP Version: 5.6.30
 
@@ -54,12 +54,12 @@ INSERT INTO `administrador` (`id`, `email`, `senha`) VALUES
 --
 DROP TABLE IF EXISTS `agendamento`;
 CREATE TABLE `agendamento` (
-  `id` smallint(6) NOT NULL,
-  `data` date DEFAULT NULL,
-  `hora` time DEFAULT NULL,
-  `idusuario` int(11) DEFAULT NULL,
-  `idservico` int(11) DEFAULT NULL,
-  `idfuncionario` int(11) DEFAULT NULL
+  `id` int(100) NOT NULL,
+  `nome_servico` varchar(100) NOT NULL,
+  `horario` time NOT NULL,
+  `dataServico` date NOT NULL,
+  `id_usuario` int(11) DEFAULT NULL,
+  `id_funcionario` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -83,31 +83,12 @@ CREATE TABLE `funcionario` (
 --
 
 INSERT INTO `funcionario` (`id_funcionario`, `nome`, `email`, `senha`, `cpf`, `tel`, `servico`) VALUES
-(1, 'hebert richard', 'hebert@richard.com', 'funcionario', '123456789', '219685473', ''),
-(2, 'noah ', 'noah@funcionario.com', '$2y$10$QStWtsTw7/MxBrlz..QmxubP2wFI3m5C.pySst2xTJfXg2A35Rpte', '123456789', '21987636453', ''),
-(3, 'kelly ', 'kelly@costa.com', '$2y$10$NOk6xhdVIzGhcVXn4wX1auac6aBGpBL4MeyZ0EXZhu1pMlPSm5ksm', '10057299722', '21987636453', ''),
-(4, 'MATHEUS', 'mpereiranovaa@gmail.com', '$2y$10$1TqoYtxeG324kYYjl1Byx.e0yntyfx5GKMYmQ.uh4gBNEZHIrYqNW', '10057299722', '21987636453', 'makeup social'),
-(5, 'fabiana', 'fabiana@teste.com', '$2y$10$nnX3Cc3Km.YrwMWGh.Dp.ONUdyQWrLwUbT5XoFuF64VfBtBJGpbVK', '12345678990', '123456723', 'makeup social');
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `horarios`
---
-DROP TABLE IF EXISTS `horarios`;
-CREATE TABLE `horarios` (
-  `id` int(100) NOT NULL,
-  `nome_servico` varchar(100) NOT NULL,
-  `horario` time NOT NULL,
-  `dataServico` date NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `horarios`
---
-
-INSERT INTO `horarios` (`id`, `nome_servico`, `horario`, `dataServico`) VALUES
-(1, 'makeup social ', '15:00:00', '2022-12-03');
+(6, 'Ana ', 'funcionariaa@novatudio.com', '$2y$10$yQeQbDp/SzD0tf9UD9dJ0.HX.Is33xvgpeFYRuaocwCtTrq1pf7VG', '12345678990', '21987636453', 'makeup social'),
+(7, 'Bruna', 'funcionariab@novatudio.com', '$2y$10$9/8/ZfEVoRXArc5f3h.wk.jXHXnJaODSb9Cb.RRdgdciM9UQfyhzi', '12345678990', '21987636453', 'makeup noiva'),
+(8, 'Carmem ', 'funcionariac@novatudio.com', '$2y$10$stdNT3eyC0JdrtCO2ID0pOgQ5rF.NJDyxsJc8OK78wr8t4PWyjq7G', '12345678990', '21987636453', 'limpeza de pele'),
+(9, 'Daniele', 'funcionariad@novatudio.com', '$2y$10$8beaZ7VpwFkAVdAnQxXXPu/2UcGlACf5FqelWrI/5eNXB33Ni34I2', '10057299722', '21987636453', 'designer com henna'),
+(10, 'Eliane ', 'funcionariae@novatudio.com', '$2y$10$6.v4Q9i.AVCtLZz.MQeFA.v4xDeMuU6RkQuSZlVGdorR8RKnAkxIC', '10057299722', '21987636453', 'designer simples'),
+(11, 'fabiana', 'funcionariaf@novatudio.com', '$2y$10$Zy8PmmwYZSfxCB//TIoiPuuUykQQZ/lqtkvK1LpjT5w7xiVj4lK8K', '10057299722', '21987636453', 'lash lifting');
 
 -- --------------------------------------------------------
 
@@ -121,13 +102,6 @@ CREATE TABLE `recupera_senha` (
   `rash` varchar(200) NOT NULL,
   `status` int(20) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `recupera_senha`
---
-
-INSERT INTO `recupera_senha` (`id`, `email`, `rash`, `status`) VALUES
-(5, 'mpereiranova@gmail.com', '082d37565d86c5f7dc93a3d11f9edfb4', 0);
 
 -- --------------------------------------------------------
 
@@ -145,20 +119,20 @@ CREATE TABLE `servicos` (
 --
 -- Extraindo dados da tabela `servicos`
 --
+
 INSERT INTO `servicos` (`id`, `nome`, `preco`, `duracao`) VALUES
-(3, 'makeup social', 150, 1),
-(4, 'makeup noiva', 700, 90),
-(5, 'limpeza de pele', 120, 90),
-(6, 'designer com henna', 50, 60),
-(7, 'designer simples', 30, 20),
-(8, 'lash lifting', 150, 90);
+(1, 'makeup social', 150, 1),
+(2, 'makeup noiva', 700, 90),
+(3, 'limpeza de pele', 120, 90),
+(4, 'designer com henna', 50, 60),
+(5, 'designer simples', 30, 20),
+(6, 'lash lifting', 150, 90);
 
 -- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `usuario`
 --
-
 DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `id` int(20) NOT NULL,
@@ -195,9 +169,7 @@ ALTER TABLE `administrador`
 -- Indexes for table `agendamento`
 --
 ALTER TABLE `agendamento`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `idusuario` (`idusuario`),
-  ADD KEY `idservico` (`idservico`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `funcionario`
@@ -205,12 +177,6 @@ ALTER TABLE `agendamento`
 ALTER TABLE `funcionario`
   ADD PRIMARY KEY (`id_funcionario`),
   ADD UNIQUE KEY `id_funcionario` (`id_funcionario`);
-
---
--- Indexes for table `horarios`
---
-ALTER TABLE `horarios`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `recupera_senha`
@@ -243,17 +209,12 @@ ALTER TABLE `administrador`
 -- AUTO_INCREMENT for table `agendamento`
 --
 ALTER TABLE `agendamento`
-  MODIFY `id` smallint(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `funcionario`
 --
 ALTER TABLE `funcionario`
-  MODIFY `id_funcionario` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT for table `horarios`
---
-ALTER TABLE `horarios`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_funcionario` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `recupera_senha`
 --

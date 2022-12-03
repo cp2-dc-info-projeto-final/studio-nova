@@ -102,11 +102,6 @@
                         $cpf = $_POST["cpf"];
                         $erro = 0;
 
-                        if(empty($nome) or strstr($nome, ' '))
-                        {
-                            echo "Por favor, insira o nome do funcionario";
-                            $erro = 1;
-                        }
                         if(($senha1 == $senha2) == false)
                         {
                             echo "As senhas não são correspondentes.<br>";

@@ -12,8 +12,12 @@
     <title>Página inicial</title>
 </head>
 <body>
-
-
+     <!--<div id="loading" class="box-load">
+        <div class="pre"><img src="img/loading.gif" alt=""></div>
+    </div>
+-->
+    
+<div class="conteudo">
     <!-- barra de navegação --> 
     <nav>
                 <a  href="#mySidenav" onclick="openNav()">     
@@ -78,9 +82,11 @@
             <a href="" class="btn-cancelar">Cancelar</a>
         </div>
     </div>
-    <center>
-    <div>
-        <h1>Nossos serviços :</h1>
+        <center>
+            <h1>Nossos serviços :</h1>
+        </center>
+        <section id="gallery">
+            <div id="gallery-container">
         <?php
                 $sql = "SELECT * FROM servicos;"; 
                 $res = mysqli_query($mysqli,$sql);
@@ -91,42 +97,58 @@
                     $servico = mysqli_fetch_array($res);
                     $id = $servico["id"];
                     $nome = $servico["nome"];
+                    echo"<div id='gallery-content'>";
                     echo "<p>Nome: ".$nome."</p>";
-                    echo "<p>Preço: ".$servico["preco"]."</p>";
+                    echo "<p>Preço: R$".$servico["preco"].",00</p>";
                     echo "<p><a href='#horarios?$id'>Ver horários</a></p>";
+                    echo"</div>";
                     
+                    echo "<div id='horarios?$id' class = 'confirma'>
+                            <div class='confirma-conteudo'>
+                            <h1>Horários de $nome </h1><br>";
                     
-                    echo "<div id='horarios?$id' class='confirma'";
-                    echo " <div class='confirma-conteudo'>";
-                    echo "<h1>Horários de $nome </h1><br>";
-                    $sql2 = "SELECT * FROM horarios WHERE nome_servico = '$nome';";
-                    $res2 = mysqli_query($mysqli,$sql2);
-                    $quantidade = mysqli_num_rows($res2);
+                            $sql2 = "SELECT * FROM agendamento WHERE nome_servico = '$nome';";
+                            $res2 = mysqli_query($mysqli,$sql2);
+                            $quantidade = mysqli_num_rows($res2);
 
-                    if($quantidade != 0){
+                            if($quantidade != 0){
 
-                        $data = mysqli_fetch_array($res2);
-                        $dia_servico = $data["dataServico"];
-                        $hora = $data["horario"];
-                        echo "<p> Dia: $dia_servico às $hora </p>"; 
-
-                    }
-                    else{
-                        echo"<p>Nenhum horário disponível no momento</p>";
-                    }
-                    echo"</div></div>";
+                                for($j = 0; $j < $quantidade; $j++){
+                                
+                                $data = mysqli_fetch_array($res2);
+                                $dia_servico = $data["dataServico"];
+                                $hora = $data["horario"];
+                                echo "<p> Dia: $dia_servico às $hora <a>Agendar Serviço</a></p>"; 
+                                
+                                }
+                            }
+                            else{
+                                echo"<p>Nenhum horário disponível no momento</p>";
+                            }
+                    echo"</div>
+                    </div>";
                 }
 
                 
                
 
         ?>
-    </div>
-
         
-    </center>
-    <!-- abrir o navbar--> 
-    <script>
+    </div>
+    </div>
+</body> 
+<!-- 
+
+<script>
+    var i = setInterval(function () {
+    
+    clearInterval(i);
+  
+    document.getElementById("loading").style.display = "none";
+
+}, 4000);
+--> 
+<script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }
@@ -134,5 +156,4 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 </script>
-</body>
 </html>
