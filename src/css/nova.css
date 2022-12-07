@@ -84,6 +84,16 @@ main h2{
     background-color: rgb(30, 24, 35);
     margin: 0 auto;
 }
+button{
+    background-color: rgb(213, 107, 130);
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+
+}
 .btn{
     background-color: rgb(213, 107, 130);
     border: none;
@@ -329,5 +339,9 @@ h1{
         border-style: solid;
         border-width: medium;
         border-color: rgb(213, 107, 130); 
-        border-radius: 5px;  
+        border-radius: 5px;
+        margin: 5%;
+        padding: 15px;
+        
 }
+

@@ -103,7 +103,7 @@
                     echo "<p><a href='#horarios?$id'>Ver horários</a></p>";
                     echo"</div>";
                     
-                    echo "<div id='horarios?$id' class = 'confirma'>
+                    echo "<div id='horarios?$id' class= 'confirma'>
                             <div class='confirma-conteudo'>
                             <h1>Horários de $nome </h1><br>";
                     
@@ -118,9 +118,20 @@
                                 $data = mysqli_fetch_array($res2);
                                 $dia_servico = $data["dataServico"];
                                 $hora = $data["horario"];
-                                echo "<p> Dia: $dia_servico às $hora <a>Agendar Serviço</a></p>"; 
+                                $id_agendamento = $data["id"];
+                                echo "<p> Dia: $dia_servico às $hora <a onClick='return confirm('Gostaria de agendar este serviço?')' href='#agendamento-feito?$id_agendamento'>Agendar Serviço</a></p>"; 
                                 
-                                }
+                                echo"<div id='agendamento-feito?$id_agendamento' class='confirma'>
+                                    <div class='confirma-conteudo'>
+                                    
+                                <h1> deu certo meu nobre $id_agendamento</>";
+
+                                    //if()
+
+                                    echo "</div>
+                                </div>";
+
+                            }
                             }
                             else{
                                 echo"<p>Nenhum horário disponível no momento</p>";
