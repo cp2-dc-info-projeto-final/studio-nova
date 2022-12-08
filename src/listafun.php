@@ -1,4 +1,4 @@
-?php
+<?php
 include "autentica.php";
 ?>
 <!DOCTYPE html>
@@ -42,14 +42,13 @@ include "autentica.php";
                     echo "<p>Celular: ".$funcionario["tel"]."</p>";
                     echo "<p><a href='edit.php?id_funcionario=".$funcionario["id_funcionario"]."'>
                     Editar funcionario</a></p>";
-                    echo "<p><a href=#botao-confirma?$id_funcionario'> Editar funcionario</a></p>";
+                    echo "<p><a href='#botao-confirma?$id_funcionario'> Excluir funcionario</a></p>";
                     
                     echo "<div class='confirma' id='botao-confirma?$id_funcionario'>
                       <div class= 'confirma-conteudo'>
                      <h1>Tem certeza que deseja excluir usuário?</h1><br>
-                      <a href=#botao-confirma'  class='confirma'>             
                       <a href= '' class='btn-cancelar'>Cancelar</a>
-                      <a href= '' class='btn-cancelar'>excluir</a>
+                      <a href= 'excluir.php?$id_funcionario' class='btn-cancelar'>excluir</a>
                       </di></div>";
                 }
             

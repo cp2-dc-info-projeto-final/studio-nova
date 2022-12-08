@@ -26,6 +26,49 @@
      $res = mysqli_query($mysqli,$sql);
      $linhas = mysqli_num_rows($res);
 
+     if(isset($_POST["data"]) && isset($_POST["horario"]) && isset($_POST["funcionarios"])){
+        
+        $servicos = mysqli_fetch_array($res);
+        $nome_servico = $servicos["nome"];
+        $horario = $_POST["horario"];
+        $dataServico = $_POST["data"];
+        $funcionario = $_POST["funcionarios"];
+        
+        $sql = "SELECT * FROM servicos WHERE nome = '$nome_servico';";
+        $sql_query = $mysqli->query($sql) or die ("Falha na execusão do código:" . $mysqli->error);
+        $servicos = mysqli_fetch_array($sql_query);
+        $duracao = $servicos["duracao"];
+        
+        $sql2 = "SELECT * FROM funcionario WHERE nome = '$funcionario';";
+        $res2 = mysqli_query($mysqli,$sql2);
+        $funcionarios = mysqli_fetch_array($res2);
+        $id_fun = $funcionarios["id_funcionario"];
+        
+        $soma = $horario + ($duracao/60);
+        $erro = 0;
+        
+        $sql3 = "SELECT * FROM agendamento WHERE horario = '$horario' AND horario <='$soma';";
+        $res3 = mysqli_query($mysqli,$sql3);
+        $quantidade = mysqli_num_rows($res3);
+
+        
+        //if($quantidade != 0 ){
+           // echo "Horário indisponível";
+          //  $erro = 1;
+        //}
+
+        
+       
+        if($erro == 0){
+        $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
+        $sql = "INSERT INTO agendamento (nome_servico,horario,dataServico,id_funcionario) VALUES ('$nome_servico','$horario','$dataServico','$id_fun');";
+        $sql_query = $mysqli->query($sql) or die ("Falha na execusão do código:" . $mysqli->error);
+        
+        echo "Horário salvo com sucesso!!";
+    }
+        }
+
+
      for($i = 0; $i < $linhas; $i++)
      {
          $servicos = mysqli_fetch_array($res);
@@ -37,22 +80,24 @@
          echo "<a href='#inserirhorarios?$id'>Disponibilizar horário</a><br><br>";
         
          echo "<div id ='inserirhorarios?$id' class = 'confirma'>
-         <div class='confirma-conteudo'>
-                                 <h1> Agendamento de horário </h1><br>
-                                 <h2> $nome </h2><br>
-                                 <form action='horarios.php' method='POST'>
-                                 <div class='input-group'>
-                                         <label for='data'>Insira o dia</label>
-                                         <input type='date' name='data' placeholder=' Insira aqui o dia do serviço' required>
-                                     </div>
-                                     <div class='input-group'>
-                                         <label for='horario'>Insira o horario</label>
-                                         <input type='time' name='horario' placeholder=' Insira aqui a hora do serviço' required>
-                                     </div>
-                                     <div class='input-group'>
-                                            <div id='box2'>
-                                                <label for='funcionarios'>Selecione o funcionario</label>
-                                                <select name='funcionarios'>";
+                    <div class='confirma-conteudo'>
+                        <h1> Agendamento de horário </h1><br>
+                        <h2> $nome </h2><br>
+                                 
+                                 
+                        <form action='horarios.php' method='POST'>
+                            <div class='input-group'>
+                                <label for='data'>Insira o dia</label>
+                                <input type='date' name='data' placeholder=' Insira aqui o dia do serviço' required>
+                            </div>
+                            <div class='input-group'>
+                                <label for='horario'>Insira o horario</label>
+                                    <input type='time' name='horario' placeholder=' Insira aqui a hora do serviço' required>
+                            </div>
+                            <div class='input-group'>
+                                    <div id='box2'>
+                                        <label for='funcionarios'>Selecione o funcionario</label>
+                                            <select name='funcionarios'>";
 
                                                 $sql2 = "SELECT * FROM funcionario WHERE servico = '$nome';";
                                                 $res2 = mysqli_query($mysqli,$sql2);
@@ -65,55 +110,13 @@
                                                     echo "<option value='$nome_fun'>".$nome_fun."</option>";
                                                 }
 
-                                                echo"</select>
-                                            </div>
-                                        </div>
-                                     <input type='submit' class='btn' value='Inserir'>";
-
-                                           if(isset($_POST["data"]) && isset($_POST["horario"]) && isset($_POST["funcionarios"])){
-                                            
-                                            $nome_servico = $nome;
-                                            $horario = $_POST["horario"];
-                                            $dataServico = $_POST["data"];
-                                            $funcionario = $_POST["funcionarios"];
-                                            
-                                            $sql = "SELECT * FROM servicos WHERE nome = '$nome_servico';";
-                                            $sql_query = $mysqli->query($sql) or die ("Falha na execusão do código:" . $mysqli->error);
-                                            $servicos = mysqli_fetch_array($sql_query);
-                                            $duracao = $servicos["duracao"];
-                                            
-                                            $sql2 = "SELECT * FROM funcionario WHERE nome = '$funcionario';";
-                                            $res2 = mysqli_query($mysqli,$sql2);
-                                            $funcionarios = mysqli_fetch_array($res2);
-                                            $id_fun = $funcionarios["id_funcionario"];
-                                            
-                                            $soma = $horario + ($duracao/60);
-                                            $erro = 0;
-                                            
-                                            $sql3 = "SELECT * FROM agendamento WHERE horario = '$horario' AND horario <='$soma';";
-                                            $res3 = mysqli_query($mysqli,$sql3);
-                                            $quantidade = mysqli_num_rows($res3);
-
-                                            
-                                            //if($quantidade != 0 ){
-                                               // echo "Horário indisponível";
-                                              //  $erro = 1;
-                                            //}
-
-                                            
-                                           
-                                            if($erro == 0){
-                                            $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
-                                            $sql = "INSERT INTO agendamento (nome_servico,horario,dataServico,id_funcionario) VALUES ('$nome_servico','$horario','$dataServico','$id_fun');";
-                                            $sql_query = $mysqli->query($sql) or die ("Falha na execusão do código:" . $mysqli->error);
-                                            
-                                            echo "Horário salvo com sucesso!!";
-                                        }
-                                            }
-                                 
-                                 echo"</form>
-             </div>
-         </div>";
+                                        echo"</select>
+                                    </div>
+                                </div>
+                                <input type='submit' class='btn' value='Inserir'>";
+                    echo"</form>
+                    </div>
+                </div>";
 
         }
     
