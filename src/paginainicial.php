@@ -105,8 +105,9 @@
                     
                     echo "<div id='horarios?$id' class= 'confirma'>
                             <div class='confirma-conteudo'>
+                            <a href='javascript:void(0)' class='closebtn'>&times;</a>
                             <h1>Horários de $nome </h1><br>";
-                    
+
                             $sql2 = "SELECT * FROM agendamento WHERE nome_servico = '$nome';";
                             $res2 = mysqli_query($mysqli,$sql2);
                             $quantidade = mysqli_num_rows($res2);
@@ -124,7 +125,7 @@
                                 echo"<div id='agendamento-feito?$id_agendamento' class='confirma'>
                                     <div class='confirma-conteudo'>
                                     
-                                <h1> deu certo meu nobre $id_agendamento</>";
+                                <h1> deu certo meu nobre $id_agendamento</h1>";
 
                                     //if()
 
@@ -138,6 +139,7 @@
                             }
                     echo"</div>
                     </div>";
+                    
                 }
 
                 

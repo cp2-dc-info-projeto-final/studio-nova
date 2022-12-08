@@ -77,12 +77,12 @@
                                             $dataServico = $_POST["data"];
                                             $funcionario = $_POST["funcionarios"];
                                             
-                                            $sql = "SELECT * FROM servicos WHERE nome='$nome_servico';";
-                                            $res = mysqli_query($mysqli,$sql);
-                                            $servicos = mysqli_fetch_array($res);
+                                            $sql = "SELECT * FROM servicos WHERE nome = '$nome_servico';";
+                                            $sql_query = $mysqli->query($sql) or die ("Falha na execusão do código:" . $mysqli->error);
+                                            $servicos = mysqli_fetch_array($sql_query);
                                             $duracao = $servicos["duracao"];
                                             
-                                            $sql2 = "SELECT * FROM funcionarios WHERE nome='$funcionario';";
+                                            $sql2 = "SELECT * FROM funcionario WHERE nome = '$funcionario';";
                                             $res2 = mysqli_query($mysqli,$sql2);
                                             $funcionarios = mysqli_fetch_array($res2);
                                             $id_fun = $funcionarios["id_funcionario"];
