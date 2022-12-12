@@ -23,7 +23,6 @@ include "autentica.php";
             </ul>
         </nav>
         <center>
-        <div>
         
             <?php
             include ("conecta.php");
@@ -35,26 +34,27 @@ include "autentica.php";
                 for($i = 0; $i < $linhas; $i++)
                  {
                     $funcionario = mysqli_fetch_array($res);
-                    echo "<p>Funcionário: ".$funcionario["nome"]."</p>";
+                    echo "<br><p>Funcionário: ".$funcionario["nome"]."</p>";
+                    $nome = $funcionario["nome"];
                     echo "<p>E-mail: ".$funcionario["email"]."</p>";
                     $id_funcionario= $funcionario["id_funcionario"];
                     echo "<p>CPF: ".$funcionario["cpf"]."</p>";
                     echo "<p>Celular: ".$funcionario["tel"]."</p>";
                     echo "<p><a href='edit.php?id_funcionario=".$funcionario["id_funcionario"]."'>
                     Editar funcionario</a></p>";
-                    echo "<p><a href='#botao-confirma?$id_funcionario'> Excluir funcionario</a></p>";
+                    echo "<p><a href='#botao-confirma?$id_funcionario'> Excluir funcionario</a></p><br>";
                     
                     echo "<div class='confirma' id='botao-confirma?$id_funcionario'>
-                      <div class= 'confirma-conteudo'>
-                     <h1>Tem certeza que deseja excluir usuário?</h1><br>
-                      <a href= '' class='btn-cancelar'>Cancelar</a>
-                      <a href= 'excluir.php?$id_funcionario' class='btn-cancelar'>excluir</a>
-                      </di></div>";
+                            <div class= 'confirma-conteudo'>
+                                <h1>Tem certeza que deseja excluir $nome?</h1><br>
+                                <a href= 'excluir.php?id_funcionario=$id_funcionario' class='btn'>excluir</a>
+                                <a href= '' class='btn-cancelar'>Cancelar</a>
+                      </div>
+                      </div>";
                 }
             
             ?>
            
-        </div>
         </center>
 </body>
 </html>

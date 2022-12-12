@@ -108,7 +108,7 @@
                                 <a href='javascript:void(0)' class='closebtn'>&times;</a>
                                 <h1>Horários de $nome </h1><br>";
 
-                                            $sql2 = "SELECT * FROM agendamento WHERE nome_servico = '$nome';";
+                                            $sql2 = "SELECT * FROM agendamento WHERE nome_servico = '$nome' AND  id_usuario IS NULL;";
                                             $res2 = mysqli_query($mysqli,$sql2);
                                             $quantidade = mysqli_num_rows($res2);
 
