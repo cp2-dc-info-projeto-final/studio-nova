@@ -53,7 +53,7 @@
                     </span>
                     <span class="title">Meu perfil</span> 
                 </a>
-                <a href="">
+                <a href="agendamentos.php">
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder" viewBox="0 0 16 16">
                             <path d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707z"/>
@@ -104,8 +104,9 @@
                     echo"</div>";
                     
                     echo "<div id='horarios?$id' class= 'confirma'>
-                            <div class='confirma-conteudo'>
-                                <a href='javascript:void(0)' class='close2' onclick='closeModal()'>&times;</a>
+                            <div class='confirma-conteudo-agendamento'>
+                            <center>
+                                <a href=\"javascript:void(0)\" class='close' onclick=\"javascript:document.getElementById(\"horarios?$id\").style.visibility = \"visible\";\">&times;</a>
                                 <h1>Horários de $nome </h1><br>";
 
                                         $sql2 = "SELECT * FROM agendamento WHERE nome_servico = '$nome' AND  id_usuario IS NULL;";
@@ -115,37 +116,30 @@
 
                                                     if($quantidade != 0){
 
-                                                        for($j = 0; $j <= $quantidade; $j++){
+                                                        for($j = 0; $j < $quantidade; $j++){
                                                         
-                                                        $data = mysqli_fetch_array($res3);
+                                                        $data = mysqli_fetch_array($res2);
                                                         $dia_servico = $data["dataServico"];
                                                         $hora = $data["horario"];
                                                         $id_agendamento = $data["id"];
                                                         $id = $_SESSION["id"];
-                                                        echo "<p> Dia: $dia_servico às $hora <a onClick=\"javascript:confirm('Gostaria de agendar este serviço?')\" href='finalizar-agendamento.php?id_agendamento=$id_agendamento&id_usuario=$id'>Agendar Serviço</a></p><br>"; 
+                                                        echo "<p> Dia: $dia_servico às $hora<br>
+                                                        <a onClick=\"javascript:confirm('Gostaria de agendar este serviço?')\" href='finalizar-agendamento.php?id_agendamento=$id_agendamento&id_usuario=$id'>Agendar Serviço</a></p><br>";
                                                         
                                                 }
                                                 }
                                                 else{
-                                                    echo"<p>Nenhum horário disponível no momento</p>";
+                                                    echo"Nenhum horário disponível no momento";
                                                 }
                                         
-                    echo"</div>
+                    echo"</center> 
+                        </div>
                     </div>";
-                    echo("
-                    <script>
-                    function closeModal() {
-                        document.getElementById(\"horarios?$id\").style.visibility = 'hidden';
-                      }
-                      function openModal() {
-                        document.getElementById(\"horarios?$id\").style.visibility = 'visible';
-                      }
-                      </script>");
                 }
 
                 
                
-
+                
         ?>
         
     </div>
@@ -169,6 +163,11 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
-
+function closeModal() {
+  document.getElementById("esqueciasenha").style.visibility = "hidden";
+}
+function openModal() {
+  document.getElementById("esqueciasenha").style.visibility = "visible";
+}
 </script>
 </html>

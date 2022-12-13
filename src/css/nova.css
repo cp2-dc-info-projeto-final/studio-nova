@@ -205,6 +205,23 @@ h1{
     background-color: white;
     padding: 2em 3em;
 }
+.confirma-conteudo-agendamento{
+    color: rgb(30, 24, 35);
+    position: relative;
+    width: 500px;
+    max-width: 90%;
+    background-color: white;
+    padding: 2em 3em;
+   
+}
+
+.confirma-conteudo-agendamento p {
+    border-style: solid;
+    border-width: medium;
+    font-size: larger;
+    padding: 5%;
+}
+
 .confirma:target{
     visibility: visible;
     opacity: 1;
@@ -345,4 +362,3 @@ h1{
         padding: 15px;
         
 }
-

@@ -29,7 +29,7 @@
             <a href="cadastrofun.php" >Cadastrar funcionários</a><br>
             <a href="listafun.php" >Funcionários</a><br>
             <a href="listacli.php" >Clientes</a><br>
-            <a href="Agendamentos.php">Agendamentos</a><br>
+            <a href="agendamentos.php">Agendamentos</a><br>
             <a href="cadastroadm.php">Criar novo administrador</a><br>
             <a href="cadastroservico.php">Cadastrar novo serviço</a><br>
             <a href="horarios.php">Disponiblizar horário</a><br>

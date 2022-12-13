@@ -47,15 +47,15 @@
         $soma = $horario + ($duracao/60);
         $erro = 0;
         
-        $sql3 = "SELECT * FROM agendamento WHERE horario = '$horario' AND horario <='$soma';";
+        $sql3 = "SELECT * FROM agendamento WHERE horario = '$horario';";
         $res3 = mysqli_query($mysqli,$sql3);
         $quantidade = mysqli_num_rows($res3);
 
         
-        //if($quantidade != 0 ){
-           // echo "Horário indisponível";
-          //  $erro = 1;
-        //}
+        if($quantidade != 0 ){
+           echo "Horário indisponível";
+           $erro = 1;
+        }
 
         
        
