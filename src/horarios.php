@@ -26,10 +26,10 @@
      $res = mysqli_query($mysqli,$sql);
      $linhas = mysqli_num_rows($res);
 
-     if(isset($_POST["data"]) && isset($_POST["horario"]) && isset($_POST["funcionarios"])){
+     if(isset($_POST["data"]) && isset($_POST["horario"]) && isset($_POST["funcionarios"]) && isset($_POST["nome"])){
         
         $servicos = mysqli_fetch_array($res);
-        $nome_servico = $servicos["nome"];
+        $nome_servico = $_POST["nome"];
         $horario = $_POST["horario"];
         $dataServico = $_POST["data"];
         $funcionario = $_POST["funcionarios"];
@@ -59,15 +59,14 @@
 
         
        
-        if($erro == 0){
-        $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
-        $sql = "INSERT INTO agendamento (nome_servico,horario,dataServico,id_funcionario) VALUES ('$nome_servico','$horario','$dataServico','$id_fun');";
-        $sql_query = $mysqli->query($sql) or die ("Falha na execusão do código:" . $mysqli->error);
-        
-        echo "Horário salvo com sucesso!!";
-    }
+            if($erro == 0){
+            $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
+            $sql = "INSERT INTO agendamento (nome_servico,horario,dataServico,id_funcionario) VALUES ('$nome_servico','$horario','$dataServico','$id_fun');";
+            $sql_query = $mysqli->query($sql) or die ("Falha na execusão do código:" . $mysqli->error);
+            
+            echo "Horário salvo com sucesso!!";
         }
-
+    }
 
      for($i = 0; $i < $linhas; $i++)
      {
@@ -86,6 +85,7 @@
                                  
                                  
                         <form action='horarios.php' method='POST'>
+                        <input type='hidden' name='nome' value='$nome'>
                             <div class='input-group'>
                                 <label for='data'>Insira o dia</label>
                                 <input type='date' name='data' placeholder=' Insira aqui o dia do serviço' required>
@@ -117,9 +117,9 @@
                     echo"</form>
                     </div>
                 </div>";
+            }
 
-        }
-    
+            
     
 
     

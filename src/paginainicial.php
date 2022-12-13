@@ -107,26 +107,28 @@
                             <div class='confirma-conteudo'>
                                 <a href='javascript:void(0)' class='closebtn'>&times;</a>
                                 <h1>Horários de $nome </h1><br>";
+                                            
+                                            $sql3 = "SELECT * FROM agendamento WHERE nome_servico = '$nome';";
+                                            $res3 = mysqli_query($mysqli,$sql3) or die ("Falha na execusão do código:" . $mysqli->error);;
+                                            $quantidade = mysqli_num_rows($res3);
 
-                                            $sql2 = "SELECT * FROM agendamento WHERE nome_servico = '$nome';";
-                                            $res2 = mysqli_query($mysqli,$sql2);
-                                            $quantidade = mysqli_num_rows($res2);
+                                                    if($quantidade != 0){
 
-                                            if($quantidade != 0){
-
-                                                for($j = 0; $j < $quantidade; $j++){
-                                                
-                                                $data = mysqli_fetch_array($res2);
-                                                $dia_servico = $data["dataServico"];
-                                                $hora = $data["horario"];
-                                                $id_agendamento = $data["id"];
-                                                echo "<p> Dia: $dia_servico às $hora <a onClick=\"javascript:confirm('Gostaria de agendar este serviço?')\" href='finalizar-agendamento.php?id_agendamento=$id_agendamento'>Agendar Serviço</a></p>"; 
-                                                
-                                        }
-                                        }
-                                        else{
-                                            echo"<p>Nenhum horário disponível no momento</p>";
-                                        }
+                                                        for($j = 0; $j < $quantidade; $j++){
+                                                        
+                                                        $data = mysqli_fetch_array($res3);
+                                                        $dia_servico = $data["dataServico"];
+                                                        $hora = $data["horario"];
+                                                        $id_agendamento = $data["id"];
+                                                        $id = $_SESSION["id"];
+                                                        echo "<p> Dia: $dia_servico às $hora <a onClick=\"javascript:confirm('Gostaria de agendar este serviço?')\" href='finalizar-agendamento.php?id_agendamento=$id_agendamento&id_usuario=$id'>Agendar Serviço</a></p>"; 
+                                                        
+                                                }
+                                                }
+                                                else{
+                                                    echo"<p>Nenhum horário disponível no momento</p>";
+                                                }
+                                        
                     echo"</div>
                     </div>";
                     
