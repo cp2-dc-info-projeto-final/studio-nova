@@ -45,7 +45,7 @@
                 <input type="password" name="senha" placeholder=" Digite aqui sua senha" required>
             </div>
 
-            <a href="#esqueciasenha">Esqueci minha senha
+            <a href="#esqueciasenha" onclick="openModal()">Esqueci minha senha
             <input type="hidden" name="operacao" value="esqueci">
             </a>
 
@@ -59,6 +59,7 @@
                         
 
                         <div class="confirma-conteudo">
+                        <a href="javascript:void(0)" class="close" onclick="closeModal()">&times;</a>
                         <h1>Insira aqui seu email</h1><br>
                         <p>Para enviarmos um formulário de recuperação de senha</p><br>
                         <form action="login.php" method="POST">
@@ -81,9 +82,6 @@
                           $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
                           $sql_code = "INSERT INTO recupera_senha (email,rash) VALUES ('$email','$rash');";
                           $sql_query = $mysqli->query($sql_code) or die ("Falha na execusão do código AQUI:" . $mysqli->error);
-
-
-
 
                           $sql_code2 = "SELECT * FROM  usuario WHERE email = '$email'";
                           $sql_query2 = $mysqli->query($sql_code2) or die ("Falha na execusão do código:" . $mysqli->error);
@@ -137,4 +135,12 @@
 </div>
 
 </body>
+<script>
+    function closeModal() {
+  document.getElementById("esqueciasenha").style.visibility = "hidden";
+}
+function openModal() {
+  document.getElementById("esqueciasenha").style.visibility = "visible";
+}
+</script>
 </html>

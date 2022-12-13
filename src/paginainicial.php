@@ -32,7 +32,7 @@
     <!-- menu lateral --> 
     <div class="sidebar" id="mySidenav">
         <center>
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="javascript:void(0)" class="close" onclick="closeNav()">&times;</a>
             <h2><?php echo $_SESSION ['bemvindo']; ?></h2>
             <h2><?php echo $_SESSION ['nome']; ?></h2>
         </center>
@@ -74,15 +74,15 @@
     </div>
 
 <!-- Caixa de confirmação -->    
-
-    <div id="botao-confirma" class="confirma">
-        <div class="confirma-conteudo">
-            <h1>Tem certeza que encerrar sua sessão?</h1><br>
-            <a href="logout.php" class="btn1">SIM</a>
-            <a href="" class="btn-cancelar">Cancelar</a>
-        </div>
-    </div>
         <center>
+                <div id="botao-confirma" class="confirma">
+                    <div class="confirma-conteudo">
+                        <h1>Tem certeza que encerrar sua sessão?</h1><br>
+                        <a href="logout.php" class="btn1">SIM</a>
+                        <a href="" class="btn-cancelar">Cancelar</a>
+                    </div>
+                </div>
+        
             <h1>Nossos serviços :</h1>
         </center>
         <section id="gallery">
@@ -105,7 +105,7 @@
                     
                     echo "<div id='horarios?$id' class= 'confirma'>
                             <div class='confirma-conteudo'>
-                                <a href='javascript:void(0)' class='closebtn'>&times;</a>
+                                <a href='javascript:void(0)' class='close2' onclick='closeModal()'>&times;</a>
                                 <h1>Horários de $nome </h1><br>";
 
                                         $sql2 = "SELECT * FROM agendamento WHERE nome_servico = '$nome' AND  id_usuario IS NULL;";
@@ -115,14 +115,14 @@
 
                                                     if($quantidade != 0){
 
-                                                        for($j = 0; $j < $quantidade; $j++){
+                                                        for($j = 0; $j <= $quantidade; $j++){
                                                         
                                                         $data = mysqli_fetch_array($res3);
                                                         $dia_servico = $data["dataServico"];
                                                         $hora = $data["horario"];
                                                         $id_agendamento = $data["id"];
                                                         $id = $_SESSION["id"];
-                                                        echo "<p> Dia: $dia_servico às $hora <a onClick=\"javascript:confirm('Gostaria de agendar este serviço?')\" href='finalizar-agendamento.php?id_agendamento=$id_agendamento&id_usuario=$id'>Agendar Serviço</a></p>"; 
+                                                        echo "<p> Dia: $dia_servico às $hora <a onClick=\"javascript:confirm('Gostaria de agendar este serviço?')\" href='finalizar-agendamento.php?id_agendamento=$id_agendamento&id_usuario=$id'>Agendar Serviço</a></p><br>"; 
                                                         
                                                 }
                                                 }
@@ -132,7 +132,15 @@
                                         
                     echo"</div>
                     </div>";
-                    
+                    echo("
+                    <script>
+                    function closeModal() {
+                        document.getElementById(\"horarios?$id\").style.visibility = 'hidden';
+                      }
+                      function openModal() {
+                        document.getElementById(\"horarios?$id\").style.visibility = 'visible';
+                      }
+                      </script>");
                 }
 
                 
@@ -161,5 +169,6 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+
 </script>
 </html>

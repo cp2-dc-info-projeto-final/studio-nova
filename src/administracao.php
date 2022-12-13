@@ -51,7 +51,8 @@
 
         </nav>
     </footer>
-
+    
+    <center>
     <div id="botao-confirma" class="confirma">
         <div class="confirma-conteudo">
             <h1>Tem certeza que encerrar sua sessão?</h1><br>
@@ -60,5 +61,6 @@
 
         </div>
     </div>
+    </center>
 </body>
 </html>
