@@ -201,15 +201,9 @@
 
 **Fluxo Alternativo A**
 
-1. O sistema vai apresenta ao cliente a interface onde ele pode escolher o serviço e o horário que deseja. 
-3. o cliente clica no botão "Marcar.
-5. O sistema exibi a seguinte mensagem " Horário indisponível" 
-6. O sistema recarrega o formulário. 
-7. O cliente deseja remarcar o serviço.
-8. O cliente vai até a interface clica no botão "Remarcar". 
-9. O cliente atualiza o serviço ou o horário no formulario clica no botão "Marcar".
-10. O sistema vai exibir a seguinte mensagem " Agendamento cadastrado com sucesso"
-11. O sistema redireciona o cliente para a pagina inicial. 
+1. O sistema vai apresenta ao cliente a interface onde ele pode escolher o serviço e o horário que deseja.
+2. O cliente clica no botão "Marcar".
+3. O cliente clica em cancelar 
  
 ![Diagrama de Casos de Uso](diagrama-agendamento-alternativoo.jpg)
 

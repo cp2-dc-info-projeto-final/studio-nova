@@ -102,17 +102,20 @@
                                                 $sql2 = "SELECT * FROM funcionario WHERE servico = '$nome';";
                                                 $res2 = mysqli_query($mysqli,$sql2);
                                                 $linhas_funcionario = mysqli_num_rows($res2);
-
+                                                
                                                 for($j = 0; $j < $linhas_funcionario; $j++)
                                                 {
                                                     $funcionarios = mysqli_fetch_array($res2);
                                                     $nome_fun = $funcionarios["nome"];
+                                                    $id_fun = $funcionarios["id_funcionario"]; 
                                                     echo "<option value='$nome_fun'>".$nome_fun."</option>";
                                                 }
 
                                         echo"</select>
                                     </div>
                                 </div>
+                                <input type='hidden' name='id_fun' value='$id_fun'>
+                                <input type='hidden' name='nome' value='$nome'>
                                 <input type='submit' class='btn' value='Inserir'>";
                     echo"</form>
                     </div>
