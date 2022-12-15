@@ -30,7 +30,7 @@ Comprometimento, responsabilidade e honestidade.
 
 **Diagrama de Classes**
 
-![Diagramas de Classes]()
+![Diagramas de Classes](diagrama-exemplo.png)
 
 
 
