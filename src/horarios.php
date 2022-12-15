@@ -80,6 +80,7 @@
         
          echo "<div id ='inserirhorarios?$id' class = 'confirma'>
                     <div class='confirma-conteudo'>
+                        <a href='javascript:void(0)' class='close' onclick=\"document.getElementById('inserirhorarios?$id').style.visibility = 'hidden';\">&times;</a>
                         <h1> Agendamento de horário </h1><br>
                         <h2> $nome </h2><br>
                                  

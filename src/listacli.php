@@ -77,7 +77,15 @@ include "autentica.php";
                     echo "<p><a href='edit.php?id=".$cliente["id"]."'>
                     Editar cliente</a></p>";
                     echo "<p><a href='excluir.php?id=".$cliente["id"]."'> Excluir cliente</a></p><br>";
-                
+
+
+                    echo "<div class='confirma' id='botao-confirma?id=".$cliente["id"]."'>
+                            <div class= 'confirma-conteudo'>
+                                <h1>Tem certeza que deseja excluir?".$cliente['nome']."</h1><br>
+                                <a href= 'excluir.php?id=".$cliente['id']." class='btn'>excluir</a>
+                                <a href= '' class='btn-cancelar'>Cancelar</a>
+
+                 </div>";
                 }
 
 ?>
@@ -89,7 +97,7 @@ include "autentica.php";
     var search = document.getElementById('pesquisar');
 
     search.addEventListener("keydown", function(event) {
-        if (event.key === "Enter") 
+        if (event.key === "Enter")
         {
             searchData();
         }

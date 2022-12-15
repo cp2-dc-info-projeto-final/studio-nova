@@ -106,7 +106,7 @@
                     echo "<div id='horarios?$id' class= 'confirma'>
                             <div class='confirma-conteudo-agendamento'>
                             <center>
-                                <a href=\"javascript:void(0)\" class='close' onclick=\"javascript:document.getElementById(\"horarios?$id\").style.visibility = \"visible\";\">&times;</a>
+                                <a href=\"javascript:void(0)\" class='close' onclick=\"javascript:document.getElementById('horarios?$id').style.visibility = 'hidden';\">&times;</a>
                                 <h1>Horários de $nome </h1><br>";
 
                                         $sql2 = "SELECT * FROM agendamento WHERE nome_servico = '$nome' AND  id_usuario IS NULL;";
