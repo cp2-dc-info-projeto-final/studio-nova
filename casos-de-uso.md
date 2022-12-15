@@ -142,7 +142,7 @@
 5. O administrador clica no botão "ok".  
 6. O sistema exibirá que "o usuário foi excluído com sucesso". 
 
-![Diagrama de Casos de Uso](diagrama-exclusão-de-usuário-principal.jpg)
+![Diagrama de Casos de Uso](diagrama-exclusão-de-usuario.jpg)
 
 
 **Fluxo Alternativo A**
@@ -154,7 +154,7 @@
 6. O sistema vai exibir a seguinte mensagem " exclusão não realizada".
 7. O sistema encaminhara o administrador para a pagina inicial.
 
-![Diagrama de Casos de Uso](diagrama-exclusão-de-usuário-alternativo.jpg)
+![Diagrama de Casos de Uso](diagrama-exclusão-de-usuario-alternativo.jpg)
 
 
 ### CDU 05 Edição de usuário
@@ -169,7 +169,7 @@
 5. O administrador clica no botão "ok".  
 6. O sistema exibirá que "o usuário foi editado com sucesso". 
 
-![Diagrama de Casos de Uso](fluxo-principal-edição.jpg)
+![Diagrama de Casos de Uso](Edição-de-usuário.jpg)
 
 
 **Fluxo Alternativo A**
@@ -181,7 +181,7 @@
 6. O sistema vai exibir a sequinte mensagem " edição não realizada".
 8. O sistema encaminhara o administrador para a pagina inicial.
 
-![Diagrama de Casos de Uso](fluxo-alternativo-edição.jpg)
+![Diagrama de Casos de Uso](Edição-de-usuário-alternativo.jpg)
 
 
 
