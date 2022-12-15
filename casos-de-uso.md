@@ -205,7 +205,7 @@
 2. O cliente clica no botão "Marcar".
 3. O cliente clica em cancelar 
  
-![Diagrama de Casos de Uso](diagrama-agendamento-alternativoo.jpg)
+![Diagrama de Casos de Uso](diagrama-de-agendamento-alternativoo.jpg)
 
 
 ### CDU 07 Disponibilizar horários
