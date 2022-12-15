@@ -195,7 +195,7 @@
 4. O sistema exibi a sequinte mensagem " Agendamento cadastrado com sucesso"
 5. O sistema redireciona o cliente para a página inicial. 
 
-![Diagrama de Casos de Uso](diagrama-agendamento-principal.jpg)
+![Diagrama de Casos de Uso](diagrama-de-agendamento-principal.jpg)
 
 
 
