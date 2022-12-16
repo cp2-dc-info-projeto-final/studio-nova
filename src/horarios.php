@@ -94,25 +94,29 @@
                 $servicos = mysqli_fetch_array($sql_query);
                 $duracao = $servicos["duracao"];
                 $duracao_num = intval($duracao);
+                $hora = $duracao_num/60;
+                $minutos = $duracao_num % 60;
+                $hora_servico = new DateTime('');
+                $hora_servico->setTime($hora, $minutos);
+                $soma = $horario + ($hora_servico);
+                $erro = 0;
 
                 $sql2 = "SELECT * FROM funcionario WHERE nome = '$funcionario';";
                 $res2 = mysqli_query($mysqli,$sql2);
                 $funcionarios = mysqli_fetch_array($res2);
                 $id_fun = $funcionarios["id_funcionario"];
                 
-                $soma = $horario + ($duracao_num/60);
-                $erro = 0;
-                
                 $sql3 = "SELECT * FROM agendamento WHERE horario = '$horario' OR horario <= '$soma' AND dataServico = '$dataServico' AND id_funcionario = '$id_fun';";
                 $res3 = mysqli_query($mysqli,$sql3);
-                $quantidade = mysqli_num_rows($res3) or die ("Falha na execusão do código:" . $mysqli->error);
+                $quantidade = mysqli_num_rows($res3);
         
                 
                 if($quantidade != 0 ){
                     echo "<div class='modal-aviso' id='modal-aviso'>
                             <div class='modal-aviso-falha'>
-                            <p><a href='javascript:void(0)' class='close-aviso' onclick=\"document.getElementById('modal-aviso').style.visibility = 'hidden';\">&times;</a></p>
-                            <p>Horário indisponível!!</p>
+                                <p><a href='javascript:void(0)' class='close-aviso' onclick=\"document.getElementById('modal-aviso').style.visibility = 'hidden';\">&times;</a></p>
+                                <p>Horário indisponível!!</p>
+                                <p>$soma</p>
                             </div>
                         </div>";
                    $erro = 1;
@@ -125,8 +129,8 @@
                     
                     echo "<div class='modal-aviso' id = 'modal-aviso'>
                             <div class='modal-aviso-sucesso'>
-                            <p><a href='javascript:void(0)' class=close-aviso onclick=\"document.getElementById('modal-aviso').style.visibility = 'hidden';\">&times;</a></p>
-                            <p>Horário salvo com sucesso!!</p>
+                                <p><a href='javascript:void(0)' class=close-aviso onclick=\"document.getElementById('modal-aviso').style.visibility = 'hidden';\">&times;</a></p>
+                                <p>Horário salvo com sucesso!!</p>
                             </div>
                         </div>";
                 }
