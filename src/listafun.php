@@ -40,17 +40,25 @@ include "autentica.php";
                     $id_funcionario= $funcionario["id_funcionario"];
                     echo "<p>CPF: ".$funcionario["cpf"]."</p>";
                     echo "<p>Celular: ".$funcionario["tel"]."</p>";
-                    echo "<p><a href='edit.php?id_funcionario=".$funcionario["id_funcionario"]."'>
-                    Editar funcionario</a></p>";
-                    echo "<p><a href='#botao-confirma?$id_funcionario'> Excluir funcionario</a></p><br>";
+                    echo "<p><a href='#botao-confirma-editar?$id_funcionario'> Editar funcionario</a></p>";
+                    echo "<p><a href='#botao-confirma-excluir?$id_funcionario'> Excluir funcionario</a></p><br>";
                     
-                    echo "<div class='confirma' id='botao-confirma?$id_funcionario'>
+                    echo "<div class='confirma' id='botao-confirma-excluir?$id_funcionario'>
                             <div class= 'confirma-conteudo'>
                                 <h1>Tem certeza que deseja excluir $nome?</h1><br>
-                                <a href= 'excluir.php?id_funcionario=$id_funcionario' class='btn'>excluir</a>
+                                <a href= 'excluir.php?id_funcionario=$id_funcionario' class='btn'>Excluir</a>
                                 <a href= '' class='btn-cancelar'>Cancelar</a>
-                      </div>
+                            </div>
                       </div>";
+                    
+                      echo "<div class='confirma' id='botao-confirma-editar?$id_funcionario'>
+                                <div class= 'confirma-conteudo'>
+                                    <h1>Tem certeza que deseja editar $nome?</h1><br>
+                                    <a href= 'edit.php?id_funcionario=$id_funcionario' class='btn'>Editar</a>
+                                    <a href= '' class='btn-cancelar'>Cancelar</a>
+                                </div>
+                            </div>";
+
                 }
             
             ?>

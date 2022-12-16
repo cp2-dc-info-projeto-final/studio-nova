@@ -15,7 +15,7 @@
             </a>
             <a class="logo" href="administracao.php"><img id="logo-nav" src="img/logo.png" alt=""></a>
             <ul class="nav-list">
-                <h1>Disponibilizar horarios</h1>        
+                <h1>Disponibilizar horários</h1>        
             </ul>
         </nav>
 <center>
@@ -26,48 +26,6 @@
      $res = mysqli_query($mysqli,$sql);
      $linhas = mysqli_num_rows($res);
 
-     if(isset($_POST["data"]) && isset($_POST["horario"]) && isset($_POST["funcionarios"]) && isset($_POST["nome"])){
-        
-        $servicos = mysqli_fetch_array($res);
-        $nome_servico = $_POST["nome"];
-        $horario = $_POST["horario"];
-        $dataServico = $_POST["data"];
-        $funcionario = $_POST["funcionarios"];
-        
-        $sql = "SELECT * FROM servicos WHERE nome = '$nome_servico';";
-        $sql_query = $mysqli->query($sql) or die ("Falha na execusão do código:" . $mysqli->error);
-        $servicos = mysqli_fetch_array($sql_query);
-        $duracao = $servicos["duracao"];
-        
-        $sql2 = "SELECT * FROM funcionario WHERE nome = '$funcionario';";
-        $res2 = mysqli_query($mysqli,$sql2);
-        $funcionarios = mysqli_fetch_array($res2);
-        $id_fun = $funcionarios["id_funcionario"];
-        
-        $soma = $horario + ($duracao/60);
-        $erro = 0;
-        
-        $sql3 = "SELECT * FROM agendamento WHERE horario = '$horario';";
-        $res3 = mysqli_query($mysqli,$sql3);
-        $quantidade = mysqli_num_rows($res3);
-
-        
-        if($quantidade != 0 ){
-           echo "Horário indisponível";
-           $erro = 1;
-        }
-
-        
-       
-            if($erro == 0){
-            $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
-            $sql = "INSERT INTO agendamento (nome_servico,horario,dataServico,id_funcionario) VALUES ('$nome_servico','$horario','$dataServico','$id_fun');";
-            $sql_query = $mysqli->query($sql) or die ("Falha na execusão do código:" . $mysqli->error);
-            
-            echo "Horário salvo com sucesso!!";
-        }
-    }
-
      for($i = 0; $i < $linhas; $i++)
      {
          $servicos = mysqli_fetch_array($res);
@@ -76,7 +34,7 @@
          echo "<br><p>Nome: ". $nome."</p>";
          echo "<p>Precos: ". $servicos["preco"]."</p>";
          echo "<p>Duracao: ". $servicos["duracao"]."</p>";
-         echo "<a href='#inserirhorarios?$id'>Disponibilizar horário</a><br><br>";
+         echo "<a href='#inserirhorarios?$id' onclick=\"document.getElementById('inserirhorarios?$id').style.visibility = 'visible';\">Disponibilizar horário</a><br><br>";
         
          echo "<div id ='inserirhorarios?$id' class = 'confirma'>
                     <div class='confirma-conteudo'>
@@ -123,9 +81,56 @@
                 </div>";
             }
 
-            
-    
+            if(isset($_POST["data"]) && isset($_POST["horario"]) && isset($_POST["funcionarios"]) && isset($_POST["nome"])){
+        
+                $servicos = mysqli_fetch_array($res);
+                $nome_servico = $_POST["nome"];
+                $horario = $_POST["horario"];
+                $dataServico = $_POST["data"];
+                $funcionario = $_POST["funcionarios"];
+                
+                $sql = "SELECT * FROM servicos WHERE nome = '$nome_servico';";
+                $sql_query = $mysqli->query($sql) or die ("Falha na execusão do código:" . $mysqli->error);
+                $servicos = mysqli_fetch_array($sql_query);
+                $duracao = $servicos["duracao"];
+                $duracao_num = intval($duracao);
 
+                $sql2 = "SELECT * FROM funcionario WHERE nome = '$funcionario';";
+                $res2 = mysqli_query($mysqli,$sql2);
+                $funcionarios = mysqli_fetch_array($res2);
+                $id_fun = $funcionarios["id_funcionario"];
+                
+                $soma = $horario + ($duracao_num/60);
+                $erro = 0;
+                
+                $sql3 = "SELECT * FROM agendamento WHERE horario = '$horario' OR horario <= '$soma' AND dataServico = '$dataServico' AND id_funcionario = '$id_fun';";
+                $res3 = mysqli_query($mysqli,$sql3);
+                $quantidade = mysqli_num_rows($res3) or die ("Falha na execusão do código:" . $mysqli->error);
+        
+                
+                if($quantidade != 0 ){
+                    echo "<div class='modal-aviso' id='modal-aviso'>
+                            <div class='modal-aviso-falha'>
+                            <p><a href='javascript:void(0)' class='close-aviso' onclick=\"document.getElementById('modal-aviso').style.visibility = 'hidden';\">&times;</a></p>
+                            <p>Horário indisponível!!</p>
+                            </div>
+                        </div>";
+                   $erro = 1;
+                }
+                
+                if($erro == 0){
+                    $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
+                    $sql = "INSERT INTO agendamento (nome_servico,horario,dataServico,id_funcionario) VALUES ('$nome_servico','$horario','$dataServico','$id_fun');";
+                    $sql_query = $mysqli->query($sql) or die ("Falha na execusão do código:" . $mysqli->error);
+                    
+                    echo "<div class='modal-aviso' id = 'modal-aviso'>
+                            <div class='modal-aviso-sucesso'>
+                            <p><a href='javascript:void(0)' class=close-aviso onclick=\"document.getElementById('modal-aviso').style.visibility = 'hidden';\">&times;</a></p>
+                            <p>Horário salvo com sucesso!!</p>
+                            </div>
+                        </div>";
+                }
+            }
     
 
 ?> 

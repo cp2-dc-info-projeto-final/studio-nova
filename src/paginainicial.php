@@ -32,7 +32,7 @@
     <!-- menu lateral --> 
     <div class="sidebar" id="mySidenav">
         <center>
-            <a href="javascript:void(0)" class="close" onclick="closeNav()">&times;</a>
+            <a href="javascript:void(0)" class="close-sidebar" onclick="closeNav()">&times;</a>
             <h2><?php echo $_SESSION ['bemvindo']; ?></h2>
             <h2><?php echo $_SESSION ['nome']; ?></h2>
         </center>
@@ -100,7 +100,7 @@
                     echo"<div id='gallery-content'>";
                     echo "<p>Nome: ".$nome."</p>";
                     echo "<p>Preço: R$".$servico["preco"].",00</p>";
-                    echo "<p><a href='#horarios?$id'>Ver horários</a></p>";
+                    echo "<p><a href='#horarios?$id' onclick=\"javascript:document.getElementById('horarios?$id').style.visibility = 'visible';\" >Ver horários</a></p>";
                     echo"</div>";
                     
                     echo "<div id='horarios?$id' class= 'confirma'>
@@ -158,16 +158,11 @@
 --> 
 <script>
 function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("mySidenav").style.visibility = "visible";
 }
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("mySidenav").style.visibility = "hidden";
 }
-function closeModal() {
-  document.getElementById("esqueciasenha").style.visibility = "hidden";
-}
-function openModal() {
-  document.getElementById("esqueciasenha").style.visibility = "visible";
-}
+
 </script>
 </html>

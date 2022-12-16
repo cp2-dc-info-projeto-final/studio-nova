@@ -72,20 +72,29 @@ include "autentica.php";
                 for($i = 0; $i < $linhas; $i++)
                 {
                     $cliente = mysqli_fetch_array($res);
+                    $id = $cliente['id'];
                     echo "<p>Nome: ".$cliente["nome"]."</p>";
+                    $nome = $cliente["nome"];
                     echo "<p>E-mail: ".$cliente["email"]."</p>";
-                    echo "<p><a href='edit.php?id=".$cliente["id"]."'>
-                    Editar cliente</a></p>";
-                    echo "<p><a href='excluir.php?id=".$cliente["id"]."'> Excluir cliente</a></p><br>";
+                    echo "<p><a href='#botao-confirma-editar?$id'> Editar cliente</a></p>";
+                    echo "<p><a href='#botao-confirma-excluir?$id'> Excluir cliente</a></p><br>";
 
 
-                    echo "<div class='confirma' id='botao-confirma?id=".$cliente["id"]."'>
+                    echo "<div class='confirma' id='botao-confirma-excluir?$id'>
                             <div class= 'confirma-conteudo'>
-                                <h1>Tem certeza que deseja excluir?".$cliente['nome']."</h1><br>
-                                <a href= 'excluir.php?id=".$cliente['id']." class='btn'>excluir</a>
+                                <h1>Tem certeza que deseja excluir $nome?</h1><br>
+                                <a href= 'excluir.php?id='$id' class='btn'>excluir</a>
                                 <a href= '' class='btn-cancelar'>Cancelar</a>
+                            </div>
+                        </div>";
 
-                 </div>";
+                        echo "<div class='confirma' id='botao-confirma-editar?$id'>
+                                <div class= 'confirma-conteudo'>
+                                    <h1>Tem certeza que deseja editar $nome?</h1><br>
+                                    <a href= 'edit.php?id=$id' class='btn'>Editar</a>
+                                    <a href= '' class='btn-cancelar'>Cancelar</a>
+                                </div>
+                            </div>";
                 }
 
 ?>
