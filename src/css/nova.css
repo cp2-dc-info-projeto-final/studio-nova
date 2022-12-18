@@ -153,6 +153,7 @@ button{
 }
 .form-box p a {
     margin: 20px 0;
+    padding: 1vh;
 }
 form .input-group {
     margin-bottom: 15px;   
@@ -263,10 +264,24 @@ h1{
     color: white;
     font-size: 3vh;
 }
+.modal-aviso-2{
+    color: rgb(30, 24, 35);
+    position: relative;
+    width: 500px;
+    max-width: 90%;
+    background-color: white;
+    padding: 2em 3em;
+}
 .close-aviso{
         color: white;
         float: right;
         font-size: 3vh;
+}
+.close-aviso-btn{
+        padding: 1vh;
+        color: white;
+        font-size: 2vh;
+
 }
 .box-search{
     display: flex;
@@ -315,6 +330,7 @@ h1{
     padding-right: 10px;
 
 }
+
 .close {
     color: rgb(213, 107, 130);
     float: right;
@@ -389,6 +405,7 @@ h1{
 }
 #gallery
 {
+    margin-top: 5vh;
     width: 90%;
     margin: auto;
     padding: 50px;
@@ -405,9 +422,93 @@ h1{
 #gallery-content{
         border-style: solid;
         border-width: medium;
+        width: 44vh;
+        height: 22vh;
         border-color: rgb(213, 107, 130); 
         border-radius: 5px;
         margin: 5%;
-        padding: 15px;
-        
+        padding: 2vh;
+        font-size: 3vh;
+}
+#gallery-content p{
+    padding: 1vh;
+}
+.icons-box{
+    color:white;
+    transition: margin 0.2s ease-in-out;
+}
+.icons-box a{
+    color: white;
+}
+.icons-box:hover{
+    margin-top: -2;
+}
+.conteudo-editar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.conteudo-editar h1{
+    font-size: 5vh;
+}
+
+.container-editar{
+    background-color: rgb(30, 24, 35);
+    border-radius: 10px;
+    box-shadow:0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    max-width: 100%;
+    color: white;
+    padding: 5vh;
+}
+.header-editar{
+    padding: 3vh;
+}
+.sair{
+    size: 2.5vh;
+}
+
+.table {
+    margin-top: 5vh;
+	width:80%;
+	border:3px solid;
+    border-color: rgb(30, 24, 35);
+    border-radius: 5px;
+}
+.table-header {
+	display:flex;
+	width:100%;
+	background:rgb(30, 24, 35);
+	padding:3vh ;
+}
+
+.table-row {
+	display:flex;
+	width:100%;
+	padding:2vh;
+}
+
+.table-data, .header__item {
+	flex: 1 1 20%;
+	text-align:center;
+    border-bottom: 3px solid;
+    border-color: rgb(30, 24, 35);
+    width: 100%;
+    font-size: 3vh;
+    padding: 1.5vh;
+}
+
+.header__item {
+	text-transform:uppercase;
+}
+
+.filter__link {
+	color:white;
+	text-decoration: none;
+	position:relative;
+	display:inline-block;
+	padding-left:$base-spacing-unit;
+	padding-right:$base-spacing-unit;
 }

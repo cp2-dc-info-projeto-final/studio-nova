@@ -59,9 +59,9 @@
                         
 
                         <div class="confirma-conteudo">
-                        <a href="javascript:void(0)" class="close" onclick="closeModal()">&times;</a>
-                        <h1>Insira aqui seu email</h1><br>
-                        <p>Para enviarmos um formulário de recuperação de senha</p><br>
+                            <a href="javascript:void(0)" class="close" onclick="closeModal()">&times;</a>
+                            <h1>Insira aqui seu email</h1><br>
+                            <p>Para enviarmos um formulário de recuperação de senha</p><br>
                         <form action="login.php" method="POST">
                             <div class="input-group">
                                 <label for="email_2">Insira seu email</label>
@@ -69,7 +69,8 @@
                             </div>
                             <input type="submit" class="btn" value="Enviar email">
                         </form>
-                     
+                    </div>
+                </div>
                         <?php
 
                         if(isset($_POST["email_2"])){
@@ -116,7 +117,14 @@
                                   $mensagem .=  "</html></header>";
 
                                   if(envia_email($email, $assunto, $mensagem)){
-                                      echo "<p>Um email com as instruções para sua nova senha foi enviado!</p>";
+                                      echo  "<div class='modal-aviso' id = 'modal-aviso'>
+                                                <div class='modal-aviso-2'>
+                                                    <center>
+                                                        <h1>Um email com as instruções para sua nova senha foi enviado!</h1>
+                                                        <br><a href='' class=btn-cancelar onclick=\"javascript:document.getElementById('modal-aviso').style.visibility = 'hidden';\">ok</a>
+                                                    </center>
+                                                </div>
+                                            </div>";
                                   }
                                   else{
                                       echo "<p>Falha no envio do e-mail</p>";
@@ -132,7 +140,6 @@
                     
                         ?>
 
-</div>
 
 </body>
 <script>

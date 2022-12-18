@@ -23,46 +23,69 @@ include "autentica.php";
             </ul>
         </nav>
         <center>
-        
-            <?php
-            include ("conecta.php");
+            <div class="table">
+                <div class="table-header">
+                    <div class="header__item"><a id="name" class="filter__link" href="#">Nome</a></div>
+                    <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Email</a></div>
+                    <div class="header__item"><a id="draws" class="filter__link filter__link--number" href="#">CPF</a></div>
+                    <div class="header__item"><a id="losses" class="filter__link filter__link--number" href="#">Celular</a></div>
+                    <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">Ações</a></div>
+                </div> 
+                <?php
+                include ("conecta.php");
 
-                $sql = "SELECT * FROM funcionario;"; 
-                $res = mysqli_query($mysqli,$sql);
-                $linhas = mysqli_num_rows($res);
-                
-                for($i = 0; $i < $linhas; $i++)
-                 {
-                    $funcionario = mysqli_fetch_array($res);
-                    echo "<br><p>Funcionário: ".$funcionario["nome"]."</p>";
-                    $nome = $funcionario["nome"];
-                    echo "<p>E-mail: ".$funcionario["email"]."</p>";
-                    $id_funcionario= $funcionario["id_funcionario"];
-                    echo "<p>CPF: ".$funcionario["cpf"]."</p>";
-                    echo "<p>Celular: ".$funcionario["tel"]."</p>";
-                    echo "<p><a href='#botao-confirma-editar?$id_funcionario'> Editar funcionario</a></p>";
-                    echo "<p><a href='#botao-confirma-excluir?$id_funcionario'> Excluir funcionario</a></p><br>";
+                    $sql = "SELECT * FROM funcionario;"; 
+                    $res = mysqli_query($mysqli,$sql);
+                    $linhas = mysqli_num_rows($res);
                     
-                    echo "<div class='confirma' id='botao-confirma-excluir?$id_funcionario'>
-                            <div class= 'confirma-conteudo'>
-                                <h1>Tem certeza que deseja excluir $nome?</h1><br>
-                                <a href= 'excluir.php?id_funcionario=$id_funcionario' class='btn'>Excluir</a>
-                                <a href= '' class='btn-cancelar'>Cancelar</a>
-                            </div>
-                      </div>";
-                    
-                      echo "<div class='confirma' id='botao-confirma-editar?$id_funcionario'>
+                    for($i = 0; $i < $linhas; $i++)
+                    {
+                        $funcionario = mysqli_fetch_array($res);
+
+                        $nome = $funcionario["nome"];
+                        echo"<div class='table-content'>
+                                <div class='table-row'>";
+                                echo "<div class='table-data'>$nome</div>";
+                                echo "<div class='table-data'>".$funcionario["email"]."</div>";
+                                $id_funcionario= $funcionario["id_funcionario"];
+                                echo "<div class='table-data'>".$funcionario["cpf"]."</div>";
+                                echo "<div class='table-data'>".$funcionario["tel"]."</div>";
+                                echo "<div class='table-data'>
+                                    <a href='#botao-confirma-editar?$id_funcionario'> 
+                                        <svg xmlns='http://www.w3.org/2000/svg' width='3.5vh' height='3.5vh' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>
+                                            <path d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z'/>
+                                        </svg></a>";
+                                echo "<a href='#botao-confirma-excluir?$id_funcionario'>
+                                        <svg xmlns='http://www.w3.org/2000/svg' width='3.5vh' height='3.5vh' fill='currentColor' class='bi bi-trash' viewBox='0 0 16 16'>
+                                            <path d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z'/>
+                                            <path fill-rule='evenodd' d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z'/>
+                                        </svg>
+                                    </a>";
+                                echo"</div>";
+                            echo"</div>";
+                        echo"</div>";
+                        
+                        echo "<div class='confirma' id='botao-confirma-excluir?$id_funcionario'>
                                 <div class= 'confirma-conteudo'>
-                                    <h1>Tem certeza que deseja editar $nome?</h1><br>
-                                    <a href= 'edit.php?id_funcionario=$id_funcionario' class='btn'>Editar</a>
+                                    <h1>Tem certeza que deseja excluir $nome?</h1><br>
+                                    <a href= 'excluir.php?id_funcionario=$id_funcionario' class='btn'>Excluir</a>
                                     <a href= '' class='btn-cancelar'>Cancelar</a>
                                 </div>
-                            </div>";
+                        </div>";
+                        
+                        echo "<div class='confirma' id='botao-confirma-editar?$id_funcionario'>
+                                    <div class= 'confirma-conteudo'>
+                                        <h1>Tem certeza que deseja editar $nome?</h1><br>
+                                        <a href= 'edit.php?id_funcionario=$id_funcionario' class='btn'>Editar</a>
+                                        <a href= '' class='btn-cancelar'>Cancelar</a>
+                                    </div>
+                                </div>";
 
-                }
-            
-            ?>
-           
-        </center>
+                    }
+                
+                ?>
+                </div>
+            </div> 
+        </center>  
 </body>
 </html>

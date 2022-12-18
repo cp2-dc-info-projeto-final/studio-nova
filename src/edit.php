@@ -21,7 +21,7 @@
 
 <html>
     <head>
-        <title>Edição de Cliente</title>
+        <title>Edição de Usuario</title>
         <form action="atualizar.php" method="POST"> 
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/nova.css">

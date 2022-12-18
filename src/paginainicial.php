@@ -25,9 +25,8 @@
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                 </svg>
                 </a> 
-            </label>
             <a class="logo" href=""><img id="logo-nav" src="img/logo.png" alt=""></a>
-            <a href="#botao-confirma">Sair</a>
+            <a href="#botao-confirma" class="sair">Sair</a>
     </nav>
     <!-- menu lateral --> 
     <div class="sidebar" id="mySidenav">
@@ -36,7 +35,7 @@
             <h2><?php echo $_SESSION ['bemvindo']; ?></h2>
             <h2><?php echo $_SESSION ['nome']; ?></h2>
         </center>
-        <a href="">
+        <a href="" onclick="closeNav()">
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
@@ -61,7 +60,7 @@
                     </span>
                     <span class="title">Meus agendamentos</span> 
                 </a>
-                <a href="#botao-confirma">
+                <a href="#botao-confirma" onclick="javascript:document.getElementById('botao-confirma').style.visibility = 'visible'">
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
@@ -79,11 +78,12 @@
                     <div class="confirma-conteudo">
                         <h1>Tem certeza que encerrar sua sessão?</h1><br>
                         <a href="logout.php" class="btn1">SIM</a>
-                        <a href="" class="btn-cancelar">Cancelar</a>
+                        <a class="btn-cancelar" onclick="javascript:document.getElementById('botao-confirma').style.visibility = 'hidden'">Cancelar</a>
                     </div>
                 </div>
-        
-            <h1>Nossos serviços :</h1>
+                <div class="conteudo-editar">       
+                    <h1>Nossos serviços :</h1>
+                </div> 
         </center>
         <section id="gallery">
             <div id="gallery-container">
@@ -98,9 +98,11 @@
                     $id = $servico["id"];
                     $nome = $servico["nome"];
                     echo"<div id='gallery-content'>";
-                    echo "<p>Nome: ".$nome."</p>";
-                    echo "<p>Preço: R$".$servico["preco"].",00</p>";
-                    echo "<p><a href='#horarios?$id' onclick=\"javascript:document.getElementById('horarios?$id').style.visibility = 'visible';\" >Ver horários</a></p>";
+                    echo"<center>";
+                    echo "  <p>Nome: ".$nome."</p>";
+                    echo "  <p>Preço: R$".$servico["preco"].",00</p>";
+                    echo "  <p><a href='#horarios?$id' onclick=\"javascript:document.getElementById('horarios?$id').style.visibility = 'visible';\" >Ver horários</a></p>";
+                    echo"</center>";
                     echo"</div>";
                     
                     echo "<div id='horarios?$id' class= 'confirma'>
