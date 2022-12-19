@@ -268,5 +268,6 @@
 
 
 **Fluxo Principal**
-1. 
+1. Usuário clica no botão sair.
+2. O sistema desloga o usuário.
 
