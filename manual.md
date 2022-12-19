@@ -77,3 +77,10 @@ Nam lacinia gravida velit et ultricies. Quisque blandit a ligula at tincidunt. V
 
 ![cadastro](login.jpeg)
 
+
+
+## Funcionalidade Z
+..................
+
+1[cadastro](cadastro-admin.png)
+
