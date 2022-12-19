@@ -46,14 +46,14 @@ Nam lacinia gravida velit et ultricies. Quisque blandit a ligula at tincidunt. V
 
 ## Funcionalidade Z
 ...............
-![cadastro](nossos-serviços-part2.jpeg)
+![cadastro](horarios.jpeg)
 
 
 
 ## Funcionalidade Z
 
 ......................
-![cadastro](horarios.jpeg)
+![cadastro](nossos-serviços-part2.jpeg)
 
 
 
