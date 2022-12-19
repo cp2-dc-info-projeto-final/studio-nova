@@ -70,6 +70,12 @@ encerramento da sessão.
 
 Ao clicar em “MEU PERFIL” o cliente será direcionado a página “editar seus dados”.
 
+EDITAR DADOS CLIENTE:
+
+O cliente insere nome, sobrenome e e-mail. O administrador clica em “EDITAR”
+
+O cliente informa sua senha e clica em “EDITAR DADOS”
+
 ![cadastro](editar-dados.jpeg)
 
 
