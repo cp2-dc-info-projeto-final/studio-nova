@@ -84,3 +84,6 @@ Nam lacinia gravida velit et ultricies. Quisque blandit a ligula at tincidunt. V
 
 ![cadastro](adm.jpeg)
 
+
+
+![cadastro](admin2.jpeg)
