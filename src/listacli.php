@@ -19,7 +19,7 @@ include "autentica.php";
             </a>
             <a class="logo" href="administracao.php"><img id="logo-nav" src="img/logo.png" alt=""></a>
             <ul class="nav-list">
-                <h1>Clientes</h1>        
+                <h1>Lista de clientes</h1>        
             </ul>
             <div class="box-search">
                 <input type="search" class="barra-pesquisa" placeholder="Pesquisar" id="pesquisar">
@@ -145,7 +145,7 @@ include "autentica.php";
                                 echo "<div class='confirma' id='botao-confirma-excluir?$id'>
                                         <div class= 'confirma-conteudo'>
                                             <h1>Tem certeza que deseja excluir $nome?</h1><br>
-                                            <a href= 'excluir.php?id='$id' class='btn'>excluir</a>
+                                            <a href= 'excluir.php?id_cliente=$id' class='btn'>excluir</a>
                                             <a href= '' class='btn-cancelar' onclick=\"javascript:document.getElementById('botao-confirma-excluir?$id').style.visibility = 'hidden';\">Cancelar</a>
                                         </div>
                                     </div>";
@@ -153,7 +153,7 @@ include "autentica.php";
                                     echo "<div class='confirma' id='botao-confirma-editar?$id'>
                                             <div class= 'confirma-conteudo'>
                                                 <h1>Tem certeza que deseja editar $nome?</h1><br>
-                                                <a href= 'edit.php?id=$id' class='btn'>Editar</a>
+                                                <a href= 'editusu.php?id_cliente=$id' class='btn'>Editar</a>
                                                 <a href= '' class='btn-cancelar' onclick=\"javascript:document.getElementById('botao-confirma-editar?$id').style.visibility = 'hidden';\">Cancelar</a>
                                             </div>
                                         </div>";

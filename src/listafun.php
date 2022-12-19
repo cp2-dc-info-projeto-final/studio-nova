@@ -159,7 +159,7 @@ include "autentica.php";
                         echo "<div class='confirma' id='botao-confirma-editar?$id_funcionario'>
                                     <div class= 'confirma-conteudo'>
                                         <h1>Tem certeza que deseja editar $nome?</h1><br>
-                                        <a href= 'edit.php?id_funcionario=$id_funcionario' class='btn'>Editar</a>
+                                        <a href= 'editusu.php?id_funcionario=$id_funcionario' class='btn'>Editar</a>
                                         <a href= '' class='btn-cancelar' onclick=\"javascript:document.getElementById('botao-confirma-editar?$id_funcionario').style.visibility = 'hidden';\">Cancelar</a>
                                     </div>
                                 </div>";

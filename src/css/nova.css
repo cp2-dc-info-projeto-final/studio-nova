@@ -276,6 +276,10 @@ h1{
     color: white;
     font-size: 3vh;
 }
+.modal-aviso-sucesso a{
+    color: white;
+    font-size: 3vh;
+}
 .modal-aviso-falha{
     color: white;
     position: relative;

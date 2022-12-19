@@ -99,8 +99,8 @@
                     $nome = $servico["nome"];
                     echo"<div id='gallery-content'>";
                     echo"<center>";
-                    echo "  <p>Nome: ".$nome."</p>";
-                    echo "  <p>Preço: R$".$servico["preco"].",00</p>";
+                    echo "  <p>".$nome."</p>";
+                    echo "  <p>R$".$servico["preco"].",00</p>";
                     echo "  <p><a href='#horarios?$id' onclick=\"javascript:document.getElementById('horarios?$id').style.visibility = 'visible';\" >Ver horários</a></p>";
                     echo"</center>";
                     echo"</div>";

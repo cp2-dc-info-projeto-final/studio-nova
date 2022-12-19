@@ -11,15 +11,14 @@
 <?php
     include "conecta.php";
 
-    
-    if(isset($id_cliente) && $id_cliente != ""){
+    if(isset($_GET["id_cliente"]) && $_GET["id_cliente"] != ""){
         
         if ($mysqli->connect_errno) {
             printf("Connect failed: %s\n", $mysqli->connect_error);
             exit();
         }
 
-        $id = $id_cliente;
+        $id = $_GET["id_cliente"];
         $sql = "DELETE FROM usuario WHERE id = $id;"; 
         mysqli_query($mysqli,$sql);
         echo "Cliente excluído com sucesso!<br>";
@@ -32,9 +31,9 @@
         $id = $_GET["id_funcionario"];
         $sql = "DELETE FROM funcionario WHERE id_funcionario = $id;"; 
         mysqli_query($mysqli,$sql);
-        echo "Cliente excluído com sucesso!<br>";
+        echo "Funcionário excluído com sucesso!<br>";
         echo "<a href='administracao.php'>Voltar para o início</a><br>";
-        echo "<a href='listacli.php'>Voltar para lista de clientes</a>";
+        echo "<a href='listafun.php'>Voltar para lista de funcionarios</a>";
         }
 ?>
 </body>

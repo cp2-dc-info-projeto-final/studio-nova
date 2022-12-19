@@ -79,7 +79,7 @@
                             }
                     }
                 ?>     
-                <input type="submit" class="btn" value="Cadastrar funcionário">
+                <input type="submit" class="btn" value="Cadastrar administrador">
         
             </form>
         </div>
