@@ -17,44 +17,44 @@ Sua autoestima em primeiro lugar sempre!!!!!
  - [Funcionalidade Y](#Funcionalidade-Y)
  - [Funcionalidade Z](#Funcionalidade-Z)
 
-## CADASTRO 
+## Cadastro
 
 O usuário insere o nome, sobrenome, e-mail e senha desejada. O usuário clica no botão “CADASTRAR-SE”.
 
 ![cadastro](cria-conta.jpeg)
 
 
-## LOGIN
+## Login
 
 O usuário deve inserir o login e a senha e clicar no botão “ENTRAR”.
 
 ![cadastro](login.jpeg)
 
 
-## NOSSOS SERVIÇOS 
+## Nossos Serviços
 
-Ao clicar em “VER HORÁRIOS” do serviço desejado, apareceráum modal com as datas e horários disponíveis para o cliente.
+Ao clicar em “VER HORÁRIOS” do serviço desejado, aparecerá um modal com as datas e horários disponíveis para o cliente.
 
 ![cadastro](nossos-serviços.jpeg)
 
 
 
 
-## AGENDAR SERVIÇOS 
+## Agendar Serviços
 
 Ao clicar em “AGENDAR SERVIÇOS” aparecerá um modal para confirmar ou cancelar o agendamento.
 
 ![cadastro](horarios.jpeg)
 
 
-## CONFIEMAÇÃO DE AGENDAMENTO 
+## Confirmação de Agendamento
 
 Após confirmar o agendamento aparecerá uma mensagem “agendamento efetuado com sucesso”.
 
 ![cadastro](agendamento-concluido.png)
 
 
-## MENU
+## Menu
 
 Ao clicar no menu lateral aparecerá os botões “início, meu perfil, meus agendamentos e sair”.
 
@@ -66,14 +66,14 @@ encerramento da sessão.
 ![cadastro](nossos-serviços-part2.jpeg)
 
 
-## MEU PERFIL
+## Meu Perfil
 
 Ao clicar em “MEU PERFIL” o cliente será direcionado a página “editar seus dados”.
 
 ![cadastro](editar-dados.jpeg)
 
 
-## MEUS AGENDAMENTOS
+## Meus Agendamentos
 
 Ao clicar em “MEUS AGENDAMENTOS” o cliente será direcionado a página “seus agendamentos”.
 
