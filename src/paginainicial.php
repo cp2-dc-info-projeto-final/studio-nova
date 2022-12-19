@@ -26,7 +26,7 @@
                 </svg>
                 </a> 
             <a class="logo" href=""><img id="logo-nav" src="img/logo.png" alt=""></a>
-            <a href="#botao-confirma" class="sair">Sair</a>
+            <a href="#botao-confirma" onclick="javascript:document.getElementById('botao-confirma').style.visibility = 'visible'" class="sair">Sair</a>
     </nav>
     <!-- menu lateral --> 
     <div class="sidebar" id="mySidenav">

@@ -22,12 +22,12 @@
                 <h1>Administração</h1>
             </ul>
             <a href="#botao-confirma" class="btn-nav" onclick="javascript:document.getElementById('botao-confirma').style.visibility = 'visible';">logout</a> 
-        </nav>
+        </nav><br><br>
 
         <section id="gallery">
             <div id="gallery-container">
                 
-                <div id='gallery-content' class=icons-box>
+                <div id='gallery-content' class="icons-box" href="">
                     <center>
                         <span class=icon2>
                             <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
@@ -39,7 +39,7 @@
                     </center>
                 </div>
                 
-                <div id='gallery-content' class=icons-box>
+                <div id='gallery-content' class="icons-box" href="">
                     <center>
                         <span class=icon2>
                             <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" fill="currentColor" class="bi bi-person-video2" viewBox="0 0 16 16">
@@ -51,7 +51,7 @@
                     </center>
                 </div>
                 
-                <div id='gallery-content' class=icons-box>
+                <div id='gallery-content' class="icons-box" href="">
                     <center>
                         <span class=icon2>
                             <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
@@ -62,7 +62,7 @@
                     </center>
                 </div>
                 
-                <div id='gallery-content' class=icons-box>
+                <div id='gallery-content' class="icons-box" href="">
                     <center>
                         <span class=icon2>
                             <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
@@ -73,7 +73,7 @@
                     </center>
                 </div>
                 
-                <div id='gallery-content' class=icons-box>
+                <div id='gallery-content' class="icons-box" href="">
                     <center>
                         <span class=icon2>
                             <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
@@ -85,7 +85,7 @@
                     </center>
                 </div>
                 
-                <div id='gallery-content' class=icons-box>
+                <div id='gallery-content' class="icons-box" href="">
                     <center>
                         <span class=icon2>
                             <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
@@ -97,7 +97,7 @@
                     </center>   
                 </div>
                 
-                <div id='gallery-content' class=icons-box>
+                <div id='gallery-content' class="icons-box" href="">
                     <center>
                         <span class=icon2>
                             <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">

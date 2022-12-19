@@ -197,6 +197,7 @@ h1{
     background-color: rgba(77, 77, 77, 0.7) ;
     transition: all .4s;
     height: 100vh;
+    font-size: 2vh;
 }
 .confirma-conteudo {
     color: rgb(30, 24, 35);
@@ -421,7 +422,7 @@ h1{
 }
 #gallery-content{
         border-style: solid;
-        border-width: medium;
+        border-width: large;
         width: 44vh;
         height: 22vh;
         border-color: rgb(213, 107, 130); 
@@ -449,11 +450,9 @@ h1{
     justify-content: center;
     padding: 20px;
 }
-
 .conteudo-editar h1{
     font-size: 5vh;
 }
-
 .container-editar{
     background-color: rgb(30, 24, 35);
     border-radius: 10px;
@@ -472,7 +471,7 @@ h1{
 
 .table {
     margin-top: 5vh;
-	width:80%;
+	width:85%;
 	border:3px solid;
     border-color: rgb(30, 24, 35);
     border-radius: 5px;
@@ -483,13 +482,11 @@ h1{
 	background:rgb(30, 24, 35);
 	padding:3vh ;
 }
-
 .table-row {
 	display:flex;
 	width:100%;
 	padding:2vh;
 }
-
 .table-data, .header__item {
 	flex: 1 1 20%;
 	text-align:center;
@@ -497,18 +494,25 @@ h1{
     border-color: rgb(30, 24, 35);
     width: 100%;
     font-size: 3vh;
-    padding: 1.5vh;
+    padding: 1.7vh;
 }
-
+.table-data #email{
+    font-size: 2.5vh;
+}
 .header__item {
 	text-transform:uppercase;
 }
-
 .filter__link {
 	color:white;
 	text-decoration: none;
 	position:relative;
 	display:inline-block;
-	padding-left:$base-spacing-unit;
-	padding-right:$base-spacing-unit;
+	padding-left:1vh;
+	padding-right:1vh;
+}
+.barra-pesquisa{
+    width: 20vh;
+    height: 7vh;
+    border-radius: 10px;
+    padding: 0.5vh;
 }

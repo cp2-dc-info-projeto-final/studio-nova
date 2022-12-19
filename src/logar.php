@@ -125,10 +125,10 @@
                                               $_SESSION['email'] = $funcionario ['email'];
                                               $_SESSION['senha'] = $funcionario ['senha'];
                                               $_SESSION['servico'] = $funcionario ['servico'];
-                                              $_SESSION['bemvindo'] = "Olá !";
+                                              $_SESSION['bemvindo'] = "Olá, ";
                                               $_SESSION['tipo'] = "funcionario";
                                   
-                                              header("location: funcionarios.php");
+                                              header("location: agendamentos.php");
                                             }
                                       }
                                       else
