@@ -72,6 +72,58 @@ Nam lacinia gravida velit et ultricies. Quisque blandit a ligula at tincidunt. V
 ![cadastro](meus-agendamentos.png)
 
 
+## Funcionalidade Z
+
+......................
+![cadastro](login.jpeg)
+
+
+## Funcionalidade Z
+
+......................
+![cadastro](cadastro-de-fun.jpeg)
+
+
+## Funcionalidade Z
+
+......................
+![cadastro](lista-de-funcionario.jpeg)
+
+
+## Funcionalidade Z
+
+......................
+![cadastro](lista-de-cliente.jpeg)
+
+
+## Funcionalidade Z
+
+......................
+![cadastro](Agendamentos.png)
+
+
+## Funcionalidade Z
+
+......................
+![cadastro](cadastro-admin.png)
+
+
+## Funcionalidade Z
+
+......................
+![cadastro](cadastro-serviços2.jpeg)
+
+
+## Funcionalidade Z
+
+......................
+![cadastro](disponibilizar-horarios.jpeg)
+
+
+## Funcionalidade Z
+
+......................
+![cadastro](disponibilizar-horarios.jpeg)
 
 
 
