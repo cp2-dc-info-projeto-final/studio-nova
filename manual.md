@@ -73,15 +73,6 @@ Nam lacinia gravida velit et ultricies. Quisque blandit a ligula at tincidunt. V
 
 
 
-## Funcionalidade Z
 
-......................
-![cadastro](meus-agendamentos.png)
-
-
-## Funcionalidade Z
-
-......................
-![cadastro](cadastro-de-fun.jpeg)
 
 
