@@ -31,7 +31,7 @@ In vestibulum euismod orci, vitae mollis neque luctus vel. Aliquam erat volutpat
 
 Donec auctor a orci a semper. Nunc consequat dui vel eros faucibus molestie. Praesent euismod purus nec justo iaculis varius. Integer vehicula ac metus at ultricies. Maecenas pulvinar neque sed est sollicitudin, vitae dignissim magna posuere. Sed consectetur, mi nec bibendum sodales, urna sem aliquam leo, mollis vulputate justo leo vel nunc. Sed lacinia ipsum lacus, ultrices iaculis tellus efficitur at. Proin consectetur orci ac egestas aliquam. Proin dignissim euismod turpis sollicitudin interdum. Mauris pellentesque, orci non accumsan lobortis, nunc felis hendrerit tortor, non rutrum risus nisl id erat.
 
-![cadastro](diagrama-exemplo.png)
+![cadastro](cadastro-de-fun.jpeg)
 
 
 ## Funcionalidade Z
