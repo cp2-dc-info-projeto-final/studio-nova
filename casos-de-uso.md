@@ -10,6 +10,8 @@
  - [CDU 06](#CDU-06): Agendamento;   
  - [CDU 07](#CDU-07): Disponibilizar horários;
  - [CDU 08](#CDU-08): Cadastro de serviços;
+ - [CDU 09](#CDU-09): Sair;
+
  
 
 ## Lista dos Atores
@@ -260,3 +262,11 @@
 
 
 ![Diagrama de Casos de Uso](cadastro-de-serviços.jpg)
+
+
+### CDU 09 Sair
+
+
+**Fluxo Principal**
+1. 
+
