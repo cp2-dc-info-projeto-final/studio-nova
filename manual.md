@@ -82,5 +82,5 @@ Nam lacinia gravida velit et ultricies. Quisque blandit a ligula at tincidunt. V
 ## Funcionalidade Z
 ..................
 
-1[cadastro](cadastro-admin.png)
+![cadastro]
 
