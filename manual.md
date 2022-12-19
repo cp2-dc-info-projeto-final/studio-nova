@@ -49,6 +49,10 @@ Nam lacinia gravida velit et ultricies. Quisque blandit a ligula at tincidunt. V
 ![cadastro](horarios.jpeg)
 
 
+## Funcionalidade Z
+...............
+![cadastro](agendamento-concluido.png)
+
 
 ## Funcionalidade Z
 
