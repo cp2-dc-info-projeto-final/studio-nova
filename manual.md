@@ -129,13 +129,13 @@ Nam lacinia gravida velit et ultricies. Quisque blandit a ligula at tincidunt. V
 ## Funcionalidade Z
 
 ......................
-![cadastro](principal-funcionario.png)
+![cadastro](serviços-funcionário.png)
 
 
 ## Funcionalidade Z
 
 ......................
-![cadastro](serviços-funcionário.png)
+![cadastro](principal-funcionario.png)
 
 
 ## Funcionalidade Z
