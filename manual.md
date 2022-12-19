@@ -60,17 +60,14 @@ Nam lacinia gravida velit et ultricies. Quisque blandit a ligula at tincidunt. V
 ![cadastro](nossos-serviços-part2.jpeg)
 
 
-
-## Funcionalidade Z
-
-......................
-![cadastro](meus-agendamentos.png)
-
-
-
 ## Funcionalidade Z
 
 ......................
 ![cadastro](editar-dados.jpeg)
 
+
+## Funcionalidade Z
+
+......................
+![cadastro](meus-agendamentos.png)
 
