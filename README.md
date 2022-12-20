@@ -14,6 +14,14 @@ O **Studio Nova** é um espaço acolhedor de ambiente agradável, onde as client
 Temos como objetivo oferecer as clientes opções de serviços e uma equipe multiprofissional para que tenham um atendimento estético de qualidade.
 Nosso Espaço oferece as clientes serviços de  Maquiagem, extensão de cílios, design de sobrancelha, Limpeza facial.
 
+ ## Instruções para o sistema 
+ 
+ Email para testar o login do funcionário : funcionariaa@novatudio.com 
+ Senha : 123123123
+ 
+ Email para testar o login do administrador: admin@admin.com
+ Senha : adminadmin
+ 
 **Aqui nós não fazemos nada mais do que realçar essa beleza incrível que existe dentro de ti!**
 
 Valores-
