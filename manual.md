@@ -20,7 +20,7 @@ Sua autoestima em primeiro lugar sempre!!!!!
  - [Confirmação de Agendamento](studio)
  - [Menu](Menu)
  - [Meu Perfil](studio)
- - [MeusAgendamentos](studio)
+ - [Meus Agendamentos](studio)
 
 ## Cadastro
 
