@@ -21,6 +21,10 @@ Sua autoestima em primeiro lugar sempre!!!!!
  - [Menu](Menu)
  - [Meu Perfil](studio)
  - [Meus Agendamentos](studio)
+ - [Login do Administrador](studio)
+ - [Administração](studio)
+ - [Cadastro de Funcionários](studio)
+ - [Lista de Funcionários](studio)
 
 ## Cadastro
 
