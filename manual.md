@@ -15,12 +15,12 @@ Sua autoestima em primeiro lugar sempre!!!!!
 
  - [Cadastro](Cadastro)
  - [Login](Login)
- - [Nossos serviços](Nossos serviços)
- - [Agendar serviços](Agendar serviços)
- - [Confirmação de Agendamento](Confirmação de Agendamento)
+ - [Nossos serviços](studio)
+ - [Agendar serviços](studio)
+ - [Confirmação de Agendamento](studio)
  - [Menu](Menu)
- - [Meu Perfil](Meu Perfil)
- - [MeusAgendamentos](MeusAgendamentos)
+ - [Meu Perfil](studio)
+ - [MeusAgendamentos](studio)
 
 ## Cadastro
 
