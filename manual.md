@@ -13,6 +13,7 @@ Sua autoestima em primeiro lugar sempre!!!!!
 
 **Lista das Funcionalidades:**
 
+ - [Página Principal](studio)
  - [Cadastro](Cadastro)
  - [Login](Login)
  - [Nossos serviços](studio)
