@@ -124,9 +124,9 @@ Ao clicar em “DISPONIBILIZAR HORÁRIO”, o administrador será direcionado a 
 
 ## Cadastro de Funcionarios 
 
-O funcionário insere o nome, sobrenome, clica em selecionar serviços para escolher o serviço desejado, insere o e-mail, CPF, 
+O Administrador insere o nome, sobrenome do Funcionário, clica em selecionar serviços para escolher o serviço desejado, insere o e-mail, CPF, 
 número de celular e senha desejada. 
-O funcionário clica em “CADASTRAR FUNCIONÁRIO”
+O Administrador clica em “CADASTRAR FUNCIONÁRIO”
 
 ![cadastro](cadastro-de-fun.jpeg)
 
@@ -195,26 +195,25 @@ Após inserir os dados, aparecerá o modal “horário salvo com sucesso” ou �
 
 
 ## Login Funcionário
-
-......................
+O Funcionário deve inserir o login e a senha e clicar no botão “ENTRAR”.
 ![cadastro](login.jpeg)
 
 
 ## Serviços do Funcionário
-
-......................
+O funcionário observa os seus serviços agendados.
 ![cadastro](serviços-funcionário.png)
 
 
 ## Menu do Funcionário
 
-......................
+
 ![cadastro](principal-funcionario.png)
 
 
 ## Perfil do Funcionário
+O funcionário insere nome, CPF, telefone, e e-mail. O funcionário clica em “EDITAR” 
 
-......................
+O funcionário informa sua senha e clica em “EDITAR DADOS”
 ![cadastro](dados-funcionario.png)
 
 
