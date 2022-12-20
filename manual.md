@@ -36,6 +36,17 @@ Sua autoestima em primeiro lugar sempre!!!!!
  - [Menu do funcionário](studio)
  - [Perfil do Funcionário](studio)
 
+## Página Principal
+
+Ao clicar em “CLIQUE AQUI” o usuário será direcionado a página de cadastro 
+
+Ao clicar em “ENTRAR” o usuário será direcionado a página de login 
+
+Ao clicar em “CADASTRAR” o usuário será direcionado a página de cadastro
+
+![cadastro](Pagina-principal.jpeg)
+
+
 ## Cadastro
 
 O usuário insere o nome, sobrenome, e-mail e senha desejada. O usuário clica no botão “CADASTRAR-SE”.
