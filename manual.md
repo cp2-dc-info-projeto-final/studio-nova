@@ -96,9 +96,22 @@ O Administrador deve inserir o login e a senha e clicar no botão “ENTRAR”.
 
 ![cadastro](login.jpeg)
 
-## Funcionalidade Z
+## Administração
 
-......................
+Ao clicar em “CADASTRAR FUNCIONÁRIOS”, o administrador será direcionado a página de “cadastro de funcionários”.
+
+Ao clicar em “FUNCIONÁRIOS”, o administrador será direcionado a página de “lista de funcionários”.
+
+Ao clicar em “CLIENTES”, o administrador será direcionado a página de “lista de clientes”.
+
+Ao clicar em “AGENDAMENTOS”, o administrador será direcionado a página de “todos os agendamentos”.
+
+Ao clicar em “CRIAR NOVO ADMINISTRADOR”, o administrador será direcionado a página “cadastro de administradores”.
+
+Ao clicar em “CADASTRAR NOVO SERVIÇO”, o administrador será direcionado a página “cadastro de serviços”.
+
+Ao clicar em “DISPONIBILIZAR HORÁRIO”, o administrador será direcionado a página “disponibilizar horários”.
+
 ![cadastro](adm.jpeg)
 ![cadastro](admin2.jpeg)
 
