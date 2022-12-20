@@ -13,9 +13,14 @@ Sua autoestima em primeiro lugar sempre!!!!!
 
 **Lista das Funcionalidades:**
 
- - [Funcionalidade X](#Funcionalidade-X)
- - [Funcionalidade Y](#Funcionalidade-Y)
- - [Funcionalidade Z](#Funcionalidade-Z)
+ - [Funcionalidade X](Cadastro)
+ - [Funcionalidade Y](Login)
+ - [Funcionalidade Z](Nossos serviços)
+ - [Funcionalidade A](Agendar serviços)
+ - [Funcionalidade B](Confirmação de Agendamento)
+ - [Funcionalidade C](Menu)
+ - [Funcionalidade D](Meu Perfil)
+ - [Funcionalidade E](Meus Agendamentos)
 
 ## Cadastro
 
