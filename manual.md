@@ -25,6 +25,15 @@ Sua autoestima em primeiro lugar sempre!!!!!
  - [Administração](studio)
  - [Cadastro de Funcionários](studio)
  - [Lista de Funcionários](studio)
+ - [Lista de Clientes](studio)
+ - [Agendamentos](studio)
+ - [Cadastro de administradores](studio)
+ - [Cadastro dos Serviços](studio)
+ - [Disponobilizar Horários](studio)
+ - [Login Funcionário](studio)
+ - [Serviços do Funcionário](studio)
+ - [Menu do funcionário](studio)
+ - [Perfil do Funcionário](studio)
 
 ## Cadastro
 
@@ -144,7 +153,7 @@ Ao clicar no “LÁPIS”, o administrador conseguirá editar o funcionário cor
 ![cadastro](lista-de-funcionario.jpeg)
 
 
-## Lista de Cliente
+## Lista de Clientes
 
 Ao clicar na “LUPA”, o administrador conseguirá pesquisar qualquer dado exibido na tela.
 
@@ -181,7 +190,7 @@ O administrador informa o nome do serviço, o preço do serviço e a duração d
 ![cadastro](cadastro-serviços2.jpeg)
 
 
-## Disponibilizar horário
+## Disponibilizar horários
 
 Ao clicar na “LUPA”, o administrador conseguirá pesquisar qualquer dado exibido na tela.
 
@@ -216,8 +225,7 @@ Ao clicar em “SAIR” aparecerá um modal onde o Funcionário pode confirmar o
 
 ## Perfil do Funcionário
 O funcionário insere nome, CPF, telefone, e e-mail. O funcionário clica em “EDITAR” 
-
-O funcionário informa sua senha e clica em “EDITAR DADOS”
+Os dados serão editados.
 ![cadastro](dados-funcionario.png)
 
 
