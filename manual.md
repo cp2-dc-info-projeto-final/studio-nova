@@ -190,19 +190,19 @@ Após inserir os dados, aparecerá o modal “horário salvo com sucesso” ou �
 ![cadastro](disponibilizar-horarios.jpeg)
 
 
-## Funcionalidade Z
+## Login Funcionário
 
 ......................
 ![cadastro](login.jpeg)
 
 
-## Funcionalidade Z
+## Serviços do Funcionário
 
 ......................
 ![cadastro](serviços-funcionário.png)
 
 
-## Funcionalidade Z
+## Menu 
 
 ......................
 ![cadastro](principal-funcionario.png)
