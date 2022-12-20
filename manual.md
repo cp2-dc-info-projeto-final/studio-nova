@@ -102,7 +102,7 @@ O funcionário clica em “CADASTRAR FUNCIONÁRIO”
 ![cadastro](cadastro-de-fun.jpeg)
 
 
-## Lista de Funcionario
+## Lista de Funcionarios
 
 Ao clicar na “SETA” e na “LOGO”, o administrador conseguirá voltar para página de administração.
 
@@ -115,7 +115,7 @@ Ao clicar no “LÁPIS”, o administrador conseguirá editar o funcionário cor
 ![cadastro](lista-de-funcionario.jpeg)
 
 
-## Lista de Cliente
+## Lista de Clientes
 
 Ao clicar na “LUPA”, o administrador conseguirá pesquisar qualquer dado exibido na tela.
 
@@ -165,27 +165,37 @@ Após inserir os dados, aparecerá o modal “horário salvo com sucesso” ou �
 ![cadastro](disponibilizar-horarios.jpeg)
 
 
-## Funcionalidade Z
+## Login Funcionario
 
-......................
+O funcionario deve inserir o login e a senha e clicar no botão “ENTRAR”.
 ![cadastro](login.jpeg)
 
 
-## Funcionalidade Z
+## Menu dos funcionarios 
 
-......................
+perfil onde os funcionarios veem se tem algum agendamento pendente, hora e dia em que ele vai trabalhar,
+e qual serviço ele deve fazer. 
+
+Ao clicar em “SAIR” aparecerá um modal onde o cliente pode confirmar ou cancelar o encerramento da sessão.
+
 ![cadastro](serviços-funcionário.png)
 
 
-## Funcionalidade Z
+## Serviços dos funcionarios 
+Ao clicar no menu lateral aparecerá os botões “início, meu perfil, meus agendamentos e sair”.
 
-......................
+Ao clicar em “INÍCIO” o cliente será direcionado a página inicial.
+
 ![cadastro](principal-funcionario.png)
 
 
-## Funcionalidade Z
+## Perfil do funcionario
 
-......................
+Ao clicar em “MEU PERFIL” o cliente será direcionado a página “editar seus dados”.
+O funcionário insere nome, CPF, telefone, e e-mail. O funcionário clica em “EDITAR”
+
+O funcionário informa sua senha e clica em “EDITAR DADOS”
+
 ![cadastro](dados-funcionario.png)
 
 
