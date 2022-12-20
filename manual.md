@@ -93,45 +93,75 @@ O Administrador deve inserir o login e a senha e clicar no botão “ENTRAR”.
 
 
 
-## Funcionalidade Z
+## Cadastro de Funcionarios 
 
-......................
+O funcionário insere o nome, sobrenome, clica em selecionar serviços para escolher o serviço desejado, insere o e-mail, CPF, 
+número de celular e senha desejada. 
+O funcionário clica em “CADASTRAR FUNCIONÁRIO”
+
 ![cadastro](cadastro-de-fun.jpeg)
 
 
-## Funcionalidade Z
+## Lista de Funcionario
 
-......................
+Ao clicar na “SETA” e na “LOGO”, o administrador conseguirá voltar para página de administração.
+
+Ao clicar na “LIXEIRA”, o administrador conseguirá excluir o funcionário correspondente daquela linha. Após ele clicar na
+“lixeira” aparecerá um modal para confirmar exclusão ou cancelar.
+
+Ao clicar no “LÁPIS”, o administrador conseguirá editar o funcionário correspondente daquela linha. Após clicar no 
+“lápis” aparecerá um modal para confirmar edição ou cancelar edição.
+
 ![cadastro](lista-de-funcionario.jpeg)
 
 
-## Funcionalidade Z
+## Lista de Cliente
 
-......................
+Ao clicar na “LUPA”, o administrador conseguirá pesquisar qualquer dado exibido na tela.
+
+Ao clicar na “SETA” e na “LOGO”, o administrador conseguirá voltar para página de administração.
+
+Ao clicar na “LIXEIRA”, o administrador conseguirá excluir o cliente correspondente daquela linha. Após ele clicar
+na “lixeira” aparecerá um modal para confirmar exclusão ou cancelar.
+
+Ao clicar no “LÁPIS”, o administrador conseguirá editar o cliente correspondente daquela linha. Após clicar no 
+“lápis” aparecerá um modal para confirmar edição ou cancelar edição.
+
 ![cadastro](lista-de-cliente.jpeg)
 
 
-## Funcionalidade Z
+## Agendamentos 
 
-......................
+ Uma tabela que contem a lista dos agendamendo do studionova, nessa lista contem os serviços, dia,
+ hora, o cliente que marcou o serviço e o profissional que vai executar o serviço.
+ 
 ![cadastro](Agendamentos.png)
 
 
-## Funcionalidade Z
+## Cadastro de administradores 
 
-......................
+O administrador insere e-mail e senha desejada. O administrador clica em “CADASTRAR ADMINISTRADOR”.
+
 ![cadastro](cadastro-admin.png)
 
 
-## Funcionalidade Z
+## Cadastro dos serviços 
 
-......................
+O administrador informa o nome do serviço, o preço do serviço e a duração do serviço.
+
 ![cadastro](cadastro-serviços2.jpeg)
 
 
-## Funcionalidade Z
+## Disponibilizar horário
 
-......................
+Ao clicar na “LUPA”, o administrador conseguirá pesquisar qualquer dado exibido na tela.
+
+Ao clicar na “SETA” e na “LOGO”, o administrador conseguirá voltar para página de administração.
+
+Ao clicar em “DISPONIBILIZAR HORÁRIOS” aparecerá um modal para inserir “dia, mês, ano e horário”. 
+Após inserir os dados, aparecerá o modal “horário salvo com sucesso” ou “horário indisponível” se caso não for possível agendar naquele horário/data.
+
+
 ![cadastro](disponibilizar-horarios.jpeg)
 
 
