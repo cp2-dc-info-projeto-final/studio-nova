@@ -13,9 +13,39 @@ Sua autoestima em primeiro lugar sempre!!!!!
 
 **Lista das Funcionalidades:**
 
- - [Funcionalidade X](#Funcionalidade-X)
- - [Funcionalidade Y](#Funcionalidade-Y)
- - [Funcionalidade Z](#Funcionalidade-Z)
+ - [Página Principal](studio)
+ - [Cadastro](Cadastro)
+ - [Login](Login)
+ - [Nossos serviços](studio)
+ - [Agendar serviços](studio)
+ - [Confirmação de Agendamento](studio)
+ - [Menu](Menu)
+ - [Meu Perfil](studio)
+ - [Meus Agendamentos](studio)
+ - [Login do Administrador](studio)
+ - [Administração](studio)
+ - [Cadastro de Funcionários](studio)
+ - [Lista de Funcionários](studio)
+ - [Lista de Clientes](studio)
+ - [Agendamentos](studio)
+ - [Cadastro de administradores](studio)
+ - [Cadastro dos Serviços](studio)
+ - [Disponobilizar Horários](studio)
+ - [Login Funcionário](studio)
+ - [Serviços do Funcionário](studio)
+ - [Menu do funcionário](studio)
+ - [Perfil do Funcionário](studio)
+
+## Página Principal
+
+Ao clicar em “CLIQUE AQUI” o usuário será direcionado a página de cadastro 
+
+Ao clicar em “ENTRAR” o usuário será direcionado a página de login 
+
+Ao clicar em “CADASTRAR” o usuário será direcionado a página de cadastro
+
+![cadastro](Pagina-principal.jpeg)
+
 
 ## Cadastro
 
@@ -70,11 +100,10 @@ encerramento da sessão.
 
 Ao clicar em “MEU PERFIL” o cliente será direcionado a página “editar seus dados”.
 
-EDITAR DADOS CLIENTE:
+EDITAR DADOS:
 
-O cliente insere nome, sobrenome e e-mail. O administrador clica em “EDITAR”
-
-O cliente informa sua senha e clica em “EDITAR DADOS”
+O cliente insere nome, sobrenome e e-mail. O cliente clica em “EDITAR”.
+O cliente informa sua nova senha e clica em “EDITAR DADOS”
 
 ![cadastro](editar-dados.jpeg)
 
@@ -92,71 +121,123 @@ O Administrador deve inserir o login e a senha e clicar no botão “ENTRAR”.
 
 ![cadastro](login.jpeg)
 
+## Administração
+
+Ao clicar em “CADASTRAR FUNCIONÁRIOS”, o administrador será direcionado a página de “cadastro de funcionários”.
+
+Ao clicar em “FUNCIONÁRIOS”, o administrador será direcionado a página de “lista de funcionários”.
+
+Ao clicar em “CLIENTES”, o administrador será direcionado a página de “lista de clientes”.
+
+Ao clicar em “AGENDAMENTOS”, o administrador será direcionado a página de “todos os agendamentos”.
+
+Ao clicar em “CRIAR NOVO ADMINISTRADOR”, o administrador será direcionado a página “cadastro de administradores”.
+
+Ao clicar em “CADASTRAR NOVO SERVIÇO”, o administrador será direcionado a página “cadastro de serviços”.
+
+Ao clicar em “DISPONIBILIZAR HORÁRIO”, o administrador será direcionado a página “disponibilizar horários”.
+
+![cadastro](adm.jpeg)
+![cadastro](admin2.jpeg)
 
 
-## Funcionalidade Z
 
-......................
+
+## Cadastro de Funcionarios 
+
+O Administrador insere o nome, sobrenome do Funcionário, clica em selecionar serviços para escolher o serviço desejado, insere o e-mail, CPF, 
+número de celular e senha desejada. 
+O Administrador clica em “CADASTRAR FUNCIONÁRIO”
+
 ![cadastro](cadastro-de-fun.jpeg)
 
 
-## Funcionalidade Z
+## Lista de Funcionario
 
-......................
+Ao clicar na “SETA” e na “LOGO”, o administrador conseguirá voltar para página de administração.
+
+Ao clicar na “LIXEIRA”, o administrador conseguirá excluir o funcionário correspondente daquela linha. Após ele clicar na
+“lixeira” aparecerá um modal para confirmar exclusão ou cancelar.
+
+Ao clicar no “LÁPIS”, o administrador conseguirá editar o funcionário correspondente daquela linha. Após clicar no 
+“lápis” aparecerá um modal para confirmar edição ou cancelar edição.
+
 ![cadastro](lista-de-funcionario.jpeg)
 
 
-## Funcionalidade Z
+## Lista de Clientes
 
-......................
+Ao clicar na “LUPA”, o administrador conseguirá pesquisar qualquer dado exibido na tela.
+
+Ao clicar na “SETA” e na “LOGO”, o administrador conseguirá voltar para página de administração.
+
+Ao clicar na “LIXEIRA”, o administrador conseguirá excluir o cliente correspondente daquela linha. Após ele clicar
+na “lixeira” aparecerá um modal para confirmar exclusão ou cancelar.
+
+Ao clicar no “LÁPIS”, o administrador conseguirá editar o cliente correspondente daquela linha. Após clicar no 
+“lápis” aparecerá um modal para confirmar edição ou cancelar edição.
+
 ![cadastro](lista-de-cliente.jpeg)
 
 
-## Funcionalidade Z
+## Agendamentos 
 
-......................
+ Uma tabela que contem a lista dos agendamendo do studionova, nessa lista contem os serviços, dia,
+ hora, o cliente que marcou o serviço e o profissional que vai executar o serviço.
+ 
 ![cadastro](Agendamentos.png)
 
 
-## Funcionalidade Z
+## Cadastro de administradores 
 
-......................
+O administrador insere e-mail e senha desejada. O administrador clica em “CADASTRAR ADMINISTRADOR”.
+
 ![cadastro](cadastro-admin.png)
 
 
-## Funcionalidade Z
+## Cadastro dos serviços 
 
-......................
+O administrador informa o nome do serviço, o preço do serviço e a duração do serviço.
+
 ![cadastro](cadastro-serviços2.jpeg)
 
 
-## Funcionalidade Z
+## Disponibilizar horários
 
-......................
+Ao clicar na “LUPA”, o administrador conseguirá pesquisar qualquer dado exibido na tela.
+
+Ao clicar na “SETA” e na “LOGO”, o administrador conseguirá voltar para página de administração.
+
+Ao clicar em “DISPONIBILIZAR HORÁRIOS” aparecerá um modal para inserir “dia, mês, ano e horário”. 
+Após inserir os dados, aparecerá o modal “horário salvo com sucesso” ou “horário indisponível” se caso não for possível agendar naquele horário/data.
+
+
 ![cadastro](disponibilizar-horarios.jpeg)
 
 
-## Funcionalidade Z
-
-......................
+## Login Funcionário
+O Funcionário deve inserir o login e a senha e clicar no botão “ENTRAR”.
 ![cadastro](login.jpeg)
 
 
-## Funcionalidade Z
-
-......................
+## Serviços do Funcionário
+O funcionário observa os seus serviços agendados.
 ![cadastro](serviços-funcionário.png)
 
 
-## Funcionalidade Z
+## Menu do Funcionário
+Ao clicar no menu lateral aparecerá os botões “início, meu perfil e sair”.
 
-......................
+Ao clicar em “INÍCIO” o Funcinário será direcionado a página inicial.
+
+Ao clicar em “SAIR” aparecerá um modal onde o Funcionário pode confirmar ou cancelar o encerramento da sessão.
+
 ![cadastro](principal-funcionario.png)
 
 
-## Funcionalidade Z
-
-......................
+## Perfil do Funcionário
+O funcionário insere nome, CPF, telefone, e e-mail. O funcionário clica em “EDITAR” 
+Os dados serão editados.
 ![cadastro](dados-funcionario.png)
 
 
