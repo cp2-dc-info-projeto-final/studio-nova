@@ -205,7 +205,11 @@ O funcionário observa os seus serviços agendados.
 
 
 ## Menu do Funcionário
+Ao clicar no menu lateral aparecerá os botões “início, meu perfil e sair”.
 
+Ao clicar em “INÍCIO” o Funcinário será direcionado a página inicial.
+
+Ao clicar em “SAIR” aparecerá um modal onde o Funcionário pode confirmar ou cancelar o encerramento da sessão.
 
 ![cadastro](principal-funcionario.png)
 
