@@ -202,13 +202,13 @@ Após inserir os dados, aparecerá o modal “horário salvo com sucesso” ou �
 ![cadastro](serviços-funcionário.png)
 
 
-## Menu 
+## Menu do Funcionário
 
 ......................
 ![cadastro](principal-funcionario.png)
 
 
-## Funcionalidade Z
+## Perfil do Funcionário
 
 ......................
 ![cadastro](dados-funcionario.png)
