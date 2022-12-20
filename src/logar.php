@@ -125,6 +125,8 @@
                                               $_SESSION['email'] = $funcionario ['email'];
                                               $_SESSION['senha'] = $funcionario ['senha'];
                                               $_SESSION['servico'] = $funcionario ['servico'];
+                                              $_SESSION['tel'] = $funcionario ['tel'];
+                                              $_SESSION['cpf'] = $funcionario ['cpf'];
                                               $_SESSION['bemvindo'] = "Olá, ";
                                               $_SESSION['tipo'] = "funcionario";
                                   

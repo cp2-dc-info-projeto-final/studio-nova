@@ -128,11 +128,14 @@ echo"<html>
 
 elseif($tipo == "funcionario"){
 
-    $id = $_SESSION['id'];
-    $sql = "SELECT * FROM funcionario WHERE id_funcionario = '$id';"; 
+    $nome = $_SESSION['nome'];
+    $cpf = $_SESSION['cpf'];
+    $tel = $_SESSION['tel'];
+    $sql ="SELECT * FROM funcionario WHERE email = '$email';";
     $res = mysqli_query($mysqli,$sql);
     $usuario = mysqli_fetch_array($res);
-    $nome = $usuario['nome'];
+    $id = $usuario["id_funcionario"];
+    
 
 
 echo"<html>
@@ -191,8 +194,7 @@ echo"<html>
             </div>
                         <form action='atualizar.php' method='POST'>
                             
-                            <input type='hidden' name='id' value='0'>
-                            <input type='hidden' name='id_fun' value='$id'>
+                            <input type='hidden' name='id' value='$id'>
 
                                 <div class='input-group'>
                                     <label for='nome'>Nome</label>
@@ -201,12 +203,12 @@ echo"<html>
 
                                 <div class='input-group'>
                                     <label for='cpf'>CPF</label>
-                                    <input type='text' name='cpf' placeholder=' Digite aqui seu nome' required value='$nome'>
+                                    <input type='text' name='cpf' placeholder=' Digite aqui seu nome' required value='$cpf'>
                                 </div>
 
                                 <div class='input-group'>
                                     <label for='tel'>Telefone</label>
-                                    <input type='text' name='tel' placeholder=' Digite aqui seu nome' required value='$nome'>
+                                    <input type='text' name='tel' placeholder=' Digite aqui seu nome' required value='$tel'>
                                 </div>
 
                                 <div class='input-group'>
@@ -214,23 +216,10 @@ echo"<html>
                                     <input type='text' name='email' placeholder=' Digite aqui seu email' title='formato' pattern='[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}$' required value='$email'>
                                 </div>
                                 <center>
-                                    <a href='#botao-confirma' onclick=\"javascript:document.getElementById('botao-confirma').style.visibility = 'visible';\" >Editar</a>
+                                    <button type='submit' >Editar</button>
                                 </center>
         </div>
     </div>          
-                                <div id='botao-confirma' class='confirma'>
-                                    <div class='confirma-conteudo'>
-                                        <h1>Insira sua senha para confirmar a edição</h1><br>
-                                            <div class='input-group'>
-                                                <label for='senha'>Confirme a senha</label>
-                                                <input type='password' name='senha' placeholder=' Confirme aqui sua senha' title='formato'>
-                                            </div>
-                                        <input type='submit' class='btn' value='Editar dados'>
-                                        <center>
-                                        <br><a href=\"javascript:void(0)\" onclick=\"javascript:document.getElementById('botao-confirma').style.visibility = 'hidden';\">Cancelar</a>
-                                        </center>
-                                    </div>
-                                </div>
                             </form>
                 
                             <div id='botao-confirma2' class='confirma2'>
@@ -347,7 +336,7 @@ elseif ($tipo == "administrador") {
                             <input type='text' name='email' placeholder=' Digite aqui seu email' title='formato' pattern='[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}$' required value='$email'>
                         </div>
                         <center>
-                            <button href='atualizar.php' type='submit' onclick=\"javascript:document.getElementById('botao-confirma').style.visibility = 'visible';\" >Editar</button>
+                            <button href='atualizar.php' type='submit'>Editar</button>
                         </center>
 </div>
 </div>          
@@ -447,7 +436,7 @@ elseif ($tipo == "administrador") {
                                     <input type='text' name='email' placeholder=' Digite aqui seu email' title='formato' pattern='[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}$' required value='$email'>
                                 </div>
                                 <center>
-                                    <a href='#botao-confirma' onclick=\"javascript:document.getElementById('botao-confirma').style.visibility = 'visible';\" >Editar</a>
+                                    <button href='atualizar.php' type='submit' >Editar</button>
                                 </center>
         </div>
     </div>          

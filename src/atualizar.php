@@ -12,80 +12,83 @@
 <?php
         include ("autentica.php");
         include ("conecta.php");
+       
         if($tipo == "administrador"){
 
             $id_fun = $_POST["id_fun"];
 
-        if($id_fun != 0){
-        
-        $nome = $_POST ["nome"];
-        $email = $_POST ["email"];
-        $cpf = $_POST ["cpf"];
-        $tel = $_POST ["tel"];
-        $id = $_POST ["id"];
-        $erro = 0;
-
-        $sql_code = "SELECT * FROM  funcionario WHERE id_funcionario = '$id';";
-        $sql_query = $mysqli->query($sql_code) or die("falha em:".$mysqli->error);
-
-                if($id != 0 && $erro == 0){
-                $sql = "UPDATE usuario SET nome = '$nome', sobrenome = '$sobrenome' ,email = '$email' WHERE id = $id;";  
-                $res = mysqli_query($mysqli,$sql) or die("falha em:".$mysqli->error);
-
-                echo "<div class='modal-aviso' id = 'modal-aviso'>
-                        <div class='modal-aviso-sucesso'>
-                            <center>
-                                <p>Cliente atualizado com sucesso!</p>";
-                echo "          <p><a href='administracao.php'>Voltar para o início</a></p>
-                            </center>
-                        </div>
-                    </div>";
-                }
+                if($id_fun != 0){
                 
-                if($id_fun != 0 && $erro == 0){
-                    $sql = "UPDATE funcionario SET nome = '$nome', email = '$email' WHERE id_funcionario = $id_fun;";  
-                    $res = mysqli_query($mysqli,$sql) or die("falha em:".$mysqli->error);
-                    
-                    echo "<div class='modal-aviso' id = 'modal-aviso'>
-                            <div class='modal-aviso-sucesso'>
-                                <center>
-                                    <p>Funcionário atualizado com sucesso!</p>";
-                        echo "      <p><a href='administracao.php'>Voltar para o início</a></p><br>
-                                </center>
-                            </div>
-                        </div>";
-                    } 
-            }
-            
-            else if($_POST["id_fun"] == 0){
-
                 $nome = $_POST ["nome"];
                 $email = $_POST ["email"];
-                $sobrenome = $_POST ["sobrenome"];
+                $cpf = $_POST ["cpf"];
+                $tel = $_POST ["tel"];
                 $id = $_POST ["id"];
                 $erro = 0;
 
-                $sql_code = "SELECT * FROM  usuario WHERE id = '$id';";
+                $sql_code = "SELECT * FROM  funcionario WHERE id_funcionario = '$id';";
                 $sql_query = $mysqli->query($sql_code) or die("falha em:".$mysqli->error);
-        
+
                         if($id != 0 && $erro == 0){
                         $sql = "UPDATE usuario SET nome = '$nome', sobrenome = '$sobrenome' ,email = '$email' WHERE id = $id;";  
                         $res = mysqli_query($mysqli,$sql) or die("falha em:".$mysqli->error);
-        
+
                         echo "<div class='modal-aviso' id = 'modal-aviso'>
                                 <div class='modal-aviso-sucesso'>
                                     <center>
                                         <p>Cliente atualizado com sucesso!</p>";
-                        echo "          <a href='administracao.php'>Voltar para o início</a>
+                        echo "          <p><a href='administracao.php'>Voltar para o início</a></p>
                                     </center>
                                 </div>
                             </div>";
                         }
-                }
-            }
+                        
+                        if($id_fun != 0 && $erro == 0){
+                            $sql = "UPDATE funcionario SET nome = '$nome', email = '$email' WHERE id_funcionario = $id_fun;";  
+                            $res = mysqli_query($mysqli,$sql) or die("falha em:".$mysqli->error);
+                            
+                            echo "<div class='modal-aviso' id = 'modal-aviso'>
+                                    <div class='modal-aviso-sucesso'>
+                                        <center>
+                                            <p>Funcionário atualizado com sucesso!</p>";
+                                echo "      <p><a href='administracao.php'>Voltar para o início</a></p><br>
+                                        </center>
+                                    </div>
+                                </div>";
+                            } 
+                    }
+                    
+                    else if($_POST["id_fun"] == 0){
+
+                        $nome = $_POST ["nome"];
+                        $email = $_POST ["email"];
+                        $sobrenome = $_POST ["sobrenome"];
+                        $id = $_POST ["id"];
+                        $erro = 0;
+
+                        $sql_code = "SELECT * FROM  usuario WHERE id = '$id';";
+                        $sql_query = $mysqli->query($sql_code) or die("falha em:".$mysqli->error);
+                
+                                if($id != 0 && $erro == 0){
+                                $sql = "UPDATE usuario SET nome = '$nome', sobrenome = '$sobrenome' ,email = '$email' WHERE id = $id;";  
+                                $res = mysqli_query($mysqli,$sql) or die("falha em:".$mysqli->error);
+                
+                                echo "<div class='modal-aviso' id = 'modal-aviso'>
+                                        <div class='modal-aviso-sucesso'>
+                                            <center>
+                                                <p>Cliente atualizado com sucesso!</p>";
+                                echo "          <p><a href='listacli.php' class='close-aviso-btn'>Voltar para lista de clientes</a><p>
+                                                <p><a href='administracao.php' class='close-aviso-btn'>Voltar para o início</a></p>
+                                            </center>
+                                        </div>
+                                    </div>";
+                                }
+                        }
+                    }
             elseif($tipo == "cliente"){
                 
                 $nome = $_POST ["nome"];
+                $senha =$_POST ["senha"];
                 $email = $_POST ["email"];
                 $sobrenome = $_POST ["sobrenome"];
                 $id = $_POST ["id"];
@@ -126,7 +129,30 @@
                 }
             }
 
-            elseif($tipo == "funcionario"){}
+            elseif($tipo == "funcionario"){
+
+                $nome = $_POST ["nome"];
+                $email = $_POST ["email"];
+                $cpf = $_POST ["cpf"];
+                $tel = $_POST["tel"];
+                $id = $_POST["id"];
+                $erro = 0;
+
+                if($id != 0 && $erro == 0){
+                $sql = "UPDATE funcionario SET nome = '$nome', cpf = '$cpf' ,email = '$email', tel = '$tel' WHERE id_funcionario = $id;";  
+                mysqli_query($mysqli,$sql) or die("falha em" .$mysqli->error);;
+
+                echo "<div class='modal-aviso'>
+                        <div class='modal-aviso-sucesso'>
+                            <center>
+                                <p>Seus dados foram atualizados com sucesso!</p>";
+                echo "          <p><a href='agendamentos.php' class='close-aviso-btn'>Voltar para o início</a><p>
+                            </center>
+                        </div>
+                    </div>";
+                }
+
+            }
 ?>
 </body>
 </html>

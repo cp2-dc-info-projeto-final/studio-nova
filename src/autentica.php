@@ -10,6 +10,9 @@
     if(isset($_SESSION["tipo"])){
         $tipo = $_SESSION["tipo"];
     }
+    if(isset($_SESSION["id"])){
+        $id = $_SESSION["id"];
+    }
     if(empty($email) OR empty($senha) OR empty($tipo)){
         echo "Você não fez o login!";
         echo "<p><a href='login.php'>Página de login</a></p>";

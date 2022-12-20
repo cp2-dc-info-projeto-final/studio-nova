@@ -211,7 +211,6 @@ else{
                         $minutos = $duracao_num % 60;
 
                         $hora_servico = strtotime("$hora:$minutos");
-                        $horario = date_format("H:i");
                         $soma = $horario + ($hora_servico);
                         $erro = 0;
 
@@ -220,8 +219,8 @@ else{
                         $funcionarios = mysqli_fetch_array($res2);
                         $id_fun = $funcionarios["id_funcionario"];
                         
-                        //$sql3 = "SELECT * FROM agendamento WHERE dataServico = '$dataServico' AND id_funcionario = '$id_fun' AND horario = '$horario' OR horario <= '$soma';";
-                        $sql3 = "SELECT * FROM agendamento WHERE dataServico = '$dataServico' AND id_funcionario = '$id_fun' AND horario = '$horario';";
+                        $sql3 = "SELECT * FROM agendamento WHERE dataServico = '$dataServico' AND id_funcionario = '$id_fun' AND horario = '$horario' OR horario = '$soma';";
+                        //$sql3 = "SELECT * FROM agendamento WHERE dataServico = '$dataServico' AND id_funcionario = '$id_fun' AND horario = '$horario';";
                         $res3 = mysqli_query($mysqli,$sql3);
                         $quantidade = mysqli_num_rows($res3);
                 

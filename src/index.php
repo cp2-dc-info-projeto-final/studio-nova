@@ -28,12 +28,10 @@
         <div class="container" id="home">
             <div class="main-text">
                 
-                <h1>Bem vinda ao Nova studio!!</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur incidunt ab molestiae quisquam minima dignissimos aliquam blanditiis ut expedita?</p>
-                
+                <h1>Bem vinda ao Nova studio!!</h1><br>
                 <div>
-                <h2>Deseja fazer um agendamento conosco?</h2><br>
-                <p><a class="btn1" href="cadastro.php">Clique aqui</a></p>
+                <h2>Deseja agendar um serviço conosco?</h2><br>
+                <br><p><a class="btn1" href="cadastro.php">Clique aqui</a></p>
                 </div>
                 
                 <div class="img-container">
