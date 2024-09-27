@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova studio</title>
     <link rel="stylesheet" href="css/nova.css">
-    
-    
-
 </head>
 <body>
     <header>
@@ -18,8 +15,8 @@
                 <li><a href="#home">Início</a></li>
                 <li><a href="">Serviços</a></li>
                 <li><a href="#contatos">Contatos</a></li>
-                <li><a href="login.php" class="btn">Entrar</a></li>
-                <li><a href="cadastro.php">Cadastre-se</a></li>
+                <li><a href="paginas/login/login.php" class="btn">Entrar</a></li>
+                <li><a href="paginas/cadastro/cadastro.php">Cadastre-se</a></li>
             </ul>
         </nav>
     </header>
@@ -31,7 +28,7 @@
                 <h1>Bem vinda ao Nova studio!!</h1><br>
                 <div>
                 <h2>Deseja agendar um serviço conosco?</h2><br>
-                <br><p><a class="btn1" href="cadastro.php">Clique aqui</a></p>
+                <br><p><a class="btn1" href="paginas/cadastro/cadastro.php">Clique aqui</a></p>
                 </div>
                 
                 <div class="img-container">

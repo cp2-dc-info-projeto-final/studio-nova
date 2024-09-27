@@ -465,10 +465,6 @@ elseif ($tipo == "administrador") {
         
 </body>
 </html>";
-        }
-            
-
-    
-    
+        }    
 }
 ?>

@@ -1,5 +1,5 @@
 <?php
-include "autentica.php";
+    include "autentica.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -134,15 +134,15 @@ include "autentica.php";
                     <span class='title'>Sair</span> 
                 </a>
 
-    </div>
-    <center>
-    <div class='table'>
-                <div class='table-header'>
-                    <div class='header__item'><a id='servico' class='filter__link' href='#'>Serviço</a></div>
-                    <div class='header__item'><a id='dia' class='filter__link filter__link--number' href='#'>Dia</a></div>
-                    <div class='header__item'><a id='hora' class='filter__link filter__link--number' href='#'>Hora</a></div>
-                    <div class='header__item'><a id='funcionário' class='filter__link filter__link--number' href='#'>funcionário</a></div>
-                </div> ";
+            </div>
+            <center>
+            <div class='table'>
+                        <div class='table-header'>
+                            <div class='header__item'><a id='servico' class='filter__link' href='#'>Serviço</a></div>
+                            <div class='header__item'><a id='dia' class='filter__link filter__link--number' href='#'>Dia</a></div>
+                            <div class='header__item'><a id='hora' class='filter__link filter__link--number' href='#'>Hora</a></div>
+                            <div class='header__item'><a id='funcionário' class='filter__link filter__link--number' href='#'>funcionário</a></div>
+                        </div> ";
             
         $id = $_SESSION['id'];
 
@@ -153,9 +153,9 @@ include "autentica.php";
             for($i = 0; $i < $quantidade; $i++)
                 {
                     $agendamento = mysqli_fetch_array($res);
-                    $id_funcionario = $agendamento['id_funcionario'];
+                    $id_funcionario = $agendamento['id_usuario'];
 
-                    $sql2 = "SELECT * FROM funcionario WHERE id_funcionario = '$id_funcionario';";
+                    $sql2 = "SELECT * FROM funcionario WHERE id_usuario = '$id_usuario';";
                     $res2 = mysqli_query($mysqli,$sql2);
                     $funcionario = mysqli_fetch_array($res2);
 

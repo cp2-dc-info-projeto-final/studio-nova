@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php
-    include "conecta.php";
+    include "../actions/conecta.php";
 
     session_start();
     $email = $mysqli->real_escape_string($_POST['email']);
@@ -48,7 +48,7 @@
                                           $_SESSION['tipo'] = "cliente";
                                           $_SESSION['bemvindo'] = "Bem vindo de volta !";
                                     
-                                          header("location: paginainicial.php");
+                                          header("location: ../home/paginainicial.php");
                                         }
                                         
                               }
@@ -87,7 +87,7 @@
                                         $_SESSION['senha'] = $administrador ['senha'];
                                         $_SESSION['tipo'] = "administrador";
                                   
-                                        header("location: administracao.php");
+                                        header("location: ../home/administracao.php");
                                      }
                                     }
                             
@@ -130,7 +130,7 @@
                                               $_SESSION['bemvindo'] = "Olá, ";
                                               $_SESSION['tipo'] = "funcionario";
                                   
-                                              header("location: agendamentos.php");
+                                              header("location: ../home/funcionarios.php");
                                             }
                                       }
                                       else
