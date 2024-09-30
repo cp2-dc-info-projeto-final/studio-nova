@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/nova.css">
+    <link rel="stylesheet" href="../../css/nova.css">
     <title>Cadastro de funcionários</title>
     <style>
 
@@ -46,7 +46,7 @@
                         <label for="servicos">Selecione o serviço</label>
                         <select name="servicos">
                         <?php
-                        include("conecta.php");
+                        include("../actions/conecta.php");
 
                         $sql = "SELECT * FROM servicos;"; 
                         $res = mysqli_query($mysqli,$sql);
@@ -88,7 +88,7 @@
                 <input type="submit" class="btn" value="Cadastrar funcionário">
                     <?php
                         session_start();
-                        include("conecta.php");
+                        include("../actions/conecta.php");
                         
                         if(isset($_POST["nome"]) && isset($_POST["sobrenome"]) && isset($_POST["email"]) && isset($_POST["senha1"]) && isset($_POST["senha2"]) && isset($_POST["tel"]) && isset($_POST["cpf"]) && isset($_POST["servicos"])){ 
                         

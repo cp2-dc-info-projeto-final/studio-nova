@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/nova.css">
+    <link rel="stylesheet" href="../../css/nova.css">
     <title>Cadastro de serviços</title>
     <style>
 
@@ -50,7 +50,7 @@
                 <?php
     
                     session_start();
-                    include_once("conecta.php");
+                    include_once("../actions/conecta.php");
 
                         if(isset($_POST["nome"]) && isset($_POST["preco"]) && isset($_POST["duracao"]) ) 
                         {

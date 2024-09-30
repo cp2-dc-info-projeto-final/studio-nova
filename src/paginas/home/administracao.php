@@ -1,7 +1,7 @@
 <?php
-    include "autentica.php"; 
+    include "../actions/autentica.php"; 
     if($tipo != "administrador"){
-        header('location:error.php');
+        header('location:../error.php');
     }
 ?>
 
@@ -35,7 +35,7 @@
                                 <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
                             </svg>
                         </span><br>
-                            <a href="cadastrofun.php" >Cadastrar funcionários</a>
+                            <a href="../cadastro/cadastrofun.php" >Cadastrar funcionários</a>
                     </center>
                 </div>
                 
@@ -47,7 +47,7 @@
                                 <path d="M2 1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2ZM1 3a1 1 0 0 1 1-1h2v2H1V3Zm4 10V2h9a1 1 0 0 1 1 1v9c0 .285-.12.543-.31.725C14.15 11.494 12.822 10 10 10c-3.037 0-4.345 1.73-4.798 3H5Zm-4-2h3v2H2a1 1 0 0 1-1-1v-1Zm3-1H1V8h3v2Zm0-3H1V5h3v2Z"/>
                             </svg>
                         </span><br>
-                            <a href="listafun.php" >Funcionários</a>
+                            <a href="../listafun.php" >Funcionários</a>
                     </center>
                 </div>
                 
@@ -58,7 +58,7 @@
                                 <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
                             </svg>
                         </span><br>
-                        <a href="listacli.php">Clientes</a>
+                        <a href="../listacli.php">Clientes</a>
                     </center>
                 </div>
                 
@@ -69,7 +69,7 @@
                                 <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
                             </svg>
                         </span><br>
-                        <a href="agendamentos.php">Agendamentos</a>
+                        <a href="../agendamentos.php">Agendamentos</a>
                     </center>
                 </div>
                 
@@ -81,7 +81,7 @@
                                 <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
                             </svg>
                         </span><br>
-                        <a href="cadastroadm.php">Criar novo administrador</a>
+                        <a href="../cadastro/cadastroadm.php">Criar novo administrador</a>
                     </center>
                 </div>
                 
@@ -93,7 +93,7 @@
                                 <path d="M13.5 10a.5.5 0 0 1 .5.5V12h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V13h-1.5a.5.5 0 0 1 0-1H13v-1.5a.5.5 0 0 1 .5-.5z"/>
                             </svg>
                         </span><br>
-                        <a href="cadastroservico.php">Cadastrar novo serviço</a>
+                        <a href="../cadastro/cadastroservico.php">Cadastrar novo serviço</a>
                     </center>   
                 </div>
                 
@@ -105,7 +105,7 @@
                                 <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
                             </svg>
                         </span><br>
-                        <a href="horarios.php">Disponiblizar horário</a><br>
+                        <a href="../horarios.php">Disponiblizar horário</a><br>
                     </center>
                 </div>
 

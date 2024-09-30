@@ -2,6 +2,7 @@
     session_start();
     $_SESSION = array();
     session_destroy();
+    echo "$tipo";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +17,7 @@
     <center>
     <h1>ACESSO NEGADO!!!</h1>
     <p>Você não tem permissão para acessar essa página</p><br>
-    <a href="login.php" class="btn">Voltar para a página de login</a>
+    <a href="login/login.php" class="btn">Voltar para a página de login</a>
     </center>
 </body>
 </html>

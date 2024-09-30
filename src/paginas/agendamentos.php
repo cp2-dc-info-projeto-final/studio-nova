@@ -1,5 +1,5 @@
 <?php
-    include "autentica.php";
+    include "actions/autentica.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,13 +7,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/nova.css">
+    <link rel="stylesheet" href="../css/nova.css">
     <title>Agendamentos</title>
 </head>
 <body>
     <?php
 
-        include "conecta.php";
+        include "actions/conecta.php";
 
         if($tipo == "administrador"){
         echo"<nav>
@@ -271,7 +271,7 @@
         <div id="botao-confirma" class="confirma">
                     <div class="confirma-conteudo">
                         <h1>Tem certeza que encerrar sua sessão?</h1><br>
-                        <a href="logout.php" class="btn1">SIM</a>
+                        <a href="home/logout.php" class="btn1">SIM</a>
                         <a class="btn-cancelar" onclick="javascript:document.getElementById('botao-confirma').style.visibility = 'hidden'">Cancelar</a>
                     </div>
                 </div>

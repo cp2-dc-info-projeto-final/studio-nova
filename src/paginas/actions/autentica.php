@@ -1,6 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/nova.css">
+    <title>Usuário não encontrado</title>
+    
+</head>
+<body>
 <?php
     include "conecta.php";
     session_start();
+
     if(isset($_SESSION["email"])){
         $email = $_SESSION["email"];
     }
@@ -15,7 +27,7 @@
     }
     if(empty($email) OR empty($senha) OR empty($tipo)){
         echo "Você não fez o login!";
-        echo "<p><a href='login.php'>Página de login</a></p>";
+        echo "<p><a href='../login/login.php'>Página de login</a></p>";
         exit;
     }
     else
@@ -40,7 +52,7 @@
             unset($_SESSION["email"]);
             unset($_SESSION["senha"]);
             echo "<p>Você não fez o login!<p>";
-            echo "<p><a href='login.php'>Página de login</a></p>";
+            echo "<p><a href='../login/login.php'>Página de login</a></p>";
             exit;
         }
         
@@ -52,11 +64,12 @@
                 unset($_SESSION["email"]);
                 unset($_SESSION["senha"]);
                 echo "Você não fez o login!";
-                echo "<p><a href='login.php'>Página de login</a></p>";
+                echo "<p><a href='../login/login.php'>Página de login</a></p>";
                 exit;
             }
         }
         mysqli_close($mysqli);
     }
-    
 ?>
+</body>
+</html>

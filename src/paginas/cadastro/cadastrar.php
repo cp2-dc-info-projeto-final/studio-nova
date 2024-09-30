@@ -3,45 +3,54 @@
     include_once("../actions/conecta.php");
 
     $action = $_REQUEST["action"];
+    $tipo = $_SESSION["tipo"];
 
-        if($tipo == "administrador") || ($action == "cadastrarAdm"){
+        if ($tipo == "administrador" && $action == "cadastrarAdm"){
         
-            session_start();
             include_once("../actions/conecta.php");
 
                 if(isset($_POST["email"]) || isset($_POST["senha1"]) || isset($_POST["senha2"]) ) 
                 {
-                        $email = $_POST ["email"];
-                        $senha1 = $_POST ["senha1"];
-                        $senha2 = $_POST ["senha2"];
-                        $erro = 0;
+                    $email = $_POST ["email"];
+                    $senha1 = $_POST ["senha1"];
+                    $senha2 = $_POST ["senha2"];
 
-                if(($senha1 != $senha2))
-                    {
-                        echo "<p>As senhas não são correspondentes</p>";
+                    $sql = "SELECT * FROM administrador WHERE email = '$email';";
+                    $res = mysqli_query($mysqli, $sql);
+
+                    $erro = 0;
+
+                    if(mysqli_num_rows($res) == 1){
+                        echo "E-mail já cadastrado. Por favor, digite outro e-mail.<br>";
                         $erro = 1;
                     }
-                if($email == $senha2)
-                    {
-                        echo "O email e a senha não podem ser iguais.<br>";
-                        $erro = 1;
-                    }
 
-                if($erro == 0)
-                    {   
-                        $senha_cript = password_hash($senha2, PASSWORD_DEFAULT);
-                        $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
-                        $sql = "INSERT INTO administrador (email,senha)";
-                        $sql .= "VALUES ('$email','$senha2');";  
-                        mysqli_query($mysqli,$sql);
-                        mysqli_close($mysqli);
+                    if(($senha1 != $senha2))
+                        {
+                            echo "<p>As senhas não são correspondentes</p>";
+                            $erro = 1;
+                        }
+                    if($email == $senha2)
+                        {
+                            echo "O email e a senha não podem ser iguais.<br>";
+                            $erro = 1;
+                        }
 
-                        echo "Administrador cadastrado com sucesso!<br>";
-                    }
-            }
+                    if($erro == 0)
+                        {   
+                            $senha_cript = password_hash($senha2, PASSWORD_DEFAULT);
+                            $mysqli = mysqli_connect("localhost","nova","admin","novastudio");
+                            $sql = "INSERT INTO administrador (email,senha)";
+                            $sql .= "VALUES ('$email','$senha2');";  
+                            mysqli_query($mysqli,$sql);
+                            mysqli_close($mysqli);
+
+                            echo "Administrador cadastrado com sucesso!<br>";
+                        }
+                }
         }
         
-        else{
+        else {
             if(isset($_POST["nome"]) || isset($_POST["sobrenome"]) ||isset($_POST["email"]) || isset($_POST["senha1"]) || isset($_POST["senha2"])  ) {
 
                 $nome = $_POST ["nome"];
@@ -86,7 +95,7 @@
                     mysqli_query($mysqli,$sql);
                     mysqli_close($mysqli);
                     
-                    header("location: ../home/paginainicial.php");
+                    header("location: ../home/clientes.php");
                 }
             }
         }
